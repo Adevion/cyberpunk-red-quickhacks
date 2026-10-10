@@ -1,7 +1,7 @@
 {
   "name": "Breach",
   "type": "gear",
-  "img": "icons/svg/net.svg",
+  "img": "modules/cyberpunk-red-quickhacks/icons/netactions/breach.svg",
   "effects": [],
   "system": {
     "description": {

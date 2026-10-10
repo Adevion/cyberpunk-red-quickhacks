@@ -1,7 +1,7 @@
 {
   "name": "Perform QuickHack",
   "type": "gear",
-  "img": "icons/svg/lightning.svg",
+  "img": "modules/cyberpunk-red-quickhacks/icons/netactions/perform_quickhack.svg",
   "effects": [],
   "system": {
     "description": {

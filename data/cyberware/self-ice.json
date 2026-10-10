@@ -1,7 +1,7 @@
 {
   "name": "Self-ICE",
   "type": "cyberware",
-  "img": "icons/svg/shield.svg",
+  "img": "modules/cyberpunk-red-quickhacks/icons/cyberware/self-ice.svg",
   "effects": [],
   "system": {
     "description": {
