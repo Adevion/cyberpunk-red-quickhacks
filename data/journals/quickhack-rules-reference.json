@@ -1,0 +1,73 @@
+{
+  "name": "Quickhack Rules Reference",
+  "img": "modules/cyberpunk-red-quickhacks/images/compendium-banner.webp",
+  "ownership": {
+    "default": 2
+  },
+  "pages": [
+    {
+      "name": "Quickhack Reference",
+      "type": "text",
+      "text": {
+        "format": 1,
+        "content": "<p>QuickHacks are NET Actions performed against Neuroports after all Passwalls have been successfully Breached.</p><p>A Netrunner may only attempt one QuickHack per target per Turn.</p><table><tr><th>QuickHack</th><th>DV</th></tr><tr><td>Impair Movement</td><td>6</td></tr><tr><td>Sonic Shock</td><td>6</td></tr><tr><td>Overheat</td><td>8</td></tr><tr><td>Short Circuit</td><td>8</td></tr><tr><td>Cyberware Malfunction</td><td>10</td></tr><tr><td>Lure</td><td>10</td></tr><tr><td>Slow</td><td>10</td></tr><tr><td>Synapse Burnout</td><td>10</td></tr><tr><td>Puppet</td><td>12</td></tr><tr><td>Shard Ejection</td><td>12</td></tr><tr><td>System Reset</td><td>12</td></tr></table>"
+      }
+    },
+    {
+      "name": "Quickhack Program Cost Table",
+      "type": "text",
+      "text": {
+        "format": 1,
+        "content": "<table><tr><th>QuickHack</th><th>DV</th><th>Cost</th></tr><tr><td>Impair Movement</td><td>6</td><td>20eb</td></tr><tr><td>Sonic Shock</td><td>6</td><td>20eb</td></tr><tr><td>Overheat</td><td>8</td><td>50eb</td></tr><tr><td>Short Circuit</td><td>8</td><td>50eb</td></tr><tr><td>Cyberware Malfunction</td><td>10</td><td>100eb</td></tr><tr><td>Lure</td><td>10</td><td>100eb</td></tr><tr><td>Slow</td><td>10</td><td>100eb</td></tr><tr><td>Synapse Burnout</td><td>10</td><td>100eb</td></tr><tr><td>Puppet</td><td>12</td><td>500eb</td></tr><tr><td>Shard Ejection</td><td>12</td><td>500eb</td></tr><tr><td>System Reset</td><td>12</td><td>500eb</td></tr></table>"
+      }
+    },
+    {
+      "name": "Quickhack DV Reference",
+      "type": "text",
+      "text": {
+        "format": 1,
+        "content": "<table><tr><th>Category</th><th>DV</th></tr><tr><td>Simple</td><td>6</td></tr><tr><td>Standard</td><td>8</td></tr><tr><td>Difficult</td><td>10</td></tr><tr><td>Advanced</td><td>12</td></tr></table><h2>Breach DV</h2><table><tr><th>Self-ICE</th><th>Breach DV</th></tr><tr><td>1</td><td>6</td></tr><tr><td>2</td><td>8</td></tr><tr><td>3</td><td>10</td></tr></table>"
+      }
+    },
+    {
+      "name": "Neuroport Security",
+      "type": "text",
+      "text": {
+        "format": 1,
+        "content": "<p>All Neuroports possess built-in firewall security.</p><p>Netrunners with Interface Rank 1-2 must succeed at a DV6 Interface Check before attempting to establish a QuickHack connection.</p><p>Netrunners with Interface Rank 3+ bypass this security automatically.</p><p>Failure does not alert the target.</p><p>If the Netrunner is forcefully removed from the Neuroport they are considered to have Unsafely Jacked Out.</p><p>After being Unsafely Jacked Out, the Netrunner may not attempt to reconnect to that target for 60 minutes.</p>"
+      }
+    },
+    {
+      "name": "Quickhacking Cyberware",
+      "type": "text",
+      "text": {
+        "format": 1,
+        "content": "<p>QuickHacks target a user's Neuroport architecture.</p><p>A Neuroport acts as a NET Architecture containing Passwalls, Control Nodes and borrowed Black ICE.</p><p>Black ICE installed on an active Cyberdeck may be used by the Neuroport.</p><p>Netrunners are always considered Jacked Into their own Neuroport and may immediately respond to hostile intrusions.</p><p>A successful QuickHack causes the target to become aware that their Neuroport has been compromised unless the QuickHack specifically states otherwise.</p>"
+      }
+    },
+    {
+      "name": "Direct Connection Netrunning",
+      "type": "text",
+      "text": {
+        "format": 1,
+        "content": "<p>A Netrunner may use Interface Plugs to establish a direct connection to a target's Neuroport.</p><p>Awake targets automatically become aware of the intrusion.</p><p>While directly connected:</p><ul><li>Gain +1 NET Action.</li><li>Ignore Passwalls.</li><li>Black ICE remains active.</li></ul><p>If either participant moves more than one square apart, the connection is broken and the Netrunner is Unsafely Jacked Out.</p>"
+      }
+    },
+    {
+      "name": "Quickhack Range Reference",
+      "type": "text",
+      "text": {
+        "format": 1,
+        "content": "<table><tr><th>Configuration</th><th>Range</th></tr><tr><td>External Cyberdeck</td><td>3 Squares</td></tr><tr><td>External Cyberdeck + Range Upgrade</td><td>4 Squares</td></tr><tr><td>Neuroport Cyberdeck Port</td><td>25 Squares</td></tr></table><p>Line of sight is required for all QuickHacks.</p>"
+      }
+    },
+    {
+      "name": "Self-ICE Rules",
+      "type": "text",
+      "text": {
+        "format": 1,
+        "content": "<p>Self-ICE is specialized Neuralware designed to resist QuickHacks.</p><p>Each Self-ICE installation adds one Passwall to the user's Neuroport architecture.</p><p>Maximum installations: 3.</p><table><tr><th>Installed</th><th>Passwall DV</th></tr><tr><td>1</td><td>6</td></tr><tr><td>2</td><td>8</td></tr><tr><td>3</td><td>10</td></tr></table><p>Each Passwall must be successfully Breached before QuickHacks can be attempted.</p>"
+      }
+    }
+  ]
+}

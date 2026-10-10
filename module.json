@@ -57,39 +57,44 @@
   ],
   "packs": [
     {
-      "label": "Edgerunners QuickHacks",
+      "label": "QUICKHACKS",
       "type": "Item",
       "name": "quickhacks",
       "path": "packs/quickhacks",
-      "system": "cyberpunk-red-core"
+      "system": "cyberpunk-red-core",
+      "banner": "modules/cyberpunk-red-quickhacks/icons/compendiums/quickhacks-banner.webp"
     },
     {
-      "label": "Edgerunners NET Actions",
+      "label": "NET ACTIONS",
       "type": "Item",
       "name": "net-actions",
       "path": "packs/net-actions",
-      "system": "cyberpunk-red-core"
+      "system": "cyberpunk-red-core",
+      "banner": "modules/cyberpunk-red-quickhacks/icons/compendiums/quickhacks-banner.webp"
     },
     {
-      "label": "Edgerunners Cyberware",
+      "label": "CYBERWARE",
       "type": "Item",
       "name": "cyberware",
       "path": "packs/cyberware",
-      "system": "cyberpunk-red-core"
+      "system": "cyberpunk-red-core",
+      "banner": "modules/cyberpunk-red-quickhacks/icons/compendiums/quickhacks-banner.webp"
     },
     {
-      "label": "Edgerunners Drugs",
+      "label": "PHARMACEUTICALS",
       "type": "Item",
       "name": "drugs",
       "path": "packs/drugs",
-      "system": "cyberpunk-red-core"
+      "system": "cyberpunk-red-core",
+      "banner": "modules/cyberpunk-red-quickhacks/icons/compendiums/quickhacks-banner.webp"
     },
     {
-      "label": "Edgerunners Rulebook",
+      "label": "RULES REFERENCE",
       "type": "JournalEntry",
       "name": "journals",
       "path": "packs/journals",
-      "system": "cyberpunk-red-core"
+      "system": "cyberpunk-red-core",
+      "banner": "modules/cyberpunk-red-quickhacks/icons/compendiums/quickhacks-banner.webp"
     }
   ]
 }
