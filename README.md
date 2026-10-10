@@ -69,7 +69,7 @@ The module adds:
 
 ## Installation
 
-...
+Manifest URL: https://raw.githubusercontent.com/Adevion/cyberpunk-red-quickhacks/main/module.json
 
 
 ## Current Known Limitations
