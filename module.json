@@ -57,44 +57,44 @@
   ],
   "packs": [
     {
-      "label": "QUICKHACKS",
+      "label": "Quickhacks",
       "type": "Item",
       "name": "quickhacks",
       "path": "packs/quickhacks",
       "system": "cyberpunk-red-core",
-      "banner": "modules/cyberpunk-red-quickhacks/icons/compendiums/quickhacks-banner.webp"
+      "banner": "modules/cyberpunk-red-quickhacks/images/compendium-banner.webp"
     },
     {
-      "label": "NET ACTIONS",
+      "label": "NET Actions",
       "type": "Item",
       "name": "net-actions",
       "path": "packs/net-actions",
       "system": "cyberpunk-red-core",
-      "banner": "modules/cyberpunk-red-quickhacks/icons/compendiums/quickhacks-banner.webp"
+      "banner": "modules/cyberpunk-red-quickhacks/images/compendium-banner.webp"
     },
     {
-      "label": "CYBERWARE",
+      "label": "Cyberware",
       "type": "Item",
       "name": "cyberware",
       "path": "packs/cyberware",
       "system": "cyberpunk-red-core",
-      "banner": "modules/cyberpunk-red-quickhacks/icons/compendiums/quickhacks-banner.webp"
+      "banner": "modules/cyberpunk-red-quickhacks/images/compendium-banner.webp"
     },
     {
-      "label": "PHARMACEUTICALS",
+      "label": "Pharmaceuticals",
       "type": "Item",
       "name": "drugs",
       "path": "packs/drugs",
       "system": "cyberpunk-red-core",
-      "banner": "modules/cyberpunk-red-quickhacks/icons/compendiums/quickhacks-banner.webp"
+      "banner": "modules/cyberpunk-red-quickhacks/images/compendium-banner.webp"
     },
     {
-      "label": "RULES REFERENCE",
+      "label": "Rules Reference",
       "type": "JournalEntry",
       "name": "journals",
       "path": "packs/journals",
       "system": "cyberpunk-red-core",
-      "banner": "modules/cyberpunk-red-quickhacks/icons/compendiums/quickhacks-banner.webp"
+      "banner": "modules/cyberpunk-red-quickhacks/images/compendium-banner.webp"
     }
   ]
 }
