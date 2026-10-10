@@ -1,0 +1,48 @@
+{
+  "name": "Short Circuit",
+  "type": "program",
+  "img": "icons/magic/lightning/bolt-blue.webp",
+  "effects": [],
+  "flags": {
+    "cpred-edgerunners-quickhacks": {
+      "quickhack": true,
+      "dv": 8,
+      "category": "anti-cyberware"
+    }
+  },
+  "system": {
+    "atk": 0,
+    "blackIceType": "antipersonnel",
+    "class": "antipersonnelattacker",
+    "damage": {
+      "blackIce": "",
+      "standard": ""
+    },
+    "def": 0,
+    "description": {
+      "value": "<p><strong>DV 8</strong></p><p>The GM chooses three pieces of cyberware other than a Cyberarm, Cyberleg, Cybereye, Cyberaudio Suite, Neuroport, or Neuroport Cyberdeck Expansion.</p><p>Selected cyberware and attached options cease functioning for 20 Rounds.</p>"
+    },
+    "favorite": false,
+    "installLocation": "mall",
+    "interface": 8,
+    "isRezzed": false,
+    "per": 0,
+    "price": {
+      "market": 50
+    },
+    "prototypeActor": "",
+    "revealed": true,
+    "rez": {
+      "value": 0,
+      "max": 0,
+      "transactions": []
+    },
+    "size": 1,
+    "source": {
+      "book": "Cyberpunk Edgerunners Mission Kit",
+      "page": 0
+    },
+    "spd": 0,
+    "usage": "toggled"
+  }
+}

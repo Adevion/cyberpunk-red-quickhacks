@@ -1,0 +1,13 @@
+{
+  "name": "QuickHack Range Reference",
+  "pages": [
+    {
+      "name": "QuickHack Range",
+      "type": "text",
+      "text": {
+        "format": 1,
+        "content": "<h1>QuickHack Range Reference</h1><table><tr><th>Configuration</th><th>Range</th></tr><tr><td>External Cyberdeck</td><td>3 Squares</td></tr><tr><td>External Cyberdeck + Range Upgrade</td><td>4 Squares</td></tr><tr><td>Neuroport Cyberdeck Port</td><td>25 Squares</td></tr></table><p>Line of sight is required for all QuickHacks.</p>"
+      }
+    }
+  ]
+}

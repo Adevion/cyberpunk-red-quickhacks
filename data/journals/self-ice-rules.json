@@ -1,0 +1,13 @@
+{
+  "name": "Self-ICE Rules",
+  "pages": [
+    {
+      "name": "Self-ICE",
+      "type": "text",
+      "text": {
+        "format": 1,
+        "content": "<h1>Self-ICE</h1><p>Self-ICE is specialized Neuralware designed to resist QuickHacks.</p><p>Each Self-ICE installation adds one Passwall to the user's Neuroport architecture.</p><p>Maximum installations: 3.</p><table><tr><th>Installed</th><th>Passwall DV</th></tr><tr><td>1</td><td>6</td></tr><tr><td>2</td><td>8</td></tr><tr><td>3</td><td>10</td></tr></table><p>Each Passwall must be successfully Breached before QuickHacks can be attempted.</p>"
+      }
+    }
+  ]
+}

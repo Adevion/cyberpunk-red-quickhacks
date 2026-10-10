@@ -1,0 +1,44 @@
+{
+  "name": "Overheat",
+  "type": "program",
+  "img": "icons/magic/fire/flame-burning-skull-orange.webp",
+  "effects": [],
+  "flags": {
+    "cpred-edgerunners-quickhacks": {
+      "quickhack": true,
+      "dv": 8,
+      "category": "anti-personnel"
+    }
+  },
+  "system": {
+    "atk": 0,
+    "blackIceType": "antipersonnel",
+    "class": "antipersonnelattacker",
+    "damage": {
+      "blackIce": "",
+      "standard": "4"
+    },
+    "def": 0,
+    "description": {
+      "value": "<p><strong>DV 8</strong></p><p>Target catches fire.</p><p>At the end of each Turn the target suffers 4 damage directly to HP.</p><p>This damage bypasses armor and does not ablate armor.</p><p>Extinguishing requires an Action on the target's Turn.</p>"
+    },
+    "favorite": false,
+    "installLocation": "mall",
+    "interface": 8,
+    "price": {
+      "market": 50
+    },
+    "revealed": true,
+    "rez": {
+      "value": 0,
+      "max": 0,
+      "transactions": []
+    },
+    "size": 1,
+    "source": {
+      "book": "Cyberpunk Edgerunners Mission Kit",
+      "page": 0
+    },
+    "usage": "toggled"
+  }
+}

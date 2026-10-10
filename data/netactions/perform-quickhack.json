@@ -1,0 +1,16 @@
+{
+  "name": "Perform QuickHack",
+  "type": "gear",
+  "img": "icons/svg/lightning.svg",
+  "effects": [],
+  "system": {
+    "description": {
+      "value": "<p>NET Action.</p><p>After all Passwalls are Breached, make an Interface Check against a QuickHack DV.</p><p>One QuickHack attempt per target per Turn.</p>"
+    },
+    "usage": "carried",
+    "revealed": true,
+    "price": {
+      "market": 0
+    }
+  }
+}

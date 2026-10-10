@@ -1,0 +1,44 @@
+{
+  "name": "Shard Ejection",
+  "type": "program",
+  "img": "icons/commodities/tech/capsule-chip.webp",
+  "effects": [],
+  "flags": {
+    "cpred-edgerunners-quickhacks": {
+      "quickhack": true,
+      "dv": 12,
+      "category": "anti-cyberware"
+    }
+  },
+  "system": {
+    "atk": 0,
+    "blackIceType": "antipersonnel",
+    "class": "antipersonnelattacker",
+    "damage": {
+      "blackIce": "",
+      "standard": ""
+    },
+    "def": 0,
+    "description": {
+      "value": "<p><strong>DV 12</strong></p><p>Forcefully uninstall and eject one installed piece of chipware into an adjacent square.</p><p>If multiple chipware options are installed, the Netrunner chooses which one is ejected.</p><p>Fails if the target has a shard slot cover or equivalent protection.</p>"
+    },
+    "favorite": false,
+    "installLocation": "mall",
+    "interface": 12,
+    "price": {
+      "market": 500
+    },
+    "revealed": true,
+    "rez": {
+      "value": 0,
+      "max": 0,
+      "transactions": []
+    },
+    "size": 2,
+    "source": {
+      "book": "Cyberpunk Edgerunners Mission Kit",
+      "page": 0
+    },
+    "usage": "toggled"
+  }
+}

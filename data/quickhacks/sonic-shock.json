@@ -1,0 +1,44 @@
+{
+  "name": "Sonic Shock",
+  "type": "program",
+  "img": "icons/magic/sonic/projectile-sound-rings-wave.webp",
+  "effects": [],
+  "flags": {
+    "cpred-edgerunners-quickhacks": {
+      "quickhack": true,
+      "dv": 6,
+      "category": "utility"
+    }
+  },
+  "system": {
+    "atk": 0,
+    "blackIceType": "antipersonnel",
+    "class": "antipersonnelattacker",
+    "damage": {
+      "blackIce": "",
+      "standard": ""
+    },
+    "def": 0,
+    "description": {
+      "value": "<p><strong>DV 6</strong></p><p>Target suffers the Damaged Ear Critical Injury without taking Bonus Damage.</p><p>Duration: 20 Rounds.</p>"
+    },
+    "favorite": false,
+    "installLocation": "mall",
+    "interface": 6,
+    "price": {
+      "market": 20
+    },
+    "revealed": true,
+    "rez": {
+      "value": 0,
+      "max": 0,
+      "transactions": []
+    },
+    "size": 1,
+    "source": {
+      "book": "Cyberpunk Edgerunners Mission Kit",
+      "page": 0
+    },
+    "usage": "toggled"
+  }
+}

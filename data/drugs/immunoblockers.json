@@ -1,0 +1,29 @@
+{
+  "name": "Immunoblockers",
+  "type": "drug",
+  "img": "icons/consumables/potions/vial-cork-blue.webp",
+  "effects": [],
+  "system": {
+    "amount": 1,
+    "brand": "",
+    "consumed": "None",
+    "concealable": {
+      "concealable": false,
+      "isConcealed": false
+    },
+    "description": {
+      "value": "<p>Primary Effect: Restore 2d6 Humanity. Cannot exceed Maximum Humanity permitted by Therapy.</p><p>Secondary Effect (DV21): Lose Humanity gained. Suffer -2 to all Checks for 20 rounds.</p><p>If two additional doses are not administered before expiration, suffer 4d6 Humanity Loss.</p>"
+    },
+    "equipped": "owned",
+    "favorite": false,
+    "price": {
+      "market": 100
+    },
+    "revealed": true,
+    "source": {
+      "book": "Cyberpunk Edgerunners Mission Kit",
+      "page": 0
+    },
+    "usage": "toggled"
+  }
+}

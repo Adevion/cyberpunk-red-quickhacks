@@ -1,0 +1,44 @@
+{
+  "name": "Cyberware Malfunction",
+  "type": "program",
+  "img": "icons/magic/death/skull-trio-blue.webp",
+  "effects": [],
+  "flags": {
+    "cpred-edgerunners-quickhacks": {
+      "quickhack": true,
+      "dv": 10,
+      "category": "anti-cyberware"
+    }
+  },
+  "system": {
+    "atk": 0,
+    "blackIceType": "antipersonnel",
+    "class": "antipersonnelattacker",
+    "damage": {
+      "blackIce": "",
+      "standard": ""
+    },
+    "def": 0,
+    "description": {
+      "value": "<p><strong>DV 10</strong></p><p>Select one piece of cyberware other than a Neuroport or Neuroport Cyberdeck Port.</p><p>The selected cyberware becomes inoperable for 20 Rounds.</p><p>Cyberlimbs act as Broken Arm or Broken Leg Critical Injuries while disabled.</p><p>All attached cyberware options cease functioning.</p>"
+    },
+    "favorite": false,
+    "installLocation": "mall",
+    "interface": 10,
+    "price": {
+      "market": 100
+    },
+    "revealed": true,
+    "rez": {
+      "value": 0,
+      "max": 0,
+      "transactions": []
+    },
+    "size": 1,
+    "source": {
+      "book": "Cyberpunk Edgerunners Mission Kit",
+      "page": 0
+    },
+    "usage": "toggled"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Puppet",
+  "type": "program",
+  "img": "icons/magic/control/debuff-chains-blue.webp",
+  "effects": [],
+  "flags": {
+    "cpred-edgerunners-quickhacks": {
+      "quickhack": true,
+      "dv": 12,
+      "category": "anti-personnel"
+    }
+  },
+  "system": {
+    "atk": 0,
+    "blackIceType": "antipersonnel",
+    "class": "antipersonnelattacker",
+    "damage": {
+      "blackIce": "",
+      "standard": ""
+    },
+    "def": 0,
+    "description": {
+      "value": "<p><strong>DV 12</strong></p><p>You control the target's Move Action and Action during their next Turn.</p><p>All rolls use the target's own Stats and Skills.</p><p>The target may attack allies, themselves, use equipment, or perform other legal actions as determined by the Netrunner.</p>"
+    },
+    "favorite": false,
+    "installLocation": "mall",
+    "interface": 12,
+    "price": {
+      "market": 500
+    },
+    "revealed": true,
+    "rez": {
+      "value": 0,
+      "max": 0,
+      "transactions": []
+    },
+    "size": 2,
+    "source": {
+      "book": "Cyberpunk Edgerunners Mission Kit",
+      "page": 0
+    },
+    "usage": "toggled"
+  }
+}

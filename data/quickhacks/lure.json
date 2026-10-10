@@ -1,0 +1,44 @@
+{
+  "name": "Lure",
+  "type": "program",
+  "img": "icons/magic/control/hypnosis-mesmerism-ring.webp",
+  "effects": [],
+  "flags": {
+    "cpred-edgerunners-quickhacks": {
+      "quickhack": true,
+      "dv": 10,
+      "category": "utility"
+    }
+  },
+  "system": {
+    "atk": 0,
+    "blackIceType": "antipersonnel",
+    "class": "antipersonnelattacker",
+    "damage": {
+      "blackIce": "",
+      "standard": ""
+    },
+    "def": 0,
+    "description": {
+      "value": "<p><strong>DV 10</strong></p><p>At the start of the target's next Turn, they are compelled to take a Move Action chosen by the Netrunner to investigate a phantom noise.</p><p>Lure only works if the target is unaware a Netrunner has Jacked In.</p><p>The target is not alerted to the QuickHack.</p><p>Cannot force movement into obvious physical danger.</p>"
+    },
+    "favorite": false,
+    "installLocation": "mall",
+    "interface": 10,
+    "price": {
+      "market": 100
+    },
+    "revealed": true,
+    "rez": {
+      "value": 0,
+      "max": 0,
+      "transactions": []
+    },
+    "size": 1,
+    "source": {
+      "book": "Cyberpunk Edgerunners Mission Kit",
+      "page": 0
+    },
+    "usage": "toggled"
+  }
+}

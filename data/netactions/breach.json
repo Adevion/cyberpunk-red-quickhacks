@@ -1,0 +1,16 @@
+{
+  "name": "Breach",
+  "type": "gear",
+  "img": "icons/svg/net.svg",
+  "effects": [],
+  "system": {
+    "description": {
+      "value": "<p>NET Action.</p><p>Each installed Self‑ICE requires one successful Breach.</p><p>DV6 with one Self‑ICE.</p><p>DV8 with two.</p><p>DV10 with three.</p><p>Make an Interface Check to bypass Passwalls.</p>"
+    },
+    "usage": "carried",
+    "revealed": true,
+    "price": {
+      "market": 0
+    }
+  }
+}

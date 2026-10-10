@@ -1,0 +1,34 @@
+{
+  "name": "Self-ICE",
+  "type": "cyberware",
+  "img": "icons/svg/shield.svg",
+  "effects": [],
+  "system": {
+    "description": {
+      "value": "<p>Intrusion countermeasure electronics system designed to harden the user against Quickhacks.</p><p>Maximum Installations: 3</p><p>Each installation adds one Passwall to the Neuroport architecture.</p><p>DV6 -> DV8 -> DV10 progression.</p>"
+    },
+    "humanityLoss": {
+      "roll": "1d6",
+      "static": 3
+    },
+    "installLocation": "hospital",
+    "price": {
+      "market": 500
+    },
+    "type": "neuralWare",
+    "favorite": false,
+    "isElectronic": true,
+    "revealed": true,
+    "installedItems": {
+      "allowed": false,
+      "allowedTypes": [],
+      "list": [],
+      "slots": 0,
+      "usedSlots": 0
+    },
+    "source": {
+      "book": "Cyberpunk Edgerunners Mission Kit",
+      "page": 0
+    }
+  }
+}

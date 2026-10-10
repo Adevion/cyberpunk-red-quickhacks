@@ -1,0 +1,48 @@
+{
+  "name": "Impair Movement",
+  "type": "program",
+  "img": "icons/svg/net.svg",
+  "effects": [],
+  "flags": {
+    "cpred-edgerunners-quickhacks": {
+      "quickhack": true,
+      "dv": 6,
+      "category": "utility"
+    }
+  },
+  "system": {
+    "atk": 0,
+    "blackIceType": "antipersonnel",
+    "class": "antipersonnelattacker",
+    "damage": {
+      "blackIce": "",
+      "standard": ""
+    },
+    "def": 0,
+    "description": {
+      "value": "<p><strong>DV 6</strong></p><p>Target's MOVE is lowered by 1 for 20 Rounds (60 seconds).</p><p>If MOVE is reduced to 0, the target cannot take Move Actions.</p>"
+    },
+    "favorite": false,
+    "installLocation": "mall",
+    "interface": 6,
+    "isRezzed": false,
+    "per": 0,
+    "price": {
+      "market": 20
+    },
+    "prototypeActor": "",
+    "revealed": true,
+    "rez": {
+      "value": 0,
+      "max": 0,
+      "transactions": []
+    },
+    "size": 1,
+    "source": {
+      "book": "Cyberpunk Edgerunners Mission Kit",
+      "page": 0
+    },
+    "spd": 0,
+    "usage": "toggled"
+  }
+}

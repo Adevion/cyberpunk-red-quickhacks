@@ -1,0 +1,13 @@
+{
+  "name": "QuickHack DV Reference",
+  "pages": [
+    {
+      "name": "DV Reference",
+      "type": "text",
+      "text": {
+        "format": 1,
+        "content": "<h1>QuickHack DV Categories</h1><table><tr><th>Category</th><th>DV</th></tr><tr><td>Simple</td><td>6</td></tr><tr><td>Standard</td><td>8</td></tr><tr><td>Difficult</td><td>10</td></tr><tr><td>Advanced</td><td>12</td></tr></table><h2>Breach DV</h2><table><tr><th>Self-ICE</th><th>Breach DV</th></tr><tr><td>1</td><td>6</td></tr><tr><td>2</td><td>8</td></tr><tr><td>3</td><td>10</td></tr></table>"
+      }
+    }
+  ]
+}

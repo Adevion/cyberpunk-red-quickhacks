@@ -1,0 +1,44 @@
+{
+  "name": "Slow",
+  "type": "program",
+  "img": "icons/magic/time/hourglass-brown.webp",
+  "effects": [],
+  "flags": {
+    "cpred-edgerunners-quickhacks": {
+      "quickhack": true,
+      "dv": 10,
+      "category": "utility"
+    }
+  },
+  "system": {
+    "atk": 0,
+    "blackIceType": "antipersonnel",
+    "class": "antipersonnelattacker",
+    "damage": {
+      "blackIce": "",
+      "standard": ""
+    },
+    "def": 0,
+    "description": {
+      "value": "<p><strong>DV 10</strong></p><p>Target's MOVE is reduced by 1d6 for 20 Rounds.</p><p>If MOVE reaches 0, the target cannot take Move Actions.</p>"
+    },
+    "favorite": false,
+    "installLocation": "mall",
+    "interface": 10,
+    "price": {
+      "market": 100
+    },
+    "revealed": true,
+    "rez": {
+      "value": 0,
+      "max": 0,
+      "transactions": []
+    },
+    "size": 1,
+    "source": {
+      "book": "Cyberpunk Edgerunners Mission Kit",
+      "page": 0
+    },
+    "usage": "toggled"
+  }
+}
