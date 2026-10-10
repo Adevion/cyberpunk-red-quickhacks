@@ -4,7 +4,7 @@
   "img": "modules/cyberpunk-red-quickhacks/icons/quickhacks/cyberware-malfunction.png",
   "effects": [],
   "flags": {
-    "cpred-edgerunners-quickhacks": {
+    "cyberpunk-red-quickhacks": {
       "quickhack": true,
       "dv": 10,
       "category": "anti-cyberware"

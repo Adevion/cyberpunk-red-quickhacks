@@ -4,7 +4,7 @@
   "img": "modules/cyberpunk-red-quickhacks/icons/quickhacks/system-reset.png",
   "effects": [],
   "flags": {
-    "cpred-edgerunners-quickhacks": {
+    "cyberpunk-red-quickhacks": {
       "quickhack": true,
       "dv": 12,
       "category": "anti-personnel"

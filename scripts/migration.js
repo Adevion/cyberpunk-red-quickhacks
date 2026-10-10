@@ -4,13 +4,13 @@ actor
 
 if (
 !actor.getFlag(
-"cpred-edgerunners-quickhacks",
+"cyberpunk-red-quickhacks",
 "neuroport"
 )
 ) {
 
 await actor.setFlag(
-"cpred-edgerunners-quickhacks",
+"cyberpunk-red-quickhacks",
 "neuroport",
 {
 selfIce: 0,

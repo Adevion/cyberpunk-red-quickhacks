@@ -3,7 +3,7 @@ export async function enableDirectConnection(
 ) {
 
   await actor.setFlag(
-    "cpred-edgerunners-quickhacks",
+    "cyberpunk-red-quickhacks",
     "neuroport.directConnection",
     true
   );

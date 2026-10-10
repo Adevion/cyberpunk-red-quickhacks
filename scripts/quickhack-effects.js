@@ -147,7 +147,7 @@ async function applyOverheat(
 ) {
 
   await target.setFlag(
-    "cpred-edgerunners-quickhacks",
+    "cyberpunk-red-quickhacks",
     "burning",
     true
   );
@@ -225,7 +225,7 @@ async function applyShortCircuit(
               target.items.get(id);
 
             await item.setFlag(
-              "cpred-edgerunners-quickhacks",
+              "cyberpunk-red-quickhacks",
               "disabledUntil",
               game.combat?.round + 20
             );
@@ -294,7 +294,7 @@ async function applyCyberwareMalfunction(
 
           await item.setFlag(
 
-            "cpred-edgerunners-quickhacks",
+            "cyberpunk-red-quickhacks",
 
             "disabledUntil",
 
@@ -318,7 +318,7 @@ async function applyLure(
 ) {
 
   await target.setFlag(
-    "cpred-edgerunners-quickhacks",
+    "cyberpunk-red-quickhacks",
     "lured",
     true
   );
@@ -420,7 +420,7 @@ async function applyPuppet(attacker, target) {
 
   await target.setFlag(
 
-    "cpred-edgerunners-quickhacks",
+    "cyberpunk-red-quickhacks",
 
     "puppeted",
 
@@ -588,7 +588,7 @@ async function applyShardEjection(
            */
 
           await target.setFlag(
-            "cpred-edgerunners-quickhacks",
+            "cyberpunk-red-quickhacks",
             "lastShardEjection",
             {
               round:

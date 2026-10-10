@@ -1,7 +1,7 @@
 export function registerSettings() {
 
   game.settings.register(
-    "cpred-edgerunners-quickhacks",
+    "cyberpunk-red-quickhacks",
     "renameBackdoor",
     {
       name: "CPQH.Settings.RenameBackdoor.Name",
@@ -14,7 +14,7 @@ export function registerSettings() {
   );
 
   game.settings.register(
-    "cpred-edgerunners-quickhacks",
+    "cyberpunk-red-quickhacks",
     "enableRangeAutomation",
     {
       name: "CPQH.Settings.RangeValidation.Name",
@@ -23,20 +23,6 @@ export function registerSettings() {
       config: true,
       type: Boolean,
       default: true
-    }
-  );
-}
-
-export function registerSettingsMenu() {
-  
-  game.settings.registerMenu( "cyberpunk-red-quickhacks", "quickhackSettings",
-    {
-      name: "Cyberpunk RED - QuickHacks",
-      label: "Configure",
-      hint: "Configure QuickHack module settings.",
-      icon: "fas fa-network-wired",
-      type: FormApplication,
-      restricted: true
     }
   );
 }

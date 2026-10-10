@@ -4,7 +4,7 @@
   "img": "modules/cyberpunk-red-quickhacks/icons/quickhacks/overheat.png",
   "effects": [],
   "flags": {
-    "cpred-edgerunners-quickhacks": {
+    "cyberpunk-red-quickhacks": {
       "quickhack": true,
       "dv": 8,
       "category": "anti-personnel"

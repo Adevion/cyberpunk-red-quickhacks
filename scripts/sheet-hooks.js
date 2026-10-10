@@ -1,82 +1,56 @@
-import {
-  openQuickHackDialog
-}
-from "./quickhacks.js";
+import { openQuickHackDialog} from "./quickhacks.js";
+import { performBreach } from "./breach.js";
 
-import {
-  performBreach
-}
-from "./breach.js";
+console.log("CPRED-QH Sheet Hook");
 
 export function registerSheetHooks() {
+  Hooks.on(
+    "renderCPRCharacterActorSheet",
+    (app, html) => {
+      const actor = app.actor;
+      const isNetrunner = actor.items.some(
+        i =>
+          i.type === "role" &&
+          i.system.mainRoleAbility === "Interface"
+      );
 
-Hooks.on(
-"renderActorSheet",
-(app, html) => {
+      if (!isNetrunner) return;
+      if (html.find(".cpred-edgerunners").length) return;
 
-const actor =
-  app.actor;
+      const controls = $(`
+        <div class="cpred-edgerunners">
+          <button class="cpred-breach">
+            Breach
+          </button>
+          <button class="cpred-quickhack">
+            Perform QuickHack
+          </button>
+        </div>
+      `);
 
-const isNetrunner =
-actor.items.some(
-i =>
-i.type === "role" &&
-i.system.mainRoleAbility ===
-"Interface"
-);
+      html
+        .find(".role-tab-content")
+        .prepend(controls);
 
-if (!isNetrunner)
-return;
+      controls
+        .find(".cpred-breach")
+        .click(async () => {
+          const target = [...game.user.targets][0]?.actor;
+          if (!target) {
+            ui.notifications.warn(
+              "Select a target."
+            );
+            return;
+          }
 
-const controls = $(`
-<div class="cpred-edgerunners">
+          await performBreach( actor, target );
+        });
 
-<button
-class="cpred-breach">
-
-Breach
-
-</button>
-
-<button
-class="cpred-quickhack">
-
-Perform QuickHack
-
-</button>
-
-</div>
-`);
-
-html.find(
-".role-abilities"
-).append(controls);
-
-html.find(
-".cpred-breach"
-).click(async () => {
-
-const target =
-[...game.user.targets][0]?.actor;
-
-if (!target) return;
-
-await performBreach(
-actor,
-target
-);
-
-});
-
-html.find(
-".cpred-quickhack"
-).click(() => {
-
-openQuickHackDialog(
-actor
-);
-
-});
-
-});
+      controls
+        .find(".cpred-quickhack")
+        .click(() => {
+          openQuickHackDialog(actor);
+        });
+    }
+  );
 }

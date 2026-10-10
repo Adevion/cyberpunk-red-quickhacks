@@ -1,18 +1,27 @@
-export function getQuickHacks(actor) {
+const QUICKHACKS = [
+  "Impair Movement",
+  "Sonic Shock",
+  "Overheat",
+  "Short Circuit",
+  "Cyberware Malfunction",
+  "Lure",
+  "Slow",
+  "Synapse Burnout",
+  "Puppet",
+  "Shard Ejection",
+  "System Reset"
+];
 
+export function getQuickHacks(actor) {
   return actor.items.filter(
     i =>
       i.type === "program" &&
-      i.flags?.[
-        "cpred-edgerunners-quickhacks"
-      ]?.quickhack
+      QUICKHACKS.includes(i.name)
   );
 }
 
-export async function openQuickHackDialog(actor) {
-
-  const target =
-    [...game.user.targets][0]?.actor;
+export async function openQuickHackDialog( actor ) {
+  const target = [...game.user.targets][0]?.actor;
 
   if (!target) {
     ui.notifications.warn(
@@ -21,20 +30,21 @@ export async function openQuickHackDialog(actor) {
     return;
   }
 
-  const hacks =
-    getQuickHacks(actor);
+const allPrograms = actor.items.filter( i => i.type === "program" );
+const hacks = getQuickHacks(actor);
 
-  let options = "";
+let options = "";
 
-  for (const h of hacks) {
-    options += `
-      <option value="${h.id}">
-        ${h.name}
-      </option>
-    `;
-  }
+for (const h of hacks) {
+  console.log( "Hack:", h.name, h.id, h._id );
+  options += `
+    <option value="${h.id}">
+      ${h.name}
+    </option>
+  `;
+}
 
-  const content = `
+const content = `
   <form>
     <div>
       <label>QuickHack</label>
@@ -46,25 +56,16 @@ export async function openQuickHackDialog(actor) {
   `;
 
   new Dialog({
-
     title: "Perform QuickHack",
-
     content,
-
     buttons: {
-
       apply: {
-
         label: "Execute",
-
         callback: async html => {
-
           const id =
             html.find("#hack").val();
-
           const hack =
             actor.items.get(id);
-
           await performQuickHack(
             actor,
             target,
@@ -73,19 +74,13 @@ export async function openQuickHackDialog(actor) {
         }
       }
     }
-
   }).render(true);
 }
 
-export async function performQuickHack(
-  actor,
-  target,
-  hack
-) {
-
+export async function performQuickHack( actor, target, hack) {
   const dv =
     hack.flags[
-      "cpred-edgerunners-quickhacks"
+      "cyberpunk-red-quickhacks"
     ].dv;
 
   const interfaceRank =
@@ -99,46 +94,31 @@ export async function performQuickHack(
       }
     ).roll();
 
-  await roll.toMessage({
-
-    flavor:
-      `${hack.name} DV ${dv}`
-
-  });
+  await roll.toMessage({ flavor: `${hack.name} DV ${dv}` });
 
   if (roll.total < dv) {
-
     ui.notifications.warn(
       `${hack.name} failed`
     );
-
     return;
   }
 
-  ui.notifications.info(
-    `${hack.name} succeeded`
-  );
+  ui.notifications.info( `${hack.name} succeeded` );
 
   await applyQuickHack(
+    actor,
     target,
     hack
   );
 }
 
-export function getInterfaceRank(
-  actor
-) {
+export function getInterfaceRank( actor ) {
 
-  const role =
-    actor.items.find(
-
+  const role = actor.items.find(
       i =>
         i.type === "role" &&
         i.system.mainRoleAbility ===
         "Interface"
-
     );
-
   return role?.system?.rank || 0;
-
 }

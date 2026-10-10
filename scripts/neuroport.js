@@ -1,18 +1,15 @@
 export function getSelfIceCount(actor) {
-
   const installs = actor.items.filter(
     i =>
       i.type === "cyberware" &&
-      i.name === "Self-ICE"
+      i.name.includes("Self-ICE")
   );
 
   return Math.min(installs.length, 3);
 }
 
 export function getPasswallDV(actor) {
-
   const count = getSelfIceCount(actor);
-
   switch (count) {
     case 1: return 6;
     case 2: return 8;
