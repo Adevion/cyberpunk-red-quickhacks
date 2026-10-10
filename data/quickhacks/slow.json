@@ -1,7 +1,7 @@
 {
   "name": "Slow",
   "type": "program",
-  "img": "icons/magic/time/hourglass-brown.webp",
+  "img": "modules/cyberpunk-red-quickhacks/icons/svg/slow.png",
   "effects": [],
   "flags": {
     "cpred-edgerunners-quickhacks": {

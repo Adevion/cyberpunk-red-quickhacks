@@ -1,7 +1,7 @@
 {
   "name": "Puppet",
   "type": "program",
-  "img": "icons/magic/control/debuff-chains-blue.webp",
+  "img": "modules/cyberpunk-red-quickhacks/icons/svg/puppet.png",
   "effects": [],
   "flags": {
     "cpred-edgerunners-quickhacks": {

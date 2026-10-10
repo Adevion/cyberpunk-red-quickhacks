@@ -1,7 +1,7 @@
 {
   "name": "Cyberware Malfunction",
   "type": "program",
-  "img": "icons/magic/death/skull-trio-blue.webp",
+  "img": "modules/cyberpunk-red-quickhacks/icons/svg/cyberware-malfunction.png",
   "effects": [],
   "flags": {
     "cpred-edgerunners-quickhacks": {

@@ -1,4 +1,4 @@
-import { registerSettings } from "./settings.js";
+import { registerSettings, registerSettingsMenu } from "./settings.js";
 import { registerEffects } from "./effects.js";
 import { buildCompendiums } from "./build-compendiums.js";
 import { registerSheetHooks } from "./sheet-hooks.js";
@@ -7,7 +7,9 @@ Hooks.once("init", () => {
   console.log("CPRED Edgerunners QuickHacks | Init");
 
   registerSettings();
+  registerSettingsMenu();
   registerEffects();
+
 });
 
 Hooks.once("ready", async () => {

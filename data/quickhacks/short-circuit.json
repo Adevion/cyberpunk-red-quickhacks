@@ -1,7 +1,7 @@
 {
   "name": "Short Circuit",
   "type": "program",
-  "img": "icons/magic/lightning/bolt-blue.webp",
+  "img": "modules/cyberpunk-red-quickhacks/icons/svg/short-circuit.png",
   "effects": [],
   "flags": {
     "cpred-edgerunners-quickhacks": {

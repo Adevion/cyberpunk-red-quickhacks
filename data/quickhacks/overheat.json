@@ -1,7 +1,7 @@
 {
   "name": "Overheat",
   "type": "program",
-  "img": "icons/magic/fire/flame-burning-skull-orange.webp",
+  "img": "modules/cyberpunk-red-quickhacks/icons/svg/overheat.png",
   "effects": [],
   "flags": {
     "cpred-edgerunners-quickhacks": {

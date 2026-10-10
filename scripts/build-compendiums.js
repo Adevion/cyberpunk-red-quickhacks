@@ -49,7 +49,7 @@ async function buildPack(def) {
     return;
   }
 
-  const source = foundry.utils.getRoute('${def.source}/index.json');
+  const source = foundry.utils.getRoute(`${def.source}/index.json`);
   const response = await fetch(source);
 
   if (!response.ok) {

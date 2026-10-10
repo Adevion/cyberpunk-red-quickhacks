@@ -1,7 +1,7 @@
 {
   "name": "Lure",
   "type": "program",
-  "img": "icons/magic/control/hypnosis-mesmerism-ring.webp",
+  "img": "modules/cyberpunk-red-quickhacks/icons/svg/lure.png",
   "effects": [],
   "flags": {
     "cpred-edgerunners-quickhacks": {

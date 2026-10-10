@@ -1,7 +1,7 @@
 {
   "name": "Impair Movement",
   "type": "program",
-  "img": "icons/svg/net.svg",
+  "img": "modules/cyberpunk-red-quickhacks/icons/svg/impair-movement.png",
   "effects": [],
   "flags": {
     "cpred-edgerunners-quickhacks": {

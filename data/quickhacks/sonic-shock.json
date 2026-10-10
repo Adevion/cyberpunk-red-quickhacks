@@ -1,7 +1,7 @@
 {
   "name": "Sonic Shock",
   "type": "program",
-  "img": "icons/magic/sonic/projectile-sound-rings-wave.webp",
+  "img": "modules/cyberpunk-red-quickhacks/icons/svg/sonic-shock.png",
   "effects": [],
   "flags": {
     "cpred-edgerunners-quickhacks": {

@@ -1,4 +1,9 @@
 {
+  "CPQH.Title": "Cyberpunk RED - QuickHacks",
+  "CPQH.Settings.RenameBackdoor.Name": "Rename Backdoor to Breach",
+  "CPQH.Settings.RenameBackdoor.Hint": "Rename the CPR Backdoor terminology to Breach when using Edgerunners content.",
+  "CPQH.Settings.RangeValidation.Name": "Enable QuickHack Range Validation",
+  "CPQH.Settings.RangeValidation.Hint": "Automatically validate QuickHack range before execution.",
   "CPEDG.QuickHack": "Perform QuickHack",
   "CPEDG.Breach": "Breach",
   "CPEDG.SelfICE": "Self-ICE",

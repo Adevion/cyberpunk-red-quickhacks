@@ -42,6 +42,19 @@
       "path": "languages/en.json"
     }
   ],
+  "packFolders": [
+    {
+      "name": "Cyberpunk RED: Edgerunners",
+      "sorting": "m",
+      "packs": [
+        "quickhacks",
+        "net-actions",
+        "cyberware",
+        "drugs",
+        "journals"
+      ]
+    }
+  ],
   "packs": [
     {
       "label": "Edgerunners QuickHacks",
