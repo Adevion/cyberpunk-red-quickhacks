@@ -9,7 +9,7 @@
     "maximum": "12"
   },
   "url": "https://github.com/Adevion/cyberpunk-red-quickhacks",
-  "manifest": "https://raw.githubusercontent.com/Adevion/cyberpunk-red-quickhacks/main/module.json",
+  "manifest": "https://raw.githubusercontent.com/Adevion/cyberpunk-red-quickhacks/latest/module.json",
   "download": "https://github.com/Adevion/cyberpunk-red-quickhacks/releases/latest/download/cyberpunk-red-quickhacks-0.0.1.zip",
   "license": "GPL-3.0",
   "relationships": {
