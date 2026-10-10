@@ -1,12 +1,17 @@
 {
-  "id": "cyperpunk-red-quickhacks",
-  "title": "Cyperpunk RED - Quickhacks",
+  "id": "cyberpunk-red-quickhacks",
+  "title": "Cyberpunk RED - Quickhacks",
   "description": "Adds Cyberpunk Edgerunners Mission Kit Quickhacks.",
   "version": "1.0.0",
   "compatibility": {
     "minimum": "12",
-    "verified": "12"
+    "verified": "12",
+    "maximum": "12"
   },
+  "url": "https://github.com/Adevion/cyberpunk-red-quickhacks",
+  "manifest": "https://raw.githubusercontent.com/Adevion/cyberpunk-red-quickhacks/main/module.json",
+  "download": "https://github.com/Adevion/cyberpunk-red-quickhacks/releases/latest/download/cyberpunk-red-quickhacks.zip",
+  "license": "GPL-3.0",
   "relationships": {
     "systems": [
       {

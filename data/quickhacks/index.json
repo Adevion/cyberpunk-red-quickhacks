@@ -1,0 +1,13 @@
+[
+"modules/cyberpunk-red-quickhacks/data/quickhacks/impair-movement.json",
+"modules/cyberpunk-red-quickhacks/data/quickhacks/sonic-shock.json",
+"modules/cyberpunk-red-quickhacks/data/quickhacks/overheat.json",
+"modules/cyberpunk-red-quickhacks/data/quickhacks/short-circuit.json",
+"modules/cyberpunk-red-quickhacks/data/quickhacks/cyberware-malfunction.json",
+"modules/cyberpunk-red-quickhacks/data/quickhacks/lure.json",
+"modules/cyberpunk-red-quickhacks/data/quickhacks/slow.json",
+"modules/cyberpunk-red-quickhacks/data/quickhacks/synapse-burnout.json",
+"modules/cyberpunk-red-quickhacks/data/quickhacks/puppet.json",
+"modules/cyberpunk-red-quickhacks/data/quickhacks/shard-ejection.json",
+"modules/cyberpunk-red-quickhacks/data/quickhacks/system-reset.json"
+]
