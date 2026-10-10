@@ -1,7 +1,7 @@
 {
   "name": "Overheat",
   "type": "program",
-  "img": "modules/cyberpunk-red-quickhacks/icons/svg/overheat.png",
+  "img": "modules/cyberpunk-red-quickhacks/icons/quickhacks/overheat.png",
   "effects": [],
   "flags": {
     "cpred-edgerunners-quickhacks": {

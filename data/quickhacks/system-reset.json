@@ -1,7 +1,7 @@
 {
   "name": "System Reset",
   "type": "program",
-  "img": "modules/cyberpunk-red-quickhacks/icons/svg/system-reset.png",
+  "img": "modules/cyberpunk-red-quickhacks/icons/quickhacks/system-reset.png",
   "effects": [],
   "flags": {
     "cpred-edgerunners-quickhacks": {

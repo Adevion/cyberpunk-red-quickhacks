@@ -1,7 +1,7 @@
 {
   "name": "Slow",
   "type": "program",
-  "img": "modules/cyberpunk-red-quickhacks/icons/svg/slow.png",
+  "img": "modules/cyberpunk-red-quickhacks/icons/quickhacks/slow.png",
   "effects": [],
   "flags": {
     "cpred-edgerunners-quickhacks": {

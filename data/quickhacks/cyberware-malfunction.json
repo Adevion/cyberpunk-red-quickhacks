@@ -1,7 +1,7 @@
 {
   "name": "Cyberware Malfunction",
   "type": "program",
-  "img": "modules/cyberpunk-red-quickhacks/icons/svg/cyberware-malfunction.png",
+  "img": "modules/cyberpunk-red-quickhacks/icons/quickhacks/cyberware-malfunction.png",
   "effects": [],
   "flags": {
     "cpred-edgerunners-quickhacks": {

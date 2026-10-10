@@ -1,6 +1,6 @@
 # Cyberpunk RED: Edgerunners QuickHacks
 
-A Foundry VTT module for Cyberpunk RED that adds the QuickHack system from the Cyberpunk: Edgerunners Mission Kit.
+A Foundry VTT module for Cyberpunk RED that adds the Quickhack system from the Cyberpunk: Edgerunners Mission Kit.
 
 ## Features
 
@@ -8,25 +8,14 @@ A Foundry VTT module for Cyberpunk RED that adds the QuickHack system from the C
 
 Adds 11 QuickHack Programs:
 
-#### Simple (DV 6)
-
 - Impair Movement
 - Sonic Shock
-
-#### Standard (DV 8)
-
 - Overheat
 - Short Circuit
-
-#### Difficult (DV 10)
-
 - Cyberware Malfunction
 - Lure
 - Slow
 - Synapse Burnout
-
-#### Advanced (DV 12)
-
 - Puppet
 - Shard Ejection
 - System Reset
@@ -44,16 +33,9 @@ Adds 11 QuickHack Programs:
 
 - Immunoblockers
 
-### Reference Journals
+### Reference Journal
 
-- QuickHack Reference
-- QuickHack Cost Table
-- QuickHack DV Reference
-- Neuroport Security
-- QuickHacking Cyberware
-- Direct Connection Netrunning
-- Self-ICE Rules
-- QuickHack Range Reference
+- Quickhack Rules Reference
 
 ## Automation
 
@@ -61,8 +43,8 @@ Current automation includes:
 
 - Breach DV calculation
 - Self-ICE detection
-- QuickHack execution dialog
-- QuickHack status effects
+- Quickhack execution dialog
+- Quickhack status effects
 - MOVE reduction effects
 - Damage automation for Synapse Burnout
 - Overheat state tracking
@@ -74,7 +56,7 @@ Current automation includes:
 
 The module adds:
 
-- QuickHacked
+- Quickhacked
 - Breached
 - Sonic Shock
 - System Reset
@@ -87,41 +69,8 @@ The module adds:
 
 ## Installation
 
-1. Download the latest release ZIP.
-2. Extract into:
+...
 
-   Data/modules/
-
-3. Enable:
-
-   Cyberpunk RED: Edgerunners QuickHacks
-
-4. Start your world.
-
-## Module Structure
-
-```text
-data/
-├── quickhacks/
-├── cyberware/
-├── drugs/
-├── netactions/
-└── journals/
-
-scripts/
-├── breach.js
-├── compendium-loader.js
-├── direct-connection.js
-├── effects.js
-├── flags.js
-├── migration.js
-├── module.js
-├── neuroport.js
-├── quickhack-effects.js
-├── quickhacks.js
-├── settings.js
-└── sheet-hooks.js
-```
 
 ## Current Known Limitations
 
@@ -155,14 +104,3 @@ Cyberpunk RED © R. Talsorian Games.
 Cyberpunk: Edgerunners © CD Projekt Red / Studio Trigger.
 
 This module is a fan-made add-on for Foundry VTT and is not affiliated with or endorsed by R. Talsorian Games, CD Projekt Red, or Foundry Gaming LLC.
-
-## Changelog
-
-### v1.0.0
-- Initial release
-- Added 11 QuickHacks
-- Added Breach NET Action
-- Added Perform QuickHack NET Action
-- Added Self-ICE
-- Added Immunoblockers
-- Added QuickHack journals

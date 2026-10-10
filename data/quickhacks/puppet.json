@@ -1,7 +1,7 @@
 {
   "name": "Puppet",
   "type": "program",
-  "img": "modules/cyberpunk-red-quickhacks/icons/svg/puppet.png",
+  "img": "modules/cyberpunk-red-quickhacks/icons/quickhacks/puppet.png",
   "effects": [],
   "flags": {
     "cpred-edgerunners-quickhacks": {

@@ -1,7 +1,7 @@
 {
   "name": "Sonic Shock",
   "type": "program",
-  "img": "modules/cyberpunk-red-quickhacks/icons/svg/sonic-shock.png",
+  "img": "modules/cyberpunk-red-quickhacks/icons/quickhacks/sonic-shock.png",
   "effects": [],
   "flags": {
     "cpred-edgerunners-quickhacks": {

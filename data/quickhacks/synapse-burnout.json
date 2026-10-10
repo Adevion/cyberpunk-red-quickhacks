@@ -1,7 +1,7 @@
 {
   "name": "Synapse Burnout",
   "type": "program",
-  "img": "modules/cyberpunk-red-quickhacks/icons/svg/synapse-burnout.png",
+  "img": "modules/cyberpunk-red-quickhacks/icons/quickhacks/synapse-burnout.png",
   "effects": [],
   "flags": {
     "cpred-edgerunners-quickhacks": {

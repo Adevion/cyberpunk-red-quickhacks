@@ -1,7 +1,7 @@
 {
   "name": "Lure",
   "type": "program",
-  "img": "modules/cyberpunk-red-quickhacks/icons/svg/lure.png",
+  "img": "modules/cyberpunk-red-quickhacks/icons/quickhacks/lure.png",
   "effects": [],
   "flags": {
     "cpred-edgerunners-quickhacks": {
