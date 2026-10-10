@@ -1,0 +1,12 @@
+{
+  "CPEDG.QuickHack": "Perform QuickHack",
+  "CPEDG.Breach": "Breach",
+  "CPEDG.SelfICE": "Self-ICE",
+  "CPEDG.Immunoblockers": "Immunoblockers",
+  "CPEDG.Neuroport": "Neuroport",
+  "CPEDG.DirectConnection": "Direct Connection",
+  "CPEDG.FirewallBreached": "Firewall Breached",
+  "CPEDG.QuickHacked": "QuickHacked",
+  "CPEDG.SystemReset": "System Reset",
+  "CPEDG.SonicShock": "Sonic Shock"
+}

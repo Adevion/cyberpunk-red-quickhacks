@@ -1,13 +1,14 @@
-flags.cpred-edgerunners = {
+export const DEFAULT_FLAGS = {
+
   neuroport: {
     selfIce: 0,
     firewallBreached: false,
     passwallsRemaining: 0,
-    directConnection: false,
-    lockoutUntil: null
+    lockoutUntil: null,
+    directConnection: false
   },
 
   quickhacks: {
     targetsThisTurn: []
   }
-}
+};

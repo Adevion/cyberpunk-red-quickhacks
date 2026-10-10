@@ -1,0 +1,16 @@
+.cpred-edgerunners {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.cpred-edgerunners button {
+  background: #111;
+  border: 1px solid #ff003c;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+.cpred-edgerunners button:hover {
+  background: #ff003c;
+}

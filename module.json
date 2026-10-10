@@ -1,7 +1,7 @@
 {
   "id": "cyperpunk-red-quickhacks",
   "title": "Cyperpunk RED - Quickhacks",
-  "description": "Adds Cyberpunk Edgerunners Mission Kit Quickhacks, Breach Action, and Self-ICE.",
+  "description": "Adds Cyberpunk Edgerunners Mission Kit Quickhacks.",
   "version": "1.0.0",
   "compatibility": {
     "minimum": "12",
@@ -22,6 +22,56 @@
     {
       "name": "Dwaallicht",
       "flags": {}
+    }
+  ],
+  "esmodules": [
+    "scripts/module.js"
+  ],
+  "styles": [
+    "styles/edgerunners.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "languages/en.json"
+    }
+  ],
+  "packs": [
+    {
+      "label": "Edgerunners QuickHacks",
+      "type": "Item",
+      "name": "quickhacks",
+      "path": "packs/quickhacks",
+      "system": "cyberpunk-red-core"
+    },
+    {
+      "label": "Edgerunners NET Actions",
+      "type": "Item",
+      "name": "net-actions",
+      "path": "packs/net-actions",
+      "system": "cyberpunk-red-core"
+    },
+    {
+      "label": "Edgerunners Cyberware",
+      "type": "Item",
+      "name": "cyberware",
+      "path": "packs/cyberware",
+      "system": "cyberpunk-red-core"
+    },
+    {
+      "label": "Edgerunners Drugs",
+      "type": "Item",
+      "name": "drugs",
+      "path": "packs/drugs",
+      "system": "cyberpunk-red-core"
+    },
+    {
+      "label": "Edgerunners Rulebook",
+      "type": "JournalEntry",
+      "name": "journals",
+      "path": "packs/journals",
+      "system": "cyberpunk-red-core"
     }
   ]
 }
