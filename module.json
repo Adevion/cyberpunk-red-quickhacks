@@ -1,0 +1,15 @@
+{
+  "id": "cyperpunk-red-quickhacks",
+  "title": "Cyperpunk RED - Quickhacks",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12"
+  },
+  "authors": [
+    {
+      "name": "Dwaallicht",
+      "flags": {}
+    }
+  ]
+}
