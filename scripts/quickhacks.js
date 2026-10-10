@@ -78,6 +78,10 @@ const content = `
 }
 
 export async function performQuickHack( actor, target, hack) {
+
+  console.log( "Hack", hack );
+  console.log( "Flags", hack.flags );
+
   const dv =
     hack.flags[
       "cyberpunk-red-quickhacks"

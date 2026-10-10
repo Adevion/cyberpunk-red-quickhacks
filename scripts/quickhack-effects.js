@@ -1,105 +1,76 @@
-export async function applyQuickHack(
-  attacker,
-  target,
-  hack
-) {
-
+export async function applyQuickHack( attacker, target, hack) {
   const name = hack.name;
-
   switch (name) {
-
     case "Impair Movement":
       return applyImpairMovement(
         attacker,
         target
       );
-
     case "Sonic Shock":
       return applySonicShock(
         attacker,
         target
       );
-
     case "Overheat":
       return applyOverheat(
         attacker,
         target
       );
-
     case "Short Circuit":
       return applyShortCircuit(
         attacker,
         target
       );
-
     case "Cyberware Malfunction":
       return applyCyberwareMalfunction(
         attacker,
         target
       );
-
     case "Lure":
       return applyLure(
         attacker,
         target
       );
-
     case "Slow":
       return applySlow(
         attacker,
         target
       );
-
     case "Synapse Burnout":
       return applySynapseBurnout(
         attacker,
         target
       );
-
     case "Puppet":
       return applyPuppet(
         attacker,
         target
       );
-
     case "Shard Ejection":
       return applyShardEjection(
         attacker,
         target
       );
-
     case "System Reset":
       return applySystemReset(
         attacker,
         target
       );
-
     default:
-
       ui.notifications.warn(
         `${name} has no automation yet.`
       );
-
   }
-
 }
 
-async function applyImpairMovement(
-  attacker,
-  target
-) {
-
+async function applyImpairMovement( attacker, target) {
   const effect = {
-
     name: "QuickHack - Impair Movement",
-
     icon:
       "icons/magic/time/hourglass-brown.webp",
-
     duration: {
       rounds: 20
     },
-
     changes: [
       {
         key:
@@ -110,35 +81,21 @@ async function applyImpairMovement(
     ]
   };
 
-  await target.createEmbeddedDocuments(
-    "ActiveEffect",
-    [effect]
-  );
-
-  await ChatMessage.create({
-    content:
-      `${target.name}'s MOVE is reduced by 1 for 20 rounds.`
-  });
-
+  await target.createEmbeddedDocuments( "ActiveEffect", [effect] );
+  await ChatMessage.create({ content: `${target.name}'s MOVE is reduced by 1 for 20 rounds.` });
 }
 
-async function applySonicShock(
-  attacker,
-  target
-) {
-
+async function applySonicShock( attacker, target ) {
   await target.toggleStatusEffect(
     "sonicShock",
     {
       active:true
     }
   );
-
   await ChatMessage.create({
     content:
       `${target.name} suffers Sonic Shock and Damaged Ear.`
   });
-
 }
 
 async function applyOverheat(

@@ -73,9 +73,22 @@ async function importEntry(pack, definition, file) {
 
   const data = await response.json();
 
+  /*const existing = pack.index.find(
+    e => e.name === data.name
+  );*/
+
   const existing = pack.index.find(
     e => e.name === data.name
   );
+  
+  if (existing) {
+    const doc =
+    await pack.getDocument(
+      existing._id
+    );
+  
+    await doc.delete();
+  }
 
   if (existing) return;
 
