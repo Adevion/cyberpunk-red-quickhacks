@@ -19,17 +19,25 @@ export function registerSheetHooks() {
 
       const controls = $(`
         <div class="cpred-edgerunners">
+
+          <div class="cpred-edgerunners-title">
+            <b>▶ NET Actions</b>
+          </div>
+
           <button class="cpred-breach">
-            Breach
+            <b>Breach</b> 
           </button>
+
           <button class="cpred-quickhack">
-            Perform QuickHack
+            <b>Perform QuickHack</b>
           </button>
+
         </div>
       `);
 
       html
-        .find(".role-tab-content")
+        .find(".fight-tab")
+        .first()
         .prepend(controls);
 
       controls

@@ -1,3 +1,6 @@
+import { applyQuickHack } from "./quickhack-effects.js";
+import "./quickhack-expiration.js";
+
 const QUICKHACKS = [
   "Impair Movement",
   "Sonic Shock",
@@ -36,7 +39,6 @@ const hacks = getQuickHacks(actor);
 let options = "";
 
 for (const h of hacks) {
-  console.log( "Hack:", h.name, h.id, h._id );
   options += `
     <option value="${h.id}">
       ${h.name}
@@ -78,42 +80,32 @@ const content = `
 }
 
 export async function performQuickHack( actor, target, hack) {
+  const dv = hack.flags[ "cyberpunk-red-quickhacks" ].dv;
+  const interfaceRank = getInterfaceRank(actor);
+  const roll = await new Roll( "1d10 + @rank", { rank: interfaceRank } ).roll();
+  const initialRoll = roll.terms[0].results[0].result;
+  const success = roll.total >= dv;
 
-  console.log( "Hack", hack );
-  console.log( "Flags", hack.flags );
-
-  const dv =
-    hack.flags[
-      "cyberpunk-red-quickhacks"
-    ].dv;
-
-  const interfaceRank =
-    getInterfaceRank(actor);
-
-  const roll =
-    await new Roll(
-      "1d10 + @rank",
+  const content =
+    await renderTemplate( "modules/cyberpunk-red-quickhacks/templates/chat/quickhack-rollcard.hbs",
       {
-        rank: interfaceRank
+        rollTitle: hack.name,
+        targetName: target.name,
+        dv,
+        initialRoll,
+        resultTotal: roll.total,
+        interfaceRank,
+        success
       }
-    ).roll();
-
-  await roll.toMessage({ flavor: `${hack.name} DV ${dv}` });
-
-  if (roll.total < dv) {
-    ui.notifications.warn(
-      `${hack.name} failed`
     );
+    
+  await ChatMessage.create({ speaker: ChatMessage.getSpeaker({ actor }), content });
+
+  if (!success) {
     return;
   }
 
-  ui.notifications.info( `${hack.name} succeeded` );
-
-  await applyQuickHack(
-    actor,
-    target,
-    hack
-  );
+  await applyQuickHack( actor, target, hack );
 }
 
 export function getInterfaceRank( actor ) {
