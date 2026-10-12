@@ -61,6 +61,14 @@ The module adds:
 - Sonic Shock
 - System Reset
 - Direct Connection
+- Lure
+- Puppet
+- Short Circuit
+- Cyberware Malfunction
+- System Reset
+- Slow
+- Impaired Movement
+- Overheat
 
 ## Requirements
 
