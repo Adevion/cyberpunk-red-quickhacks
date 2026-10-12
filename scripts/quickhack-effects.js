@@ -64,10 +64,10 @@ async function applyOverheat( attacker, target ) {
 
 async function applySlow( attacker, target ) {
   const roll = await new Roll("1d6").roll();
-  await roll.toMessage();
-
   const penalty = roll.total;
-  
+
+  await postRollCard( attacker, "Slow", target.name, `${target.name} suffers -${penalty} MOVE for 1 minute.`, roll, "d6" );
+    
   const created = await target.createEmbeddedDocuments(
     "ActiveEffect",
     [{
@@ -102,10 +102,6 @@ async function applySlow( attacker, target ) {
   );
 
   await target.setFlag( "cyberpunk-red-quickhacks", "slow", penalty );
-  await ChatMessage.create({ 
-    speaker: ChatMessage.getSpeaker({ actor: attacker }),
-    content: `<div class="cpr-evasion-result hit"> ${target.name} suffers -${penalty} MOVE for 1 minute.</div>` 
-  });
 }
 
 async function applySonicShock( attacker, target ) {
@@ -172,7 +168,7 @@ async function applyShortCircuit( attacker, target) {
     content: `
     <form>
     <label>
-      Select 3 Cyberware:
+      Select up to 3 pieces of Cyberware:
     </label>
     <br><br>
     <select multiple id="items">
@@ -180,7 +176,7 @@ async function applyShortCircuit( attacker, target) {
     </select>
     </form>
     <br>
-    <p>Cyberware will be disabled for 1 minute.</p>
+    <p>All Cyberware will be disabled for 1 minute.</p>
     `,
 
     buttons: {
@@ -401,22 +397,12 @@ async function applyLure( attacker, target ) {
 
 async function applySynapseBurnout( attacker, target ) {
   const roll = await new Roll("3d6").roll();
-  await roll.toMessage({ flavor: `Synapse Burnout on ${target.name}` });
+  await postRollCard( attacker, "Synapse Burnout", target.name, `${target.name} suffers ${roll.total} direct damage.`, roll, "d6" );
 
   const hp = target.system?.derivedStats?.hp?.value;
   if (hp !== undefined) {
     await target.update({"system.derivedStats.hp.value": Math.max(hp - roll.total, 0)});
   }
-
-  await ChatMessage.create({
-    speaker: ChatMessage.getSpeaker({ actor: attacker }),
-    content: `
-      <div class="cpr-evasion-result hit">
-        <h3>Synapse Burnout</h3>
-        <p> ${target.name} suffers <b>${roll.total}</b> direct damage. </p>
-      </div>
-    `
-  });
 }
 
 async function applyPuppet( attacker, target ) {
@@ -593,7 +579,6 @@ async function applyShardEjection(attacker, target) {
 }
 
 // Remove QuickHack Effects
-
 async function removeSlow( target ) {
   const slowEffects = target.effects.filter(
     e =>
@@ -660,6 +645,23 @@ async function applyCriticalInjury( actor, packName, injuryId ) {
       )
     }]
   );
+}
+
+export async function postRollCard( attacker, rollTitle, subTitle, description, roll, dieType = "d6" ) {
+  const faces = roll.terms[0].results.map( r => r.result );
+  const diceClass = faces.length <= 2 ? "d6 d6-60" : "d6 d6-40";
+
+  const content =
+    await renderTemplate(
+      "modules/cyberpunk-red-quickhacks/templates/chat/dice-rollcard.hbs",
+      { rollTitle, subTitle, description, faces, diceClass, dieType, resultTotal: roll.total }
+    );
+
+  await ChatMessage.create({
+    speaker: ChatMessage.getSpeaker({ actor: attacker }),
+    content
+  });
+
 }
 
 export async function applyQuickHack( attacker, target, hack ) {

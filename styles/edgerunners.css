@@ -33,3 +33,27 @@
 .cpred-edgerunners button:hover {
   color: #b90202;
 }
+
+.d6-60, .d10-60 {
+  width: 60px;
+  height: 60px;
+}
+
+.d6-40, .d10-40 {
+  width: 40px;
+  height: 40px;
+}
+
+.quickhack-result {
+  text-align: center;
+  margin: 6px 0;
+}
+
+.quickhack-result-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 175px;
+  max-height: 35px;
+  height: auto;
+  image-rendering: pixelated;
+}

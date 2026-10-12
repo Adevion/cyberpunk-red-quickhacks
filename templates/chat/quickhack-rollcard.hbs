@@ -21,11 +21,11 @@
           {{resultTotal}}
         </div>
         <div class="d10-data-div">
-          <div class="text-center">
+          <div class="quickhack-result {{#if success}}success{{else}}failure{{/if}}">
             {{#if success}}
-              SUCCESS
+              <img class="quickhack-result-image" src="modules/cyberpunk-red-quickhacks/images/pixel-preem.webp"/>
             {{else}}
-              FAILURE
+              <img class="quickhack-result-image" src="modules/cyberpunk-red-quickhacks/images/pixel-fail.webp"/>
             {{/if}}
           </div>
         </div>
