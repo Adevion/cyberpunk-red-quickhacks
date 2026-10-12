@@ -2,7 +2,7 @@
   "id": "cyberpunk-red-quickhacks",
   "title": "Cyberpunk RED - Quickhacks",
   "description": "Adds Cyberpunk Edgerunners Mission Kit Quickhacks.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "compatibility": {
     "minimum": "12",
     "verified": "12",
