@@ -49,7 +49,7 @@ for (const h of hacks) {
 const content = `
   <form>
     <div>
-      <label>QuickHack</label>
+      <label>Quickhack</label>
       <select id="hack">
         ${options}
       </select>
@@ -58,7 +58,7 @@ const content = `
   `;
 
   new Dialog({
-    title: "Perform QuickHack",
+    title: "Perform Quickhack",
     content,
     buttons: {
       apply: {

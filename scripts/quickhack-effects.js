@@ -35,7 +35,10 @@ async function applyImpairMovement( attacker, target ) {
   );
 
   await target.setFlag("cyberpunk-red-quickhacks", "impairedMovement", true );
-  await ChatMessage.create({ content: `${target.name}'s MOVE is reduced by 1 for 1 minute.` });
+  await ChatMessage.create({ 
+    speaker: ChatMessage.getSpeaker({ actor: attacker }),
+    content: `<div class="cpr-evasion-result hit"> ${target.name}'s MOVE is reduced by 1 for 1 minute.</div>`
+  });
 }
 
 async function applyOverheat( attacker, target ) {
@@ -54,7 +57,9 @@ async function applyOverheat( attacker, target ) {
     }]
   );
 
-  await ChatMessage.create({ content: `${target.name} is on fire. Suffers 4 HP damage at the end of each Turn.` });
+  await ChatMessage.create({ 
+    speaker: ChatMessage.getSpeaker({ actor: attacker }),
+    content: `<div class="cpr-evasion-result hit"> ${target.name} is on fire. Suffers 4 HP damage each Turn.</div>` });
 }
 
 async function applySlow( attacker, target ) {
@@ -66,7 +71,7 @@ async function applySlow( attacker, target ) {
   const created = await target.createEmbeddedDocuments(
     "ActiveEffect",
     [{
-      name: `Slow`,
+      name: "Slow",
       img: "modules/cyberpunk-red-quickhacks/icons/svg/sticky-boot.svg",
       changes: [{
         key: "system.stats.move.value",
@@ -97,7 +102,10 @@ async function applySlow( attacker, target ) {
   );
 
   await target.setFlag( "cyberpunk-red-quickhacks", "slow", penalty );
-  await ChatMessage.create({ content: `${target.name} suffers -${penalty} MOVE for 1 minute.` });
+  await ChatMessage.create({ 
+    speaker: ChatMessage.getSpeaker({ actor: attacker }),
+    content: `<div class="cpr-evasion-result hit"> ${target.name} suffers -${penalty} MOVE for 1 minute.</div>` 
+  });
 }
 
 async function applySonicShock( attacker, target ) {
@@ -107,9 +115,7 @@ async function applySonicShock( attacker, target ) {
     [{
       name: "Sonic Shock",
       img: "modules/cyberpunk-red-quickhacks/icons/svg/sonic-boom.svg",
-
       statuses: ["sonicShock"],
-
       flags: {
         "cyberpunk-red-core": {
           changes: {
@@ -132,55 +138,103 @@ async function applySonicShock( attacker, target ) {
 
   if (!alreadyHasInjury) {
     await applyCriticalInjury( target, "cyberpunk-red-core.core_critical-injuries-head", "qRkCxq0KTuBnw2wj" );
-    await ChatMessage.create({ content: `${target.name} suffers Sonic Shock for 1 minute.` });
+    await ChatMessage.create({ 
+      speaker: ChatMessage.getSpeaker({ actor: attacker }),
+      content: `<div class="cpr-evasion-result hit"> ${target.name} suffers Sonic Shock for 1 minute.</div>`
+   });
   } else {
-    await ChatMessage.create({ content: `${target.name} already suffers from Damaged Ear Critical Injury.` });
+    await ChatMessage.create({ 
+      speaker: ChatMessage.getSpeaker({ actor: attacker }),
+      content: `<div class="cpr-evasion-result hit"> ${target.name} already suffers from Damaged Ear Critical Injury.</div>` 
+    });
   }
 }
 
 async function applyShortCircuit( attacker, target) {
-  const cyberware =
-    target.items.filter(
-      i => i.type === "cyberware"
-    );
+  const cyberware = target.items.filter( 
+    i => i.type === "cyberware" && 
+    ![
+      "External (7 Option Slots)",
+      "Fashionware (7 Option Slots)",
+      "Internal (7 Option Slots)",
+      "Cyberarm",
+      "Cyberleg",
+      "Cybereye",
+      "Cyberaudio Suite",
+      "Neuralport",
+      "Neuralport Cyberdeck" 
+    ].includes(i.name)
+  );
 
-  const list =
-    cyberware
-      .map(i => `<option value="${i.id}">
-      ${i.name}
-      </option>`)
-      .join("");
-
+  const list = cyberware.map(i => `<option value="${i.id}"> ${i.name} </option>`).join("");
   new Dialog({
     title: "Short Circuit",
     content: `
     <form>
     <label>
-      Select 3 Cyberware
+      Select 3 Cyberware:
     </label>
+    <br><br>
     <select multiple id="items">
       ${list}
     </select>
     </form>
+    <br>
+    <p>Cyberware will be disabled for 1 minute.</p>
     `,
 
     buttons: {
       apply: {
         label: "Disable",
         callback: async html => {
-          const selected =
-            html
-              .find("#items")
-              .val();
-          for (const id of selected) {
-            const item =
-              target.items.get(id);
-            await item.setFlag(
-              "cyberpunk-red-quickhacks",
-              "disabledUntil",
-              game.combat?.round + 20
-            );
+          const selected = html.find("#items").val() ?? [];
+          if (selected.length === 0) {
+            ui.notifications.warn( "Select at least one Cyberware item." );
+            return;
           }
+
+          if (selected.length > 3) {
+            ui.notifications.warn( "Select a maximum of 3 Cyberware items." );
+            return;
+          }
+
+          const disabledNames = [];
+          for (const id of selected) {
+            const item = target.items.get(id);
+            if (!item) continue;
+            disabledNames.push(item.name);
+          }
+
+          // Apply Short Circuit effect
+          await target.createEmbeddedDocuments(
+            "ActiveEffect",
+            [{
+              name: "Short Circuit",
+              img: "modules/cyberpunk-red-quickhacks/icons/svg/sonic-lightning.svg",
+              statuses: ["shortCircuit"],
+              flags: {
+                "cyberpunk-red-quickhacks": {
+                  quickhack: "shortCircuit",
+                  expiresRound: (game.combat?.round ?? 0) + 20
+                }
+              }
+            }]
+          );
+
+          await ChatMessage.create({
+            speaker: ChatMessage.getSpeaker({ actor: attacker }),
+            content: `
+              <div class="cpr-evasion-result hit">
+              <h3>Short Circuit</h3>
+              <p> ${target.name}'s cyberware disabled: </p>
+              <ul>
+                ${disabledNames
+                  .map(name => `<li>${name}</li>` )
+                  .join("")}
+              </ul>
+              </div>
+            `
+          });
         }
       }
     }
@@ -188,44 +242,94 @@ async function applyShortCircuit( attacker, target) {
 }
 
 async function applyCyberwareMalfunction( attacker, target ) {
-  const cyberware =
-    target.items.filter(
-      i => i.type === "cyberware"
-    );
+const cyberware = target.items.filter(
+  i => i.type === "cyberware" &&
+  ![
+    "External (7 Option Slots)",
+    "Fashionware (7 Option Slots)",
+    "Internal (7 Option Slots)",
+    "Neuralport Cyberdeck",
+    "Neuralport"
+  ].includes(i.name)
+  );
 
-  let options = "";
-  for (const item of cyberware) {
-    options += `
-    <option value="${item.id}">
-      ${item.name}
-    </option>
-    `;
-  }
-
+  const list = cyberware.map(i => `<option value="${i.id}"> ${i.name} </option>`).join("");
   new Dialog({
-    title:
-      "Cyberware Malfunction",
+    title: "Cyberware Malfunction",
     content: `
-      <select id="cyber">
-        ${options}
+      <form>
+      <label>
+        Select a piece of Cyberware: 
+      </label>
+      <br><br>
+      <select id="items">
+        ${list}
       </select>
+      </form>
+      <br>
+      <p>Cyberware will malfunction for 1 minute.</p>
     `,
+
     buttons: {
       apply: {
         label: "Disable",
-        callback:
-        async html => {
-          const id =
-            html
-              .find("#cyber")
-              .val();
-          const item =
-            target.items.get(id);
-          await item.setFlag(
-            "cyberpunk-red-quickhacks",
-            "disabledUntil",
-            game.combat.round + 20
+        callback: async html => {
+          const selected = html.find("#items").val();
+          if (!selected) {
+            ui.notifications.warn( "Select a Cyberware item." );
+             return;
+          }
+          
+          const item = target.items.get(selected);
+          if (!item) return;
+
+          // Apply Critical Injury for specific cyberware
+          if ( item.name === "Cyberaudio Suite" ) {
+            await applyCriticalInjury( target, "cyberpunk-red-core.core_critical-injuries-head", "qRkCxq0KTuBnw2wj" ); // Damaged Ear
+          }
+          if ( item.name.includes("Cybereye") ) { 
+            await applyCriticalInjury( target, "cyberpunk-red-core.core_critical-injuries-body", "qoegLCfpEOQifeZq" ); // Damaged Eye
+          }
+          if ( item.name.includes("Cyberarm") ) { 
+            await applyCriticalInjury( target, "cyberpunk-red-core.core_critical-injuries-body", "Y65igO9rtakP4qSs" ); // Broken Arm
+          }
+          if ( item.name.includes("Cyberleg") ) {
+            await applyCriticalInjury( target, "cyberpunk-red-core.core_critical-injuries-body", "yBy9rlhgZeaWGtHh" ); // Broken Leg
+          }
+          if ( item.name.includes("Nasal Filters") ) {
+            await applyCriticalInjury( target, "cyberpunk-red-core.core_critical-injuries-body", "RAZcouFe0FS1VN1o" ); // Collapsed Lung
+          }
+          if ( item.name.includes("Subdermal Armor") ) {
+            await applyCriticalInjury( target, "cyberpunk-red-core.core_critical-injuries-body", "MQpiPgEtPaIe6MJ6" ); // Broken Ribs
+          }
+          
+          // Apply Cyberware Malfunction effect
+          await target.createEmbeddedDocuments(
+            "ActiveEffect",
+            [{
+              name: "Cyberware Malfunction",
+              img: "modules/cyberpunk-red-quickhacks/icons/svg/skeleton-inside.svg",
+              statuses: ["cyberwareMalfunction"],
+              flags: {
+                "cyberpunk-red-quickhacks": {
+                  quickhack: "cyberwareMalfunction",
+                  cyberwareId: item.id,
+                  cyberwareName: item.name,
+                  expiresRound: (game.combat?.round ?? 0) + 20
+                }
+              }
+            }]
           );
+
+          await ChatMessage.create({ 
+            speaker: ChatMessage.getSpeaker({ actor: attacker }),
+            content: `
+            <div class="cpr-evasion-result hit">
+             <h3>Cyberware Malfunction</h3>
+             <p> ${target.name}'s <b>${item.name}</b> malfunctions for 1 minute. </p>
+            </div>
+            `
+          });
         }
       }
     }
@@ -233,8 +337,66 @@ async function applyCyberwareMalfunction( attacker, target ) {
 }
 
 async function applyLure( attacker, target ) {
-  await target.setFlag( "cyberpunk-red-quickhacks", "lured", true );
-  await ChatMessage.create({ content: `Lure successful. GM: Move ${target.name}  at the start of their next Turn.` });
+  new Dialog({
+    title: "Lure",
+    content: `
+      <label>
+        ${target.name} is lured toward:
+      </label>
+      <br><br>
+      <input
+        id="instruction"
+        type="text"
+        placeholder="Security terminal"
+      >
+      <br>
+    `,
+    buttons: {
+      apply: {
+        label: "Lure",
+        callback: async html => {
+          const instruction = html.find("#instruction").val();
+          if (!instruction) { ui.notifications.warn( "Enter a destination." );
+            return;
+          }
+
+          await target.createEmbeddedDocuments(
+            "ActiveEffect",
+            [{
+              name: "Lure",
+              img: "modules/cyberpunk-red-quickhacks/icons/svg/fishing-lure.svg",
+              statuses: ["lured"],
+              flags: {
+                "cyberpunk-red-quickhacks": {
+                  quickhack: "lure",
+                  instruction,
+                  expiresRound:
+                    (game.combat?.round ?? 0) + 1
+                }
+              }
+            }]
+          );
+
+          const gmRecipients = ChatMessage.getWhisperRecipients("GM");
+          await ChatMessage.create({
+            whisper: gmRecipients.map(u => u.id),
+            speaker: ChatMessage.getSpeaker({ actor: attacker }),
+            content: `
+              <div class="cpr-evasion-result hit">
+                <h3>Lure Instruction</h3>
+                <p> ${target.name} is lured toward: <b>${instruction}</b> </p>
+              </div>
+            `
+          });
+
+          await ChatMessage.create({
+            speaker: ChatMessage.getSpeaker({ actor: attacker }),
+            content: ` <div class="cpr-evasion-result hit"> Lure successful. </div> `
+          });
+        }
+      }
+    }
+  }).render(true);
 }
 
 async function applySynapseBurnout( attacker, target ) {
@@ -245,20 +407,112 @@ async function applySynapseBurnout( attacker, target ) {
   if (hp !== undefined) {
     await target.update({"system.derivedStats.hp.value": Math.max(hp - roll.total, 0)});
   }
+
+  await ChatMessage.create({
+    speaker: ChatMessage.getSpeaker({ actor: attacker }),
+    content: `
+      <div class="cpr-evasion-result hit">
+        <h3>Synapse Burnout</h3>
+        <p> ${target.name} suffers <b>${roll.total}</b> direct damage. </p>
+      </div>
+    `
+  });
 }
 
 async function applyPuppet( attacker, target ) {
-  await target.setFlag("cyberpunk-red-quickhacks", "puppeted", true);
-  await ChatMessage.create({content:`Puppet successful. GM/Netrunner controls: • Move Action • Action during the target's next Turn.` });
+  new Dialog({
+    title: "Puppet",
+    content: `
+      <label>
+        ${target.name} is controled to do:
+      </label>
+      <br><br>
+      <input
+        id="instruction"
+        type="text"
+        placeholder="Security terminal"
+      >
+      <br>
+    `,
+    buttons: {
+      apply: {
+        label: "Puppet",
+        callback: async html => {
+          const instruction = html.find("#instruction").val();
+          if (!instruction) { ui.notifications.warn( "Enter a action." );
+            return;
+          }
+
+          await target.createEmbeddedDocuments(
+            "ActiveEffect",
+            [{
+              name: "Puppet",
+              img: "modules/cyberpunk-red-quickhacks/icons/svg/puppet.svg",
+              statuses: ["controled"],
+              flags: {
+                "cyberpunk-red-quickhacks": {
+                  quickhack: "lure",
+                  instruction,
+                  expiresRound:
+                    (game.combat?.round ?? 0) + 1
+                }
+              }
+            }]
+          );
+
+          const gmRecipients = ChatMessage.getWhisperRecipients("GM");
+          await ChatMessage.create({
+            whisper: gmRecipients.map(u => u.id),
+            speaker: ChatMessage.getSpeaker({ actor: attacker }),
+            content: `
+              <div class="cpr-evasion-result hit">
+                <h3>Command Instruction</h3>
+                <p> ${target.name} is command to: <b>${instruction}</b> </p>
+              </div>
+            `
+          });
+
+          await ChatMessage.create({
+            speaker: ChatMessage.getSpeaker({ actor: attacker }),
+            content: ` <div class="cpr-evasion-result hit"> Puppet successful. </div> `
+          });
+        }
+      }
+    }
+  }).render(true);
 }
 
 async function applySystemReset( attacker, target ) {
-  await target.toggleStatusEffect("systemReset",  { active:true } );
-  await ChatMessage.create({ content: `${target.name} falls unconscious and prone for 20 rounds or until damaged.` });
+  await target.createEmbeddedDocuments(
+    "ActiveEffect",
+    [{
+      name: "System Reset",
+      img: "modules/cyberpunk-red-quickhacks/icons/svg/unconcious.svg",
+      statuses: ["systemReset"],
+      flags: {
+        "cyberpunk-red-quickhacks": {
+          quickhack: "systemReset",
+          expiresRound:
+            (game.combat?.round ?? 0) + 20
+        }
+      }
+    }]
+  );
+
+  await target.toggleStatusEffect( "unconscious", { active: true } );
+  await target.toggleStatusEffect( "prone", { active: true } );
+
+  await ChatMessage.create({ speaker: ChatMessage.getSpeaker({ actor: attacker }),
+    content: `
+      <div class="cpr-evasion-result hit">
+        <h3>System Reset</h3>
+        <p> ${target.name} falls unconscious and prone for 1 minute or until damaged. </p>
+      </div>
+    `
+  });
 }
 
-async function applyShardEjection( attacker, target ) {
-
+async function applyShardEjection(attacker, target) {
   const chipware = target.items.filter(i => {
     if (i.type !== "cyberware") return false;
     return (
@@ -269,105 +523,71 @@ async function applyShardEjection( attacker, target ) {
   });
 
   if (chipware.length === 0) {
-    ui.notifications.warn(
-      `${target.name} has no installed chipware.`
-    );
+    ui.notifications.warn( `${target.name} has no installed chipware.` );
     return;
   }
 
-  let options = "";
-  for (const item of chipware) {
-    options += `
-      <option value="${item.id}">
-        ${item.name}
-      </option>
-    `;
-  }
+  const options = chipware
+    .map(item => `<option value="${item.id}"> ${item.name} </option>` )
+    .join("");
 
   new Dialog({
     title: "Shard Ejection",
     content: `
       <form>
-        <div class="form-group">
-          <label>Chipware To Eject</label>
-          <select id="chipware">
-            ${options}
-          </select>
-        </div>
+        <label>
+          Chipware To Eject:
+        </label>
+        <br><br>
+        <select id="chipware">
+          ${options}
+        </select>
       </form>
+      <br>
+      <p> The selected shard will be forcibly ejected. </p>
     `,
+
     buttons: {
       eject: {
         label: "Eject",
         callback: async html => {
-          const itemId =
-            html.find("#chipware").val();
-          const item =
-            target.items.get(itemId);
+          const itemId = html.find("#chipware").val();
+          if (!itemId) return;
+          const item = target.items.get(itemId);
           if (!item) return;
-          /*
-           * Create a dropped copy
-           * for recovery later.
-           */
-          const droppedData =
-            foundry.utils.deepClone(
-              item.toObject()
-            );
-          droppedData.name =
-            `${item.name} (Ejected)`;
-          await Item.create(
-            droppedData,
+          const shardName = item.name;
+
+          await item.uninstall({ skipDialog: true });
+
+          //await item.delete();
+          await target.setFlag( "cyberpunk-red-quickhacks", "lastShardEjection",
             {
-              temporary: false
+              round: game.combat?.round ?? 0,
+              shard: shardName
             }
           );
 
-          /*
-           * Remove
-           * from target.
-           */
-
-          await item.delete();
-
-          /*
-           * Mark target.
-           */
-
-          await target.setFlag(
-            "cyberpunk-red-quickhacks",
-            "lastShardEjection",
-            {
-              round:
-                game.combat?.round ?? 0,
-              shard:
-                item.name
-            }
-          );
-
-          ChatMessage.create({
-            speaker: { actor: attacker },
-
+          const gmRecipients = ChatMessage.getWhisperRecipients( "GM" );
+          await ChatMessage.create({
+            whisper: gmRecipients.map( u => u.id ),
+            speaker: ChatMessage.getSpeaker({ actor: attacker }),
             content: `
-              <h2>Shard Ejection</h2>
-              <p>
-              ${attacker.name}
-              forcibly ejected
-              <b>${item.name}</b>
-              from
-              ${target.name}.
-              </p>
-              <p>
-              The shard lands in an
-              adjacent square.
-              </p>
+              <div class="cpr-evasion-result hit">
+                <h3> Shard Ejection </h3>
+                <p> <b>${shardName}</b> has been forcibly ejected from ${target.name}. </p>
+                <p> The shard is airborne and lands in an adjacent square. </p>
+                <p> Remove the chip from inventory if it is not recovered. </p>
+              </div>
             `
+          });
+
+          await ChatMessage.create({
+            speaker: ChatMessage.getSpeaker({ actor: attacker }),
+            content: ` <div class="cpr-evasion-result hit"> Shard Ejection successful. </div> `
           });
         }
       },
-
-      cancel: {
-        label: "Cancel"
-      }
+      cancel: { label: "Cancel" }
     }
   }).render(true);
 }

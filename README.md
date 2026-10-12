@@ -97,10 +97,19 @@ The following systems are partially automated and may still require GM interacti
 
 GPL-3.0
 
-## Credits
+### Credits
 
-Cyberpunk RED © R. Talsorian Games.
-
+Cyberpunk RED © R. Talsorian Games.  
 Cyberpunk: Edgerunners © CD Projekt Red / Studio Trigger.
+
+#### Game Icons
+
+This module uses icons from [Game Icons](https://game-icons.net).
+
+Icons are licensed under the **Creative Commons Attribution 3.0 License (CC BY 3.0)**. Attribution belongs to the original icon artists as listed on Game Icons.
+
+#### Development Assistance
+
+Development, coding assistance, debugging support, and documentation were provided with the help of **Microsoft Copilot**.
 
 This module is a fan-made add-on for Foundry VTT and is not affiliated with or endorsed by R. Talsorian Games, CD Projekt Red, or Foundry Gaming LLC.

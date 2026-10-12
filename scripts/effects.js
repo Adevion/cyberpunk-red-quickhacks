@@ -15,6 +15,26 @@ export const QUICKHACK_EFFECTS = [
     icon: "modules/cyberpunk-red-quickhacks/icons/svg/sonic-boom.svg"
   },
   {
+    id: "lure",
+    label: "Lure",
+    icon: "modules/cyberpunk-red-quickhacks/icons/svg/fishing-lure.svg"
+  },
+  {
+    id: "puppet",
+    label: "Puppet",
+    icon: "modules/cyberpunk-red-quickhacks/icons/svg/puppet.svg"
+  },
+  {
+    id: "shortCircuit",
+    label: "Short Circuit",
+    icon: "modules/cyberpunk-red-quickhacks/icons/svg/sonic-lightning.svg"
+  },
+  {
+    id: "cyberwareMalfunction",
+    label: "Cyberware Malfunction",
+    icon: "modules/cyberpunk-red-quickhacks/icons/svg/skeleton-inside.svg"
+  },
+  {
     id: "systemReset",
     label: "System Reset",
     icon: "modules/cyberpunk-red-quickhacks/icons/svg/unconcious.svg"

@@ -22,9 +22,7 @@
     "installedItems": {
       "allowed": false,
       "allowedTypes": [],
-      "list": [],
-      "slots": 0,
-      "usedSlots": 0
+      "list": []
     },
     "source": {
       "book": "CEMK",
