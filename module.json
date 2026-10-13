@@ -1,7 +1,7 @@
 {
-  "id": "cyberpunk-red-quickhacks-dev",
-  "title": "Cyberpunk RED - Quickhacks DEV",
-  "description": "Adds Cyberpunk Edgerunners Mission Kit Quickhacks. Develoment Edition",
+  "id": "cyberpunk-red-quickhacks",
+  "title": "Cyberpunk RED - Quickhacks",
+  "description": "Adds Cyberpunk Edgerunners Mission Kit Quickhacks.",
   "version": "0.1.0",
   "compatibility": {
     "minimum": "12",
@@ -44,7 +44,7 @@
   ],
   "packFolders": [
     {
-      "name": "Cyberpunk RED: Edgerunners DEV",
+      "name": "Cyberpunk RED: Edgerunners",
       "sorting": "m",
       "packs": [
         "quickhacks",
