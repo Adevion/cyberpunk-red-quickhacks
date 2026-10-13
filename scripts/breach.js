@@ -14,14 +14,30 @@ export async function performBreach(actor, target) {
   }
 
   const interfaceRank = getInterfaceRank(actor);
-  //const roll = await new Roll( "1d10 + @rank", { rank: interfaceRank }).roll();
   const roll = new CPRRolls.CPRInterfaceRoll("action", "Interface", interfaceRank);
   const keepRolling = await roll.handleRollDialog({ type: "manual" }, actor );
   if (!keepRolling) { return false; }
 
+  const currentLuck = Number(actor.system.stats.luck.value ?? 0)
+  const requestedLuck = Number(roll.luck ?? 0);
+
+  // TODO:
+  // CPR currently allows spending more Luck than available.
+  // Roll receives full entered value and then reduces Luck to 0.
+  // This behavior also exists in native CPR rolls.
+  // Do not alter locally until a CPR-compatible solution is decided.
+
+  console.log("Luck Anti-Cheat");
+  console.log("Requested Luck:", requestedLuck);
+  console.log("Current Luck:", currentLuck);
+  console.log("Applied Luck:", roll.luck);
+
   await roll.roll();
 
-  console.log("CPR Roll", roll);
+  // Luck Deduction
+  if (roll.luck > 0) {
+    await actor.update({ "system.stats.luck.value": currentLuck - roll.luck });
+  }
 
   let breachResult = ""
   let success = false;
@@ -48,7 +64,8 @@ export async function performBreach(actor, target) {
     target.name, 
     breachResult, 
     roll, 
-    "d10"
+    "d10",
+    interfaceRank
   );
 
   return success;

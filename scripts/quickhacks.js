@@ -1,3 +1,7 @@
+// Cyberpunk RED Core Imports
+import * as CPRRolls from  "../../../systems/cyberpunk-red-core/modules/rolls/cpr-rolls.js";
+
+// Quickhack Imports
 import { applyQuickHack } from "./quickhack-effects.js";
 import "./quickhack-expiration.js";
 
@@ -49,10 +53,20 @@ for (const h of hacks) {
 const content = `
   <form>
     <div>
+      Target: ${target.name}
+    </div>
+
+    <div class="form-group">
       <label>Quickhack</label>
       <select id="hack">
         ${options}
       </select>
+    </div>
+
+    <hr/>
+
+    <div class="text-small">
+      Select a Quickhack and press Execute.
     </div>
   </form>
   `;
@@ -82,10 +96,45 @@ const content = `
 export async function performQuickHack( actor, target, hack) {
   const dv = hack.flags[ "cyberpunk-red-quickhacks" ].dv;
   const interfaceRank = getInterfaceRank(actor);
-  const roll = await new Roll( "1d10 + @rank", { rank: interfaceRank } ).roll();
-  const initialRoll = roll.terms[0].results[0].result;
-  const success = roll.total >= dv;
+  const roll = new CPRRolls.CPRInterfaceRoll("action", "Quickhack", interfaceRank);
+  const keepRolling = await roll.handleRollDialog({ type: "manual" }, actor );
+  if (!keepRolling) { return false; }
 
+  const currentLuck = Number(actor.system.stats.luck.value ?? 0)
+  const requestedLuck = Number(roll.luck ?? 0);
+
+  // TODO:
+  // CPR currently allows spending more Luck than available.
+  // Roll receives full entered value and then reduces Luck to 0.
+  // This behavior also exists in native CPR rolls.
+  // Do not alter locally until a CPR-compatible solution is decided.
+
+  console.log("Luck Anti-Cheat");
+  console.log("Requested Luck:", requestedLuck);
+  console.log("Current Luck:", currentLuck);
+  console.log("Applied Luck:", roll.luck);
+
+  await roll.roll();
+
+  // Luck Deduction
+  if (roll.luck > 0) {
+    await actor.update({ "system.stats.luck.value": currentLuck - roll.luck });
+  }
+
+  const initialRoll = roll.initialRoll ?? 0;
+  const resultTotal = roll.resultTotal ?? roll.total ?? 0;
+  const success = roll.resultTotal >= dv;
+
+  const wasCritSuccess = roll.wasCritSuccess?.() ?? false;
+  const wasCritFail = roll.wasCritFail?.() ?? false;
+  const criticalRoll = roll.criticalRoll ?? 0;
+
+  const totalMods = roll.totalMods?.() ?? 0;
+  const modifiers = roll.mods ?? [];
+  const hasModifiers = modifiers.length > 0 || totalMods !== 0;
+  const luck = roll.luck ?? 0;
+  const totalModsDisplay = totalMods >= 0 ? `+${totalMods}` : `${totalMods}`;
+ 
   const content =
     await renderTemplate( "modules/cyberpunk-red-quickhacks/templates/chat/quickhack-rollcard.hbs",
       {
@@ -93,8 +142,20 @@ export async function performQuickHack( actor, target, hack) {
         targetName: target.name,
         dv,
         initialRoll,
-        resultTotal: roll.total,
+        resultTotal,
         interfaceRank,
+
+        wasCritSuccess,
+        wasCritFail,
+        criticalRoll,
+
+        hasModifiers,
+        modifiers,
+        totalMods,
+        totalModsDisplay,
+
+        luck,
+
         success
       }
     );

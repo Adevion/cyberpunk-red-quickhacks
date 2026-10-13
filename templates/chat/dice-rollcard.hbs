@@ -16,21 +16,93 @@
 
   <div class="rollcard-bottom">
     <div class="cpr-block">
-      <div class="d6-rollcard-data">
-        <div class="d6-dice-div">
-            {{#each faces as |dieFace| }}
-                <img class="{{../diceClass}}" src="systems/cyberpunk-red-core/icons/dice/black/{{../dieType}}_{{dieFace}}.svg"/>
-            {{/each}}
+      <div class="d10-rollcard-data">
+
+        <div class="d10-dice-div">
+          {{#each faces as |dieFace| }}
+            <img class="{{../diceClass}}" src="systems/cyberpunk-red-core/icons/dice/black/{{../dieType}}_{{dieFace}}.svg"/> 
+          {{/each}}
+
+          {{#if isD10Roll}}
+            {{#if wasCritSuccess}}
+              <i class="fas fa-plus"></i> <img class="{{diceClass}}" src="systems/cyberpunk-red-core/icons/dice/red/{{dieType}}_{{criticalRoll}}.svg"/>
+            {{/if}}
+
+            {{#if wasCritFail}}
+              <i class="fas fa-minus"></i> <img class="{{diceClass}}" src="systems/cyberpunk-red-core/icons/dice/black/{{dieType}}_{{criticalRoll}}.svg"/>
+            {{/if}}
+          {{/if}}
+
+          {{#if isD6Roll}}
+            {{#if criticalBonus}}
+              <div class="text-normal text-semi">
+                <i class="fas fa-plus"></i> <img class="{{diceClass}}" src="systems/cyberpunk-red-core/icons/dice/black/{{dieType}}_{{criticalBonus}}.svg"/>
+              </div>
+            {{/if}}
+          {{/if}}
+
         </div>
-        <div class="d6-number-div">
-            <span>{{resultTotal}}</span>
+
+        <div class="d10-number-div">
+          <a> 
+            <span class="clickable" data-action="toggleVisibility" data-visible-element="d10-data-details">
+              {{resultTotal}}
+            </span>
+          </a>
         </div>
-        <div class="d6-data-div">
+
+        <div class="d10-data-div">
+          <div class="d10-data-details hide">
+            {{#if interfaceRank}}
+              <div class="text-normal text-semi">
+                Interface +{{interfaceRank}}
+              </div>
+            {{/if}}
+
+            {{#if isD6Roll}}
+              {{#if criticalBonus}}
+                <div class="text-normal text-semi">
+                  Critical Damage +{{criticalBonus}}
+                </div>
+              {{/if}}
+            {{/if}}   
+
+            {{#if isD10Roll}}
+              {{#if wasCritSuccess}}
+                <div class="text-normal text-semi">
+                  Critical Success +{{criticalRoll}}
+                </div>
+              {{/if}}
+
+              {{#if wasCritFail}}
+                <div class="text-normal text-semi">
+                  Critical Failure -{{criticalRoll}}
+                </div>
+              {{/if}}
+            {{/if}}
+
+            {{#if hasModifiers}}
+              <div class="text-normal text-semi text-nowrap" data-tooltip="
+              {{#each modifiers}} 
+                {{this.source}}: {{this.value}} <br/>
+              {{/each}}
+              "> Total Mods {{{totalModsDisplay}}}
+              </div>
+            {{/if}}
+
+            {{#if luck}}
+              <div class="text-normal text-semi">
+                LUCK +{{luck}}
+              </div>
+            {{/if}}
+          </div>
+
           {{#if description}}
             <div class="quickhack-result">
               {{{description}}}
             </div>
           {{/if}}
+
         </div>
       </div>
     </div>

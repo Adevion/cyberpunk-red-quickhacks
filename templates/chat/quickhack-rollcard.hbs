@@ -16,11 +16,62 @@
       <div class="d10-rollcard-data">
         <div class="d10-dice-div">
           <img class="d10" src="systems/cyberpunk-red-core/icons/dice/black/d10_{{initialRoll}}.svg">
+
+          {{#if wasCritSuccess}}
+            <i class="fas fa-plus"></i> <img class="d10" src="systems/cyberpunk-red-core/icons/dice/red/d10_{{criticalRoll}}.svg"/>
+          {{/if}}
+
+          {{#if wasCritFail}}
+            <i class="fas fa-minus"></i> <img class="d10" src="systems/cyberpunk-red-core/icons/dice/black/d10_{{criticalRoll}}.svg"/>
+          {{/if}}
+
         </div>
+
         <div class="d10-number-div">
-          {{resultTotal}}
+          <a> 
+            <span class="clickable" data-action="toggleVisibility" data-visible-element="d10-data-details">
+              {{resultTotal}}
+            </span>
+          </a>
         </div>
+
         <div class="d10-data-div">
+
+          <div class="d10-data-details hide">
+            {{#if interfaceRank}}
+              <div class="text-normal text-semi">
+                Interface +{{interfaceRank}}
+              </div>
+            {{/if}}
+
+            {{#if wasCritSuccess}}
+              <div class="text-normal text-semi">
+                Critical Success +{{criticalRoll}}
+              </div>
+            {{/if}}
+
+            {{#if wasCritFail}}
+              <div class="text-normal text-semi">
+                Critical Failure -{{criticalRoll}}
+              </div>
+            {{/if}}
+
+            {{#if hasModifiers}}
+              <div class="text-normal text-semi text-nowrap" data-tooltip="
+              {{#each modifiers}} 
+                {{this.source}}: {{this.value}} <br/>
+              {{/each}}
+              "> Total Mods {{{totalModsDisplay}}}
+              </div>
+            {{/if}}
+
+            {{#if luck}}
+              <div class="text-normal text-semi">
+                LUCK +{{luck}}
+              </div>
+            {{/if}}
+          </div>
+
           <div class="quickhack-result {{#if success}}success{{else}}failure{{/if}}">
             {{#if success}}
               <img class="quickhack-result-image" src="modules/cyberpunk-red-quickhacks/images/pixel-preem.webp"/>

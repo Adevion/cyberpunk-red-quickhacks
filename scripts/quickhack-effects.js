@@ -1,3 +1,6 @@
+// Cyberpunk RED Core Imports
+import * as CPRRolls from  "../../../systems/cyberpunk-red-core/modules/rolls/cpr-rolls.js";
+
 // Apply QuickHack Effects
 async function applyImpairMovement( attacker, target ) {
   const penalty = 1;
@@ -63,8 +66,10 @@ async function applyOverheat( attacker, target ) {
 }
 
 async function applySlow( attacker, target ) {
-  const roll = await new Roll("1d6").roll();
-  const penalty = roll.total;
+  const roll = new CPRRolls.CPRDamageRoll( "Slow", "1d6", "program" );
+ 
+  await roll.roll();
+  let penalty = roll.resultTotal;
 
   await postRollCard( attacker, "Slow", target.name, `${target.name} suffers -${penalty} MOVE for 1 minute.`, roll, "d6" );
     
@@ -164,18 +169,19 @@ async function applyShortCircuit( attacker, target) {
 
   const list = cyberware.map(i => `<option value="${i.id}"> ${i.name} </option>`).join("");
   new Dialog({
-    title: "Short Circuit",
+    title: "Short Circuit ▼",
     content: `
     <form>
     <label>
       Select up to 3 pieces of Cyberware:
     </label>
     <br><br>
-    <select multiple id="items">
+    <select multiple id="items" style="width:100%;">
       ${list}
     </select>
     </form>
     <br>
+    <p>Target: ${target.name}</p>
     <p>All Cyberware will be disabled for 1 minute.</p>
     `,
 
@@ -251,18 +257,19 @@ const cyberware = target.items.filter(
 
   const list = cyberware.map(i => `<option value="${i.id}"> ${i.name} </option>`).join("");
   new Dialog({
-    title: "Cyberware Malfunction",
+    title: "Cyberware Malfunction ▼",
     content: `
       <form>
       <label>
         Select a piece of Cyberware: 
       </label>
       <br><br>
-      <select id="items">
+      <select id="items" style="width:100%;">
         ${list}
       </select>
       </form>
       <br>
+      <p>Target: ${target.name}</p>
       <p>Cyberware will malfunction for 1 minute.</p>
     `,
 
@@ -336,16 +343,15 @@ async function applyLure( attacker, target ) {
   new Dialog({
     title: "Lure",
     content: `
-      <label>
-        ${target.name} is lured toward:
-      </label>
+      <form>
+        <label>
+          ${target.name} is lured toward:
+        </label>
+        <br><br>
+        <input id="instruction" type="text" placeholder="Security terminal">
+      </form>
       <br><br>
-      <input
-        id="instruction"
-        type="text"
-        placeholder="Security terminal"
-      >
-      <br>
+
     `,
     buttons: {
       apply: {
@@ -391,17 +397,22 @@ async function applyLure( attacker, target ) {
           });
         }
       }
-    }
+    },
+    default: "apply"
   }).render(true);
 }
 
 async function applySynapseBurnout( attacker, target ) {
-  const roll = await new Roll("3d6").roll();
-  await postRollCard( attacker, "Synapse Burnout", target.name, `${target.name} suffers ${roll.total} direct damage.`, roll, "d6" );
+  const roll = new CPRRolls.CPRDamageRoll( "Synapse Burnout", "3d6", "program" );
+  
+  await roll.roll();
+  await postRollCard( attacker, "Synapse Burnout", target.name, `${target.name} suffers ${roll.resultTotal} direct damage.`, roll, "d6");
 
   const hp = target.system?.derivedStats?.hp?.value;
   if (hp !== undefined) {
-    await target.update({"system.derivedStats.hp.value": Math.max(hp - roll.total, 0)});
+    let damage = roll.resultTotal;
+    if (roll.wasCritSuccess()) { damage += roll.bonusDamage; }
+    await target.update({"system.derivedStats.hp.value": Math.max(hp - damage, 0)});
   }
 }
 
@@ -409,16 +420,14 @@ async function applyPuppet( attacker, target ) {
   new Dialog({
     title: "Puppet",
     content: `
-      <label>
-        ${target.name} is controled to do:
-      </label>
+      <form>
+        <label>
+          ${target.name} is controled to do:
+        </label>
+        <br><br>
+        <input id="instruction" type="text" placeholder="Security terminal">
+      </form>
       <br><br>
-      <input
-        id="instruction"
-        type="text"
-        placeholder="Security terminal"
-      >
-      <br>
     `,
     buttons: {
       apply: {
@@ -464,7 +473,8 @@ async function applyPuppet( attacker, target ) {
           });
         }
       }
-    }
+    },
+    default: "apply"
   }).render(true);
 }
 
@@ -518,18 +528,19 @@ async function applyShardEjection(attacker, target) {
     .join("");
 
   new Dialog({
-    title: "Shard Ejection",
+    title: "Shard Ejection ▼",
     content: `
       <form>
         <label>
           Chipware To Eject:
         </label>
         <br><br>
-        <select id="chipware">
+        <select id="chipware" style="width:100%;">
           ${options}
         </select>
       </form>
       <br>
+      <p>Target: ${target.name}</p>
       <p> The selected shard will be forcibly ejected. </p>
     `,
 
@@ -647,21 +658,58 @@ async function applyCriticalInjury( actor, packName, injuryId ) {
   );
 }
 
-export async function postRollCard( attacker, rollTitle, subTitle, description, roll, dieType = "d6" ) {
-  const faces = roll.terms[0].results.map( r => r.result );
+export async function postRollCard( attacker, rollTitle, subTitle, description, roll, dieType = "d6", interfaceRank ) {
+  const faces = roll.faces ?? roll.terms?.[0]?.results?.map(r => r.result) ?? [];
+  const resultTotal = roll.resultTotal ?? roll.total ?? 0;
   const diceClass = faces.length <= 2 ? "d6 d6-60" : "d6 d6-40";
+  const wasCritSuccess = roll.wasCritSuccess?.() ?? false;
+  const wasCritFail = roll.wasCritFail?.() ?? false;
+  const criticalRoll = roll.criticalRoll ?? 0;
+  const totalMods = roll.totalMods?.() ?? 0;
+  const modifiers = roll.mods ?? [];
+  const hasModifiers = modifiers.length > 0 || totalMods !== 0;
+  const luck = roll.luck ?? 0;
+  const totalModsDisplay = totalMods >= 0 ? `+${totalMods}` : `${totalMods}`;
+  const criticalBonus = roll.wasCritSuccess?.() ? (roll.bonusDamage ?? 0) : 0;
+  const isD10Roll = dieType === "d10";
+  const isD6Roll = dieType === "d6";
 
   const content =
     await renderTemplate(
       "modules/cyberpunk-red-quickhacks/templates/chat/dice-rollcard.hbs",
-      { rollTitle, subTitle, description, faces, diceClass, dieType, resultTotal: roll.total }
+      {
+        rollTitle,
+        subTitle,
+        description,
+        faces,
+        diceClass,
+        dieType,
+        resultTotal,
+
+        wasCritSuccess,
+        wasCritFail,
+        criticalRoll,
+        criticalBonus,
+        
+        hasModifiers,
+        modifiers,
+        totalMods,
+        totalModsDisplay,
+
+        isD10Roll,
+        isD6Roll,
+
+        interfaceRank,
+        luck
+      }
     );
 
   await ChatMessage.create({
-    speaker: ChatMessage.getSpeaker({ actor: attacker }),
+      speaker: ChatMessage.getSpeaker({
+      actor: attacker
+    }),
     content
   });
-
 }
 
 export async function applyQuickHack( attacker, target, hack ) {

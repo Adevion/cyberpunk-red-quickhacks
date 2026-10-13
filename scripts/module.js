@@ -1,3 +1,4 @@
+//  Cyberpunk RED QuickHack Imports
 import { registerSettings } from "./settings.js";
 import { registerEffects } from "./effects.js";
 import { buildCompendiums } from "./build-compendiums.js";
