@@ -5,6 +5,8 @@ import * as CPRRolls from  "../../../systems/cyberpunk-red-core/modules/rolls/cp
 import { getPasswallDV } from "./neuroport.js";
 import { getInterfaceRank } from "./quickhacks.js";
 import { postRollCard } from "./quickhack-effects.js";
+import { getSocket } from "./socketlib.js";
+import { debugLog } from "./gm-utilities.js";
 
 export async function performBreach(actor, target) {
   const dv = getPasswallDV(target);
@@ -27,10 +29,7 @@ export async function performBreach(actor, target) {
   // This behavior also exists in native CPR rolls.
   // Do not alter locally until a CPR-compatible solution is decided.
 
-  console.log("Luck Anti-Cheat");
-  console.log("Requested Luck:", requestedLuck);
-  console.log("Current Luck:", currentLuck);
-  console.log("Applied Luck:", roll.luck);
+  await debugLog( "Luck Anti-Cheat", { actor: actor.name, requestedLuck, currentLuck, appliedLuck: roll.luck } );
 
   await roll.roll();
 
@@ -39,22 +38,28 @@ export async function performBreach(actor, target) {
     await actor.update({ "system.stats.luck.value": currentLuck - roll.luck });
   }
 
-  let breachResult = ""
+  const wasCritSuccess = roll.wasCritSuccess?.() ?? false;
+
+  let breachResult = "";
+  let resultImage = "";
   let success = false;
 
   if (roll.resultTotal < dv) {
     ui.notifications.warn( "Breach failed." );
-    breachResult = `<img class="quickhack-result-image" src="modules/cyberpunk-red-quickhacks/images/pixel-fail.webp"/>`;
-  } else {  
-    await target.setFlag(
-      "cyberpunk-red-quickhacks",
-      "neuroport.firewallBreached",
-      true
-    );
+    resultImage = "modules/cyberpunk-red-quickhacks/images/pixel-fail.webp";
+  } else {
+    const socket = getSocket();
+
+    await socket.executeAsGM( "applyBreach", target.uuid );
 
     ui.notifications.info( "Breach successful." );
-    breachResult = `<img class="quickhack-result-image" src="modules/cyberpunk-red-quickhacks/images/pixel-preem.webp"/>`;
     success = true;
+
+    if (roll.wasCritSuccess?.()) {
+      resultImage = Math.random() < 0.5 ? "modules/cyberpunk-red-quickhacks/images/pixel-preem.webp" : "modules/cyberpunk-red-quickhacks/images/pixel-nova.webp";
+    } else {
+      resultImage = "modules/cyberpunk-red-quickhacks/images/pixel-success.webp";
+    }    
   }
 
   //await roll.toMessage({ flavor: `Breach DV ${dv}` });
@@ -62,11 +67,43 @@ export async function performBreach(actor, target) {
     actor, 
     `Breach`, 
     target.name, 
-    breachResult, 
+    breachResult,
+    resultImage, 
     roll, 
     "d10",
     interfaceRank
   );
 
   return success;
+}
+
+export async function applyBreach( targetUuid ) {
+  const target = await fromUuid(targetUuid);
+  await target.setFlag( "cyberpunk-red-quickhacks", "neuroport.firewallBreached", true );
+
+  const alreadyBreached =
+    target.effects.some(
+      e =>
+        e.getFlag(
+          "cyberpunk-red-quickhacks",
+          "quickhack"
+        ) === "breached"
+    );
+
+  if (!alreadyBreached) {
+
+    await target.createEmbeddedDocuments(
+      "ActiveEffect",
+      [{
+        name: "Breached",
+        img: "modules/cyberpunk-red-quickhacks/icons/svg/whiplash.svg",
+        statuses: ["breached"],
+        flags: {
+          "cyberpunk-red-quickhacks": {
+            quickhack: "breached"
+          }
+        }
+      }]
+    );
+  }
 }

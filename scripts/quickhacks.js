@@ -3,6 +3,7 @@ import * as CPRRolls from  "../../../systems/cyberpunk-red-core/modules/rolls/cp
 
 // Quickhack Imports
 import { applyQuickHack } from "./quickhack-effects.js";
+import { debugLog } from "./gm-utilities.js";
 import "./quickhack-expiration.js";
 
 const QUICKHACKS = [
@@ -109,10 +110,7 @@ export async function performQuickHack( actor, target, hack) {
   // This behavior also exists in native CPR rolls.
   // Do not alter locally until a CPR-compatible solution is decided.
 
-  console.log("Luck Anti-Cheat");
-  console.log("Requested Luck:", requestedLuck);
-  console.log("Current Luck:", currentLuck);
-  console.log("Applied Luck:", roll.luck);
+  await debugLog( "Luck Anti-Cheat", { actor: actor.name, requestedLuck, currentLuck, appliedLuck: roll.luck } );
 
   await roll.roll();
 
@@ -128,6 +126,12 @@ export async function performQuickHack( actor, target, hack) {
   const wasCritSuccess = roll.wasCritSuccess?.() ?? false;
   const wasCritFail = roll.wasCritFail?.() ?? false;
   const criticalRoll = roll.criticalRoll ?? 0;
+
+  let resultImage;
+
+  if (!success) { resultImage = "modules/cyberpunk-red-quickhacks/images/pixel-fail.webp"; }
+  else if (wasCritSuccess) { resultImage = Math.random() < 0.5 ? "modules/cyberpunk-red-quickhacks/images/pixel-preem.webp" : "modules/cyberpunk-red-quickhacks/images/pixel-nova.webp"; }
+  else { resultImage = "modules/cyberpunk-red-quickhacks/images/pixel-success.webp"; }
 
   const totalMods = roll.totalMods?.() ?? 0;
   const modifiers = roll.mods ?? [];
@@ -148,6 +152,7 @@ export async function performQuickHack( actor, target, hack) {
         wasCritSuccess,
         wasCritFail,
         criticalRoll,
+        resultImage,
 
         hasModifiers,
         modifiers,

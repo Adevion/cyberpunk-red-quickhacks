@@ -72,13 +72,11 @@
             {{/if}}
           </div>
 
-          <div class="quickhack-result {{#if success}}success{{else}}failure{{/if}}">
-            {{#if success}}
-              <img class="quickhack-result-image" src="modules/cyberpunk-red-quickhacks/images/pixel-preem.webp"/>
-            {{else}}
-              <img class="quickhack-result-image" src="modules/cyberpunk-red-quickhacks/images/pixel-fail.webp"/>
-            {{/if}}
-          </div>
+          {{#if resultImage}}
+            <div class="quickhack-result">
+              <img class="quickhack-result-image" src="{{resultImage}}"/>
+            </div>
+          {{/if}}
         </div>
       </div>
     </div>

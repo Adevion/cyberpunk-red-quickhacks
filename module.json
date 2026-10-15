@@ -12,6 +12,7 @@
   "manifest": "https://raw.githubusercontent.com/Adevion/cyberpunk-red-quickhacks/latest/module.json",
   "download": "https://github.com/Adevion/cyberpunk-red-quickhacks/archive/refs/tags/v0.1.0.zip",
   "license": "GPL-3.0",
+  "socket": true,
   "relationships": {
     "systems": [
       {
@@ -21,7 +22,14 @@
           "minimum": "0.92.4"
         }
       }
-    ]
+    ],
+  "requires": [
+    {
+      "id": "socketlib",
+      "type": "module",
+      "manifest": "https://github.com/farling42/foundryvtt-socketlib/releases/latest/download/module.json"
+    }
+  ]
   },
   "authors": [
     {

@@ -8,6 +8,7 @@ export function registerSheetHooks() {
     "renderCPRCharacterActorSheet",
     (app, html) => {
       const actor = app.actor;
+      const buttontextContent = game.i18n.localize("CPEDG.Breach");
       const isNetrunner = actor.items.some(
         i =>
           i.type === "role" &&
@@ -25,7 +26,7 @@ export function registerSheetHooks() {
           </div>
 
           <button class="cpred-breach">
-            <b>Breach</b> 
+            <b>${buttontextContent}</b> 
           </button>
 
           <button class="cpred-quickhack">

@@ -1,9 +1,7 @@
 const MODULE_ID = "cyberpunk-red-quickhacks";
 
 export async function buildCompendiums() {
-
   console.log("CPRED-QH | Building Compendiums");
-
   const definitions = [
    {
       pack: "quickhacks",
@@ -36,9 +34,7 @@ export async function buildCompendiums() {
         "modules/cyberpunk-red-quickhacks/data/journals"
     }
   ];
-
   for (const def of definitions) {await buildPack(def);}
-
 }
 
 async function buildPack(def) {
@@ -66,17 +62,9 @@ async function buildPack(def) {
 }
 
 async function importEntry(pack, definition, file) {
-
   const response = await fetch(file);
-
   if (!response.ok) return;
-
   const data = await response.json();
-
-  /*const existing = pack.index.find(
-    e => e.name === data.name
-  );*/
-
   const existing = pack.index.find(
     e => e.name === data.name
   );
@@ -86,7 +74,6 @@ async function importEntry(pack, definition, file) {
     await pack.getDocument(
       existing._id
     );
-  
     await doc.delete();
   }
 

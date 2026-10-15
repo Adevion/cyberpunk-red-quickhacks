@@ -1,7 +1,4 @@
-export async function enableDirectConnection(
-  actor
-) {
-
+export async function enableDirectConnection( actor ) {
   await actor.setFlag(
     "cyberpunk-red-quickhacks",
     "neuroport.directConnection",

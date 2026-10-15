@@ -97,11 +97,15 @@
             {{/if}}
           </div>
 
-          {{#if description}}
-            <div class="quickhack-result">
+          <div class="quickhack-result">
+            {{#if description}}
               {{{description}}}
-            </div>
-          {{/if}}
+            {{/if}}
+            
+            {{#if resultImage}}
+              <img class="quickhack-result-image" src="{{resultImage}}"/>
+            {{/if}}
+          </div>
 
         </div>
       </div>
