@@ -1,2 +1,5 @@
 # ignore all word documents files
 *.docx
+
+# ignore packs folder
+/packs/
