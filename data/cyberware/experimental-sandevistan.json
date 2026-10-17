@@ -1,0 +1,135 @@
+{
+  "effects": [
+    {
+      "_id": "MPX4bqIlawLKgHIC",
+      "changes": [],
+      "description": "",
+      "disabled": false,
+      "duration": {
+        "combat": null,
+        "rounds": null,
+        "seconds": null,
+        "startRound": null,
+        "startTime": null,
+        "startTurn": null,
+        "turns": null
+      },
+      "flags": {
+        "cyberpunk-red-core": {
+          "changes": {
+            "cats": {
+              "0": "combat"
+            },
+            "situational": {
+              "0": {
+                "isSituational": true,
+                "onByDefault": true
+              }
+            }
+          }
+        }
+      },
+      "img": "systems/cyberpunk-red-core/icons/compendium/cyberware/sandevistan.svg",
+      "name": "Experimental Sandevistan",
+      "statuses": [],
+      "system": {},
+      "transfer": true,
+      "type": "base",
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.343",
+        "systemId": "cyberpunk-red-core",
+        "systemVersion": "v0.92.4",
+        "createdTime": null,
+        "modifiedTime": 1792264923977,
+        "lastModifiedBy": "LMiFxf5pshG9G5e3"
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "sort": 0
+    }
+  ],
+  "flags": {
+    "cyberpunk-red-core": {
+      "_migration": {
+        "current": 33,
+        "previous": "24"
+      }
+    },
+    "exportSource": {
+      "world": "cpr-dev-test",
+      "system": "cyberpunk-red-core",
+      "coreVersion": "12.343",
+      "systemVersion": "v0.92.4"
+    }
+  },
+  "img": "systems/cyberpunk-red-core/icons/compendium/cyberware/sandevistan.svg",
+  "name": "Experimental Sandevistan",
+  "system": {
+    "ammoVariety": [],
+    "attackmod": 0,
+    "brand": "",
+    "canIgnoreArmor": true,
+    "concealable": {
+      "concealable": false,
+      "isConcealed": false
+    },
+    "core": false,
+    "damage": "1d6",
+    "description": {
+      "value": "<p><em>There's only a few of these in the world, and it cost at least two people their lives. Are you sure you want it?</em></p><p><strong>Neuralware Option. Borgware. Speedware. Requires 2 Neuralware Option Slots.</strong> Whenever a user activates the Experimental Sandevistan, they take 2d6 Humanity Loss. Activating does not require an Action, even during combat.</p><p>If activated at the beginning of combat, the user immediately shoots to the top of the Initiative Queue. If activated during combat, they move to the top of the Initiative Queue immediately. If the user activates the Experimental Sandevistan on their Turn, they can take an additional Move or other Action.</p><p>If the Experimental Sandevistan is activated by a user with negative Humanity, they receive an amount of damage equal to the Humanity Loss they experience. This damage is dealt directly to their Hit Points and bypasses armor but does not ablate it.</p><p>A Character with negative Humanity enters Extreme Cyberpsychosis, and their sheet is handed to the GM, who plays them according to their worst tendencies.</p><p>Only a single piece of Speedware can be installed into a user at a time.</p>"
+    },
+    "dvTable": "",
+    "favorite": false,
+    "fireModes": {
+      "autoFire": 0,
+      "suppressiveFire": false
+    },
+    "humanityLoss": {
+      "roll": "4d6",
+      "static": 14
+    },
+    "ignoreArmorPercent": 50,
+    "installLocation": "hospital",
+    "installedItems": {
+      "allowed": false,
+      "allowedTypes": [
+        "itemUpgrade"
+      ],
+      "list": [],
+      "slots": 3,
+      "usedSlots": 0
+    },
+    "isElectronic": true,
+    "isFoundational": false,
+    "isRanged": false,
+    "isWeapon": false,
+    "magazine": {
+      "ammoData": null,
+      "max": 0,
+      "value": 0
+    },
+    "price": {
+      "market": 250000
+    },
+    "providesHardening": false,
+    "revealed": true,
+    "rof": 1,
+    "size": 1,
+    "source": {
+      "book": "CEMK",
+      "page": 34
+    },
+    "type": "neuralWare",
+    "unarmedAutomaticCalculation": true,
+    "usage": "toggled",
+    "usesType": "magazine",
+    "weaponSkill": "Archery",
+    "weaponType": "assaultRifle",
+    "critFailEffect": "jammed",
+    "ignoreBelowSP": 0
+  },
+  "type": "cyberware",
+  "folder": null
+}

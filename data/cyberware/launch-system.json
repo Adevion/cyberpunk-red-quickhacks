@@ -1,0 +1,58 @@
+{
+  "name": "Projectile Launch System",
+  "img": "modules/cyberpunk-red-quickhacks/icons/cyberware/projectile-launch-system.svg",
+  "effects": [],
+  "system": {
+    "ammoVariety": [],
+    "attackmod": 0,
+    "brand": "",
+    "canIgnoreArmor": false,
+    "concealable": {
+      "concealable": true,
+      "isConcealed": true
+    },
+    "core": false,
+    "damage": "",
+    "description": {
+      "value": "<p>A versatile explosive launcher in the palm of your hand.</p><p><strong>Cyberarm Option. Borgware.</strong> Requires 2 Cyberarm Option Slots.</p><p>A One-Handed Rocket Launcher/Grenade Launcher integrated into the Cyberarm.</p>"
+    },
+    "dvTable": "",
+    "favorite": false,
+    "fireModes": {
+      "autoFire": 0,
+      "suppressiveFire": false
+    },
+    "humanityLoss": {
+      "roll": "4d6",
+      "static": 14
+    },
+    "installLocation": "clinic",
+    "installedItems": {
+      "allowed": false,
+      "allowedTypes": [
+        "itemUpgrade"
+      ],
+      "list": [],
+      "slots": 3,
+      "usedSlots": 0
+    },
+    "price": {
+      "market": 1000
+    },
+    "isElectronic": true,
+    "isFoundational": false,
+    "isRanged": false,
+    "isWeapon": true,
+    "providesHardening": false,
+    "revealed": true,
+    "rof": 1,
+    "size": 2,
+    "source": {
+      "book": "CEMK",
+      "page": 36
+    },
+    "type": "cyberArm"
+  },
+  "type": "cyberware",
+  "folder": null
+}

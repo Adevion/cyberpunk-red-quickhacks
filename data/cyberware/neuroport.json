@@ -1,0 +1,68 @@
+{
+  "name": "Neuroport",
+  "img": "systems/cyberpunk-red-core/icons/compendium/cyberware/neural_link.svg",
+  "effects": [],
+  "system": {
+    "ammoVariety": [],
+    "attackmod": 0,
+    "brand": "",
+    "canIgnoreArmor": true,
+    "concealable": {
+      "concealable": false,
+      "isConcealed": false
+    },
+    "core": false,
+    "damage": "1d6",
+    "description": {
+      "value": "<p>A modern marvel, the Neuroport is a cyberware control package loaded with extras, ranging from a holophone to a HUD display. The Neuroport is considered so safe and unobtrusive that most children are fitted with one. Learning to use it is part of many primary school curriculums. Early installation is linked with better outcomes in adulthood, and the reverse is true as well. Those not installed with a Neuroport are at a disadvantage to their peers and have lower levels of educational and financial attainment in adulthood.</p><p>To aid this situation, or more cynically put, to profit off of it, predatory high interest loans are often offered to families who cannot afford a Neuroport for their children. Others look to The Street to find other more affordable options for their children, trusting back alley ripperdocs.</p><br><p>During Character Generation, every Character can choose to install Neuroport cyberware. If they do so, it is free of charge, costs 0 Humanity Loss, and doesn't lower Maximum Humanity, all of which represents a Character's lifetime of experience getting used to it.</p>"
+    },
+    "dvTable": "",
+    "favorite": false,
+    "fireModes": {
+      "autoFire": 0,
+      "suppressiveFire": false
+    },
+    "humanityLoss": {
+      "roll": "2d6",
+      "static": 7
+    },
+    "ignoreArmorPercent": 50,
+    "installLocation": "hospital",
+    "installedItems": {
+      "allowed": true,
+      "allowedTypes": [
+        "itemUpgrade",
+        "cyberware"
+      ],
+      "list": [],
+      "slots": 5,
+      "usedSlots": 0
+    },
+    "isElectronic": true,
+    "isFoundational": true,
+    "isRanged": false,
+    "isWeapon": false,
+    "magazine": {
+      "ammoData": null,
+      "max": 0,
+      "value": 0
+    },
+    "price": {
+      "market": 1000
+    },
+    "providesHardening": false,
+    "revealed": true,
+    "rof": 1,
+    "size": 0,
+    "source": {
+      "book": "CEMK",
+      "page": 35
+    },
+    "type": "neuralWare",
+    "unarmedAutomaticCalculation": true,
+    "usage": "toggled",
+    "ignoreBelowSP": 0
+  },
+  "type": "cyberware",
+  "folder": null
+}

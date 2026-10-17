@@ -1,0 +1,55 @@
+{
+  "name": "Mantis Blade",
+  "img": "modules/cyberpunk-red-quickhacks/icons/cyberware/mantis-blade.svg",
+  "effects": [],
+  "system": {
+    "ammoVariety": [],
+    "attackmod": 1,
+    "brand": "",
+    "canIgnoreArmor": true,
+    "concealable": {
+      "concealable": false,
+      "isConcealed": false
+    },
+    "core": false,
+    "damage": "3d6",
+    "description": {
+      "value": "<p>These iconic arm blades are designed with lethality and concealment in mind.</p><p><strong>Cyberarm Option.</strong> Requires 2 Cyberarm Option Slots.</p><p>A One-Handed Excellent Quality Heavy Melee Weapon that can be concealed without a Check.</p>"
+    },
+    "humanityLoss": {
+      "roll": "4d6",
+      "static": 14
+    },
+    "installLocation": "hospital",
+    "price": {
+      "market": 500
+    },
+    "isElectronic": true,
+    "isFoundational": false,
+    "isRanged": false,
+    "isWeapon": true,
+    "weaponSkill": "Melee Weapon",
+    "weaponType": "heavyMelee",
+    "providesHardening": false,
+    "revealed": true,
+    "rof": 1,
+    "size": 2,
+    "source": {
+      "book": "CEMK",
+      "page": 35
+    },
+    "installedItems": {
+      "allowed": true,
+      "allowedTypes": [
+        "cyberware",
+        "itemUpgrade"
+      ],
+      "list": [],
+      "usedSlots": 0,
+      "slots": 3
+    },
+    "type": "cyberArm"
+  },
+  "type": "cyberware",
+  "folder": null
+}

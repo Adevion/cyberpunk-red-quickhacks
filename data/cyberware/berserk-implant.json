@@ -1,0 +1,133 @@
+{
+  "effects": [
+    {
+      "_id": "ZbdcjKVufBX80pFO",
+      "changes": [
+        {
+          "key": "bonuses.initiative",
+          "mode": 2,
+          "priority": null,
+          "value": "2"
+        }
+      ],
+      "description": "",
+      "disabled": false,
+      "duration": {
+        "combat": null,
+        "rounds": null,
+        "seconds": null,
+        "startRound": null,
+        "startTime": null,
+        "startTurn": null,
+        "turns": null
+      },
+      "flags": {
+        "cyberpunk-red-core": {
+          "changes": {
+            "cats": {
+              "0": "combat"
+            },
+            "situational": {
+              "0": {
+                "isSituational": false,
+                "onByDefault": false
+              }
+            }
+          }
+        }
+      },
+      "img": "systems/cyberpunk-red-core/icons/compendium/cyberware/kerenzikov.svg",
+      "name": "Kerenzikov",
+      "statuses": [],
+      "system": {},
+      "transfer": true,
+      "type": "base",
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.343",
+        "systemId": "cyberpunk-red-core",
+        "systemVersion": "v0.92.4",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "sort": 0
+    }
+  ],
+  "flags": {
+    "cyberpunk-red-core": {
+      "_migration": {
+        "current": 33,
+        "previous": "24"
+      }
+    },
+    "exportSource": {
+      "world": "cpr-dev-test",
+      "system": "cyberpunk-red-core",
+      "coreVersion": "12.343",
+      "systemVersion": "v0.92.4"
+    }
+  },
+  "img": "modules/cyberpunk-red-quickhacks/icons/cyberware/enrage.svg",
+  "name": "Berserk Implant",
+  "system": {
+    "ammoVariety": [],
+    "attackmod": 0,
+    "brand": "",
+    "canIgnoreArmor": true,
+    "concealable": {
+      "concealable": false,
+      "isConcealed": false
+    },
+    "core": false,
+    "damage": "1d6",
+    "description": {
+      "value": "<p><em>Hormone regulation implant designed to improve the user's fight or flight response.</em></p><p><strong>Neuralware Option.</strong> This implant induces a powerful adrenaline rush on command. When activated as an Action, the user ignores the effects of the Seriously and Mortally Wounded Wound States for 60 seconds (20 Rounds) with one exception: Mortally Wounded Characters must still make Death Saves. After the activation period expires, the implant cannot be activated again for 1 hour.</p>"
+    },
+    "dvTable": "",
+    "favorite": false,
+    "fireModes": {
+      "autoFire": 0,
+      "suppressiveFire": false
+    },
+    "humanityLoss": {
+      "roll": "2d6",
+      "static": 7
+    },
+    "ignoreArmorPercent": 50,
+    "installLocation": "clinic",
+    "isElectronic": true,
+    "isFoundational": false,
+    "isRanged": false,
+    "isWeapon": false,
+    "magazine": {
+      "ammoData": null,
+      "max": 0,
+      "value": 0
+    },
+    "price": {
+      "market": 1000
+    },
+    "providesHardening": false,
+    "revealed": true,
+    "rof": 1,
+    "size": 1,
+    "source": {
+      "book": "CEMK",
+      "page": 34
+    },
+    "type": "neuralWare",
+    "unarmedAutomaticCalculation": true,
+    "usage": "installed",
+    "usesType": "magazine",
+    "weaponSkill": "Archery",
+    "weaponType": "assaultRifle",
+    "critFailEffect": "jammed",
+    "ignoreBelowSP": 0
+  },
+  "type": "cyberware",
+  "folder": null
+}

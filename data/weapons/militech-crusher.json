@@ -1,0 +1,65 @@
+{
+  "name": "Militech Crusher",
+  "img": "systems/cyberpunk-red-core/icons/compendium/weapons/veryHeavyPistol.svg",
+  "effects": [],
+  "system": {
+    "ammoVariety": [
+      "shotgunShell"
+    ],
+    "attackmod": 0,
+    "brand": "Militech",
+    "canIgnoreArmor": false,
+    "concealable": {
+      "concealable": false,
+      "isConcealed": false
+    },
+    "critFailEffect": "jammed",
+    "damage": "4d6",
+    "description": {
+      "value": "<p><em>The very sight of the Militech Crusher is enough to bring a tear to any gun lover's eye. This powerful shotgun, designed for short-range combat, was first created in the year 2020 and soon became one of the period's most iconic weapons. The version currently available on the market has seen some updates from the original but its distinctive look remains the same.</em></p><p>An Exotic Very Heavy Pistol with a Power Rebuild. It has a 12-shot capacity and can only fire Shotgun Shell Ammunition.</p>"
+    },
+    "dvTable": "DV Pistol",
+    "equipped": "owned",
+    "favorite": false,
+    "fireModes": {
+      "autoFire": 0,
+      "suppressiveFire": false
+    },
+    "handsReq": 1,
+    "ignoreArmorPercent": 0,
+    "ignoreBelowSP": 0,
+    "installedItems": {
+      "allowed": true,
+      "allowedTypes": [
+        "itemUpgrade",
+        "ammo"
+      ],
+      "list": [],
+      "slots": 3,
+      "usedSlots": 0
+    },
+    "isRanged": true,
+    "magazine": {
+      "ammoData": null,
+      "max": 12,
+      "value": 0
+    },
+    "price": {
+      "market": 1000
+    },
+    "quality": "standard",
+    "revealed": true,
+    "rof": 1,
+    "source": {
+      "book": "CEMK",
+      "page": 32
+    },
+    "unarmedAutomaticCalculation": true,
+    "usage": "equipped",
+    "usesType": "magazine",
+    "weaponSkill": "Handgun",
+    "weaponType": "vHeavyPistol"
+  },
+  "type": "weapon",
+  "folder": null
+}

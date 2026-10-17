@@ -1,0 +1,166 @@
+{
+  "effects": [],
+  "flags": {
+    "cyberpunk-red-core": {
+      "_migration": {
+        "current": 33,
+        "previous": "24"
+      }
+    },
+    "exportSource": {
+      "world": "cpr-dev-test",
+      "system": "cyberpunk-red-core",
+      "coreVersion": "12.343",
+      "systemVersion": "v0.92.4"
+    }
+  },
+  "img": "systems/cyberpunk-red-core/icons/compendium/upgrades/smartgun_link.svg",
+  "name": "Tech Rebuild",
+  "system": {
+    "ammoVariety": [],
+    "attackmod": 0,
+    "brand": "",
+    "canIgnoreArmor": true,
+    "concealable": {
+      "concealable": false,
+      "isConcealed": false
+    },
+    "damage": "1d6",
+    "description": {
+      "value": "<p><strong>Eligible:</strong> All Non-Exotic Ranged Weapons except Grenade Launchers and Rocket Launchers.</p><p><em>The weapon is reworked from the ground up to be fitted with electromagnetic launch modules.</em></p><p><strong>Rebuild. Requires 2 attachment slots.</strong> Transforms the weapon into a <strong>Tech Weapon</strong>. Weapon is equipped with a scope that can see simple target outlines through Thin Cover. By sacrificing their Move Action, a user can charge the weapon.</p><p>Once charged, the weapon remains so, until it is fired or 60 seconds (20 Rounds) passes. While charged, the weapon's next non-explosive attack is ROF1, can fire through Thin Cover (see page 12), and ignores half of the target's SP (round up) on a hit. Cover fired through does not lose HP. The small holes left behind are not large enough to damage it.</p>"
+    },
+    "dvTable": "",
+    "favorite": false,
+    "fireModes": {
+      "autoFire": 0,
+      "suppressiveFire": false
+    },
+    "handsReq": 0,
+    "ignoreArmorPercent": 50,
+    "installLocation": "mall",
+    "installedItems": {
+      "allowed": false,
+      "list": [],
+      "slots": 0,
+      "usedSlots": 0
+    },
+    "isElectronic": false,
+    "isRanged": false,
+    "magazine": {
+      "ammoData": null,
+      "max": 0,
+      "value": 0
+    },
+    "modifiers": {
+      "Wardrobe & Style": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "attackmod": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "bodySp": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "cool": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "damage": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": 0
+      },
+      "headSp": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "magazine": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "rof": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "sdp": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "seats": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "secondaryWeapon": {
+        "configured": false
+      },
+      "shieldHp": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "slots": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "speedCombat": {
+        "value": null,
+        "isSituational": false,
+        "onByDefault": false
+      }
+    },
+    "price": {
+      "market": 1000
+    },
+    "providesHardening": false,
+    "rof": 1,
+    "size": 2,
+    "source": {
+      "book": "CEMK",
+      "page": 31
+    },
+    "type": "weapon",
+    "unarmedAutomaticCalculation": true,
+    "usesType": "magazine",
+    "weaponSkill": "",
+    "weaponType": "",
+    "critFailEffect": "jammed",
+    "ignoreBelowSP": 0,
+    "revealed": true,
+    "usage": "toggled"
+  },
+  "type": "itemUpgrade",
+  "_stats": {
+    "coreVersion": "12.343",
+    "systemId": "cyberpunk-red-core",
+    "systemVersion": "v0.92.4",
+    "createdTime": 1792262287591,
+    "modifiedTime": 1792262442720,
+    "lastModifiedBy": "LMiFxf5pshG9G5e3"
+  },
+  "folder": null
+}

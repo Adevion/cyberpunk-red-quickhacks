@@ -1,0 +1,61 @@
+{
+  "name": "Monowire",
+  "img": "modules/cyberpunk-red-quickhacks/icons/cyberware/monowire.svg",
+  "effects": [],
+  "system": {
+    "ammoVariety": [],
+    "attackmod": 0,
+    "brand": "",
+    "canIgnoreArmor": true,
+    "concealable": {
+      "concealable": false,
+      "isConcealed": false
+    },
+    "core": false,
+    "damage": "3d6",
+    "description": {
+      "value": "<p>Whip-like monofilament wire with a cutting edge only a molecule wide.</p><p><strong>Cyberarm Option.</strong></p><p>A One-Handed Exotic Heavy Melee Weapon capable of making melee attacks up to 6 meters away.</p>"
+    },
+    "dvTable": "",
+    "favorite": false,
+    "fireModes": {
+      "autoFire": 0,
+      "suppressiveFire": false
+    },
+    "humanityLoss": {
+      "roll": "2d6",
+      "static": 7
+    },
+    "installLocation": "clinic",
+    "price": {
+      "market": 1000
+    },
+    "isElectronic": true,
+    "isFoundational": false,
+    "isRanged": false,
+    "isWeapon": true,
+    "weaponSkill": "Melee Weapon",
+    "weaponType": "heavyMelee",
+    "providesHardening": false,
+    "revealed": true,
+    "rof": 1,
+    "size": 2,
+    "source": {
+      "book": "CEMK",
+      "page": 35
+    },
+    "installedItems": {
+      "allowed": true,
+      "allowedTypes": [
+        "cyberware",
+        "itemUpgrade"
+      ],
+      "list": [],
+      "usedSlots": 0,
+      "slots": 3
+    },
+    "type": "cyberArm"
+  },
+  "type": "cyberware",
+  "folder": null
+}

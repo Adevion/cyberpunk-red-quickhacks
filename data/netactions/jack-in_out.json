@@ -1,0 +1,40 @@
+{
+  "name": "Jack In/Out",
+  "type": "gear",
+  "img": "systems/cyberpunk-red-core/icons/compendium/cyberware/interface_plugs.svg",
+  "effects": [],
+  "system": {
+    "description": {
+      "value": "<h2>NET Action.</h2><p><strong>Jack In:</strong> A Netrunner can connect to the Neuroport of a target within 50 m/yds (25 squares) who is visible to them. <strong>When Jacking In, the Netrunner must make an Interface Rank + 1d10 vs. the target's WILL + 1d10.</strong> The Netrunner Jacks In even if they fail the Check, but with a failure, the target is aware they've been hacked.</p><p>As an Action (ROF1) on their Turn, <strong>the target can attempt to force the invader out by making a WILL + Concentration + 1d10 Check vs. the Netrunner's Interface + 1d10</strong>. Netrunners always know when another Netrunner has hacked into their Neuroport, so you can skip the initial Check. If a Netrunner is ejected from a target's Neuroport they cannot attempt to Jack In to that individual again for 60 minutes. Otherwise, Netrunners remain connected to their target until forced out, they (or the target) move out of range, they Jack Out willingly, or the target dies. A Netrunner can Jack In to multiple Neuroports within range, each as a separate Net Action. A Netrunner can remain connected to as many Neuroports as they wish. </p><p><strong>Jack Out:</strong> A Netrunner can safely disconnect from a target's Neuroport.</p>"
+    },
+    "usage": "carried",
+    "revealed": true,
+    "price": {
+      "market": 0
+    },
+    "favorite": false,
+    "source": {
+      "page": 16,
+      "book": "CEMK"
+    },
+    "installedItems": {
+      "allowed": false,
+      "allowedTypes": [
+        "itemUpgrade"
+      ],
+      "list": [],
+      "usedSlots": 0,
+      "slots": 0
+    },
+    "isElectronic": false,
+    "providesHardening": false,
+    "equipped": "owned",
+    "concealable": {
+      "concealable": false,
+      "isConcealed": false
+    },
+    "amount": 1,
+    "brand": ""
+  },
+  "folder": null
+}

@@ -59,7 +59,9 @@
         "net-actions",
         "cyberware",
         "drugs",
-        "journals"
+        "journals",
+        "weapons",
+        "upgrades"
       ]
     }
   ],
@@ -101,6 +103,22 @@
       "type": "JournalEntry",
       "name": "journals",
       "path": "packs/journals",
+      "system": "cyberpunk-red-core",
+      "banner": "modules/cyberpunk-red-quickhacks/images/compendium-banner.webp"
+    },
+    {
+      "label": "Weapons",
+      "type": "Item",
+      "name": "weapons",
+      "path": "packs/weapons",
+      "system": "cyberpunk-red-core",
+      "banner": "modules/cyberpunk-red-quickhacks/images/compendium-banner.webp"
+    },
+    {
+      "label": "Upgrades",
+      "type": "Item",
+      "name": "upgrades",
+      "path": "packs/upgrades",
       "system": "cyberpunk-red-core",
       "banner": "modules/cyberpunk-red-quickhacks/images/compendium-banner.webp"
     }

@@ -1,0 +1,55 @@
+{
+  "name": "Gorilla Arm",
+  "img": "modules/cyberpunk-red-quickhacks/icons/cyberware/gorilla-arm.svg",
+  "effects": [],
+  "system": {
+    "ammoVariety": [],
+    "brand": "",
+    "canIgnoreArmor": true,
+    "concealable": {
+      "concealable": false,
+      "isConcealed": false
+    },
+    "core": false,
+    "damage": "3d6",
+    "description": {
+      "value": "<p>Classic and reliable hard labor enhancements for cyberarms.</p><p><strong>Cyberarm Option.</strong> Requires 2 Cyberarm Option Slots.</p><p>This reinforced fist can be wielded as an Excellent Quality Heavy Melee Weapon.</p><p>The user may wield weapons in this arm's hand as if they had BODY 11.</p>"
+    },
+    "humanityLoss": {
+      "roll": "4d6",
+      "static": 14
+    },
+    "installLocation": "hospital",
+    "price": {
+      "market": 1000
+    },
+    "isElectronic": true,
+    "isFoundational": false,
+    "isRanged": false,
+    "isWeapon": true,
+    "attackmod": 1,
+    "weaponSkill": "Melee Weapon",
+    "weaponType": "heavyMelee",
+    "providesHardening": false,
+    "revealed": true,
+    "rof": 1,
+    "size": 2,
+    "source": {
+      "book": "CEMK",
+      "page": 35
+    },
+    "installedItems": {
+      "allowed": true,
+      "allowedTypes": [
+        "cyberware",
+        "itemUpgrade"
+      ],
+      "list": [],
+      "usedSlots": 0,
+      "slots": 3
+    },
+    "type": "cyberArm"
+  },
+  "type": "cyberware",
+  "folder": null
+}

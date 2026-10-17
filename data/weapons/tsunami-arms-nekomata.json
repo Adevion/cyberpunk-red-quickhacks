@@ -1,0 +1,65 @@
+{
+  "name": "Tsunami Arms Nekomata",
+  "img": "systems/cyberpunk-red-core/icons/compendium/weapons/SniperRifle.svg",
+  "effects": [],
+  "system": {
+    "ammoVariety": [
+      "rifle"
+    ],
+    "attackmod": 0,
+    "brand": "Tsunami",
+    "canIgnoreArmor": false,
+    "concealable": {
+      "concealable": false,
+      "isConcealed": false
+    },
+    "critFailEffect": "jammed",
+    "damage": "5d6",
+    "description": {
+      "value": "<p><em>The Nekomata is a demanding weapon. It requires care, regular service, and time to learn how best to use it. But it's worth it. Really, really worth it. This electromag sniper rifle is a technological marvel. It's almost impossible for mercenaries outside the employ of a government or major Megacorp to get their hands on one ... almost.</em></p><p>A Sniper Rifle with a Tech Rebuild. While Charged using its Tech Rebuild, its user can see simple target outlines and fire through both Thin and Thick Cover.</p>"
+    },
+    "dvTable": "DV Sniper Rifle",
+    "equipped": "owned",
+    "favorite": false,
+    "fireModes": {
+      "autoFire": 0,
+      "suppressiveFire": false
+    },
+    "handsReq": 2,
+    "ignoreArmorPercent": 0,
+    "ignoreBelowSP": 0,
+    "installedItems": {
+      "allowed": true,
+      "allowedTypes": [
+        "itemUpgrade",
+        "ammo"
+      ],
+      "list": [],
+      "slots": 3,
+      "usedSlots": 0
+    },
+    "isRanged": true,
+    "magazine": {
+      "ammoData": null,
+      "max": 24,
+      "value": 0
+    },
+    "price": {
+      "market": 1000
+    },
+    "quality": "standard",
+    "revealed": true,
+    "rof": 1,
+    "source": {
+      "book": "CEML",
+      "page": 34
+    },
+    "unarmedAutomaticCalculation": true,
+    "usage": "equipped",
+    "usesType": "magazine",
+    "weaponSkill": "Shoulder Arms",
+    "weaponType": "sniperRifle"
+  },
+  "type": "weapon",
+  "folder": null
+}

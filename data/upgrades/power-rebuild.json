@@ -1,0 +1,169 @@
+{
+  "effects": [],
+  "flags": {
+    "cyberpunk-red-core": {
+      "_migration": {
+        "current": 33,
+        "previous": "24"
+      }
+    },
+    "exportSource": {
+      "world": "cpr-dev-test",
+      "system": "cyberpunk-red-core",
+      "coreVersion": "12.343",
+      "systemVersion": "v0.92.4"
+    }
+  },
+  "img": "systems/cyberpunk-red-core/icons/compendium/upgrades/smartgun_link.svg",
+  "name": "Power rebuild",
+  "system": {
+    "ammoVariety": [],
+    "attackmod": 0,
+    "brand": "",
+    "canIgnoreArmor": true,
+    "concealable": {
+      "concealable": false,
+      "isConcealed": false
+    },
+    "damage": "1d6",
+    "description": {
+      "value": "<p><strong>Eligible:</strong> All Non-Exotic Ranged Weapons</p><p><em>The weapon is reinforced to handle extreme strain, enabling increased precision.</em></p><p><strong>Rebuild. Requires 2 attachment slots.</strong> Transforms the weapon into a <strong>Power Weapon</strong>.</p><p>Whenever a Power Weapon causes a Critical Injury, that Critical Injury's Bonus Damage is increased by 5. Additionally, when firing this weapon a user can ricochet their shots off pieces of cover to hit targets that they are aware of but which might be beyond a normal Attack because they are behind cover or out of line of sight. When performing such a ricochet shot, the user takes a -4 penalty to their Attack Check. If making an Aimed Shot, the user ignores the -4 ricochet penalty and instead applies only the Aimed Shot penalty. There must be a clear path between the ricochet point and the target for this to work.</p><p>Despite the shot's new ricochet trajectory, the range the shot is made at is still calculated based on the distance between the user and the target. To ricochet a Shotgun Shell, the user chooses a surface within 6 m/yd (3 squares) of them to be the new origin of the spread, which then attacks all targets within a 6 m/yd (3 squares) area in a new direction, as directed by the user (so long as common sense is followed - a shotgun blast can't ricochet behind a surface it is bouncing off of).</p>"
+    },
+    "dvTable": "",
+    "favorite": false,
+    "fireModes": {
+      "autoFire": 0,
+      "suppressiveFire": false
+    },
+    "handsReq": 0,
+    "ignoreArmorPercent": 50,
+    "installLocation": "mall",
+    "installedItems": {
+      "allowed": false,
+      "allowedTypes": [
+        "itemUpgrade"
+      ],
+      "list": [],
+      "slots": 0,
+      "usedSlots": 0
+    },
+    "isElectronic": false,
+    "isRanged": false,
+    "magazine": {
+      "ammoData": null,
+      "max": 0,
+      "value": 0
+    },
+    "modifiers": {
+      "Wardrobe & Style": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "attackmod": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "bodySp": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "cool": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "damage": {
+        "isSituational": true,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": 5
+      },
+      "headSp": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "magazine": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "rof": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "sdp": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "seats": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "secondaryWeapon": {
+        "configured": false
+      },
+      "shieldHp": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "slots": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "speedCombat": {
+        "value": null,
+        "isSituational": false,
+        "onByDefault": false
+      }
+    },
+    "price": {
+      "market": 1000
+    },
+    "providesHardening": false,
+    "rof": 1,
+    "size": 2,
+    "source": {
+      "book": "CEMK",
+      "page": 30
+    },
+    "type": "weapon",
+    "unarmedAutomaticCalculation": true,
+    "usesType": "magazine",
+    "weaponSkill": "",
+    "weaponType": "",
+    "critFailEffect": "jammed",
+    "ignoreBelowSP": 0,
+    "revealed": true,
+    "usage": "toggled"
+  },
+  "type": "itemUpgrade",
+  "_stats": {
+    "coreVersion": "12.343",
+    "systemId": "cyberpunk-red-core",
+    "systemVersion": "v0.92.4",
+    "createdTime": 1792261474789,
+    "modifiedTime": 1792262269595,
+    "lastModifiedBy": "LMiFxf5pshG9G5e3"
+  },
+  "folder": null
+}

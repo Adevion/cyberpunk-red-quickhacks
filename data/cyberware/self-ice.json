@@ -1,32 +1,65 @@
 {
   "name": "Self-ICE",
-  "type": "cyberware",
   "img": "modules/cyberpunk-red-quickhacks/icons/cyberware/self-ice.svg",
   "effects": [],
   "system": {
+    "ammoVariety": [],
+    "attackmod": 0,
+    "brand": "",
+    "canIgnoreArmor": true,
+    "concealable": {
+      "concealable": false,
+      "isConcealed": false
+    },
+    "core": false,
+    "damage": "1d6",
     "description": {
       "value": "<p>Intrusion countermeasure electronics system designed to harden the user against Quickhacks.</p><p>Maximum Installations: 3</p><p>Each installation adds one Passwall to the Neuroport architecture.</p><p>DV6 -> DV8 -> DV10 progression.</p>"
+    },
+    "dvTable": "",
+    "favorite": false,
+    "fireModes": {
+      "autoFire": 0,
+      "suppressiveFire": false
     },
     "humanityLoss": {
       "roll": "1d6",
       "static": 3
     },
+    "ignoreArmorPercent": 50,
     "installLocation": "hospital",
+    "installedItems": {
+      "allowed": false,
+      "list": [],
+      "slots": 0,
+      "usedSlots": 0
+    },
+    "isElectronic": true,
+    "isFoundational": true,
+    "isRanged": false,
+    "isWeapon": false,
+    "magazine": {
+      "ammoData": null,
+      "max": 0,
+      "value": 0
+    },
     "price": {
       "market": 500
     },
-    "type": "neuralWare",
-    "favorite": false,
-    "isElectronic": true,
+    "providesHardening": false,
     "revealed": true,
-    "installedItems": {
-      "allowed": false,
-      "allowedTypes": [],
-      "list": []
-    },
+    "rof": 1,
+    "size": 0,
     "source": {
       "book": "CEMK",
-      "page": 0
-    }
-  }
+      "page": 36
+    },
+    "type": "neuralWare",
+    "unarmedAutomaticCalculation": true,
+    "usage": "toggled",
+    "usesType": "magazine",
+    "ignoreBelowSP": 0
+  },
+  "type": "cyberware",
+  "folder": null
 }

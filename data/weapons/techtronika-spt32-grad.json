@@ -1,0 +1,79 @@
+{
+  "effects": [],
+  "flags": {
+    "cyberpunk-red-core": {
+      "_migration": {
+        "current": 33,
+        "previous": "24"
+      }
+    },
+    "exportSource": {
+      "world": "cpr-dev-test",
+      "system": "cyberpunk-red-core",
+      "coreVersion": "12.343",
+      "systemVersion": "v0.92.4"
+    }
+  },
+  "img": "systems/cyberpunk-red-core/icons/compendium/weapons/SniperRifle_excellent.svg",
+  "name": "Techtronika SPT32 Grad",
+  "system": {
+    "ammoVariety": [
+      "rifle"
+    ],
+    "attackmod": 1,
+    "brand": "",
+    "canIgnoreArmor": false,
+    "concealable": {
+      "concealable": false,
+      "isConcealed": false
+    },
+    "critFailEffect": "jammed",
+    "damage": "5d6",
+    "description": {
+      "value": "<p><em>When the world required a new generation of sniper rifles to pierce increasingly heavy armor, the first to answer was the Soviet-made SPT32 Grad, considered by many to be the most powerful sniper on the market. It may not possess the same dedication to detail as its counterparts from Arasaka or Militech, but in the hands of a well-trained sharpshooter who doesn't rely on weapon-assisted wind readings, the Grad is a truly devastating force.</em></p><p>An Excellent Quality Exotic Sniper Rifle with a Power Rebuild. Despite being an Exotic weapon, it can still load Non-Basic Ammunition. After it is fired, it requires an Action to work its bolt action before it can be fired again.</p>"
+    },
+    "dvTable": "DV Sniper Rifle",
+    "equipped": "owned",
+    "favorite": false,
+    "fireModes": {
+      "autoFire": 0,
+      "suppressiveFire": false
+    },
+    "handsReq": 2,
+    "ignoreArmorPercent": 0,
+    "ignoreBelowSP": 0,
+    "installedItems": {
+      "allowed": true,
+      "allowedTypes": [
+        "itemUpgrade",
+        "ammo"
+      ],
+      "list": [],
+      "slots": 3,
+      "usedSlots": 0
+    },
+    "isRanged": true,
+    "magazine": {
+      "ammoData": null,
+      "max": 4,
+      "value": 0
+    },
+    "price": {
+      "market": 1000
+    },
+    "quality": "excellent",
+    "revealed": true,
+    "rof": 1,
+    "source": {
+      "book": "CEMK",
+      "page": 33
+    },
+    "unarmedAutomaticCalculation": true,
+    "usage": "equipped",
+    "usesType": "magazine",
+    "weaponSkill": "Shoulder Arms",
+    "weaponType": "sniperRifle"
+  },
+  "type": "weapon",
+  "folder": null
+}

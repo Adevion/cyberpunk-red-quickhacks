@@ -1,0 +1,66 @@
+{
+  "name": "Kang Tao L-69 Zhuo",
+  "img": "systems/cyberpunk-red-core/icons/compendium/weapons/Shotgun.svg",
+  "effects": [],
+  "system": {
+    "ammoVariety": [
+      "shotgunShell",
+      "shotgunSlug"
+    ],
+    "attackmod": 0,
+    "brand": "Kang Tao",
+    "canIgnoreArmor": false,
+    "concealable": {
+      "concealable": false,
+      "isConcealed": false
+    },
+    "critFailEffect": "jammed",
+    "damage": "4d6",
+    "description": {
+      "value": "<p><em>Shotguns aren't exactly known for finesse: While undoubtedly powerful, they often suffer from clunkiness and imprecision. That is, except for the L-69 Zhuo by Kang Tao. Just like the other weapons manufactured by the Chinese Corp, the L-69 Zhuo comes packed with top-of-the-line electronics. The ultra-sensitive radar scans the area for you, identifying targets all on its own. Every one of its eight below-barrel magazines is always ready and waiting to tear someone to shreds.</em></p><p>An Exotic Shotgun with a Smart Rebuild. It holds 32 rounds and can only be loaded with Improved Smart Shotgun Shell Ammunition. When firing this weapon, 8 shells are expended with each Attack Check. Without 8 shells loaded, the weapon will not fire as a safety feature. Due to the massive amount of ammunition expended for a shot, the L-69 Zhuo deals 4d6 damage instead of the 3d6 damage typical for shotgun shells.</p>"
+    },
+    "dvTable": "DV Shotgun (Slug)",
+    "equipped": "owned",
+    "favorite": false,
+    "fireModes": {
+      "autoFire": 8,
+      "suppressiveFire": false
+    },
+    "handsReq": 2,
+    "ignoreArmorPercent": 0,
+    "ignoreBelowSP": 0,
+    "installedItems": {
+      "allowed": true,
+      "allowedTypes": [
+        "itemUpgrade",
+        "ammo"
+      ],
+      "list": [],
+      "slots": 3,
+      "usedSlots": 0
+    },
+    "isRanged": true,
+    "magazine": {
+      "ammoData": null,
+      "max": 32,
+      "value": 0
+    },
+    "price": {
+      "market": 1000
+    },
+    "quality": "standard",
+    "revealed": true,
+    "rof": 1,
+    "source": {
+      "book": "CEMK",
+      "page": 32
+    },
+    "unarmedAutomaticCalculation": true,
+    "usage": "equipped",
+    "usesType": "magazine",
+    "weaponSkill": "Shoulder Arms",
+    "weaponType": "shotgun"
+  },
+  "type": "weapon",
+  "folder": null
+}

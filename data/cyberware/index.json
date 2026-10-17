@@ -1,3 +1,12 @@
 [
-  "modules/cyberpunk-red-quickhacks/data/cyberware/self-ice.json"
+  "modules/cyberpunk-red-quickhacks/data/cyberware/berserk-implant.json",
+  "modules/cyberpunk-red-quickhacks/data/cyberware/ex-disk.json",
+ "modules/cyberpunk-red-quickhacks/data/cyberware/experimental-sandevistan.json",
+  "modules/cyberpunk-red-quickhacks/data/cyberware/gorilla-arm.json",
+  "modules/cyberpunk-red-quickhacks/data/cyberware/launch-system.json",
+  "modules/cyberpunk-red-quickhacks/data/cyberware/mantis-blade.json",
+  "modules/cyberpunk-red-quickhacks/data/cyberware/monowire.json",
+  "modules/cyberpunk-red-quickhacks/data/cyberware/self-ice.json",
+  "modules/cyberpunk-red-quickhacks/data/cyberware/neuroport.json",
+  "modules/cyberpunk-red-quickhacks/data/cyberware/neuroport-cyberdesk.json"
 ]

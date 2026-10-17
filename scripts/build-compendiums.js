@@ -32,6 +32,18 @@ export async function buildCompendiums() {
       type: "JournalEntry",
       source:
         "modules/cyberpunk-red-quickhacks/data/journals"
+    },
+    {
+      pack: "weapons",
+      type: "Item",
+      source:
+        "modules/cyberpunk-red-quickhacks/data/weapons"
+    },
+    {
+      pack: "upgrades",
+      type: "Item",
+      source:
+        "modules/cyberpunk-red-quickhacks/data/upgrades"
     }
   ];
   for (const def of definitions) {await buildPack(def);}
@@ -59,6 +71,8 @@ async function buildPack(def) {
     await importEntry(pack, def, file);
   }
 
+  console.log(`CPRED Edgerunners QuickHacks | Compendium ${pack.name} Build Completed`);
+
 }
 
 async function importEntry(pack, definition, file) {
@@ -76,8 +90,6 @@ async function importEntry(pack, definition, file) {
     );
     await doc.delete();
   }
-
-  if (existing) return;
 
   if (definition.type === "Item") {
     await Item.create(

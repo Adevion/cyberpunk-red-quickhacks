@@ -1,0 +1,65 @@
+{
+  "name": "Arasaka HJKE-11 Yukimura",
+  "img": "systems/cyberpunk-red-core/icons/compendium/weapons/SMG.svg",
+  "effects": [],
+  "system": {
+    "ammoVariety": [
+      "medPistol"
+    ],
+    "attackmod": 0,
+    "brand": "Arasaka",
+    "canIgnoreArmor": false,
+    "concealable": {
+      "concealable": true,
+      "isConcealed": false
+    },
+    "critFailEffect": "jammed",
+    "damage": "3d6",
+    "description": {
+      "value": "<p><em>The weapon that started the smart revolution, issued in the 2040s by Arasaka. With the Yukimura, you could shoot as poorly as the troopers in a certain late 20th century space opera and still hit your target with 100% accuracy.</em></p><p>An Exotic SMG with a Smart Rebuild. When fired in Single Shot, it deals 3d6 damage, expending 3 rounds with each Attack Check.</p><p>If not enough rounds are available to fire 3, the weapon deals 2d6 damage instead.</p>"
+    },
+    "dvTable": "DV SMG",
+    "equipped": "owned",
+    "favorite": false,
+    "fireModes": {
+      "autoFire": 3,
+      "suppressiveFire": true
+    },
+    "handsReq": 1,
+    "ignoreArmorPercent": 0,
+    "ignoreBelowSP": 0,
+    "installedItems": {
+      "allowed": true,
+      "allowedTypes": [
+        "itemUpgrade",
+        "ammo"
+      ],
+      "list": [],
+      "slots": 3,
+      "usedSlots": 0
+    },
+    "isRanged": true,
+    "magazine": {
+      "ammoData": null,
+      "max": 30,
+      "value": 0
+    },
+    "price": {
+      "market": 500
+    },
+    "quality": "standard",
+    "revealed": true,
+    "rof": 1,
+    "source": {
+      "book": "CEMK",
+      "page": 31
+    },
+    "unarmedAutomaticCalculation": true,
+    "usage": "equipped",
+    "usesType": "magazine",
+    "weaponSkill": "Handgun",
+    "weaponType": "smg"
+  },
+  "type": "weapon",
+  "folder": null
+}

@@ -1,0 +1,47 @@
+{
+  "name": "Ex-Disk",
+  "img": "modules/cyberpunk-red-quickhacks/icons/cyberware/ex-disk.svg",
+  "effects": [],
+  "system": {
+    "ammoVariety": [],
+    "attackmod": 0,
+    "brand": "",
+    "canIgnoreArmor": true,
+    "concealable": {
+      "concealable": false,
+      "isConcealed": false
+    },
+    "core": false,
+    "damage": "1d6",
+    "description": {
+      "value": "<p>Implant that increases the brain's capacity to store and process information related to Netrunning.</p><p><strong>Neuralware.</strong> Requires Neuroport Cyberdeck Port.</p><p>Each installation contains a Hardware-only Option Slot for Cyberdeck Hardware.</p><p>All Hardware installed in a user's Ex-Disks are considered to be installed in any Cyberdeck installed in a user's Neuroport Cyberdeck Port.</p><p>A user with two or more Ex-Disk installations gains one additional NET Action every turn while physically connected to an Access Point manually via their Personal Link.</p>"
+    },
+    "dvTable": "",
+    "favorite": false,
+    "fireModes": {
+      "autoFire": 0,
+      "suppressiveFire": false
+    },
+    "humanityLoss": {
+      "roll": "1d6",
+      "static": 3
+    },
+    "ignoreArmorPercent": 50,
+    "installLocation": "hospital",
+    "price": {
+      "market": 1000
+    },
+    "isElectronic": true,
+    "isFoundational": false,
+    "revealed": true,
+    "size": 1,
+    "source": {
+      "book": "CEMK",
+      "page": 36
+    },
+    "type": "neuralWare",
+    "usage": "installed"
+  },
+  "type": "cyberware",
+  "folder": null
+}

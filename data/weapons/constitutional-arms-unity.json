@@ -1,0 +1,65 @@
+{
+  "name": "Constitutional Arms Unity",
+  "img": "systems/cyberpunk-red-core/icons/compendium/weapons/veryHeavyPistol.svg",
+  "effects": [],
+  "system": {
+    "ammoVariety": [
+      "vHeavyPistol"
+    ],
+    "attackmod": 0,
+    "brand": "Constitutional Arms",
+    "canIgnoreArmor": false,
+    "concealable": {
+      "concealable": false,
+      "isConcealed": false
+    },
+    "critFailEffect": "jammed",
+    "damage": "3d6",
+    "description": {
+      "value": "<p><em>This universal, easily attainable pistol designed by Constitutional Arms has resolved countless disputes all across Night City. It only takes one well-placed shot to win an argument. Forever.</em></p><p>An Exotic Heavy Pistol with a Power Rebuild. It has a 12-shot capacity. When using this weapon to make an Aimed Shot, its damage increases to 4d6.</p>"
+    },
+    "dvTable": "DV Pistol",
+    "equipped": "owned",
+    "favorite": false,
+    "fireModes": {
+      "autoFire": 0,
+      "suppressiveFire": false
+    },
+    "handsReq": 1,
+    "ignoreArmorPercent": 0,
+    "ignoreBelowSP": 0,
+    "installedItems": {
+      "allowed": true,
+      "allowedTypes": [
+        "itemUpgrade",
+        "ammo"
+      ],
+      "list": [],
+      "slots": 3,
+      "usedSlots": 0
+    },
+    "isRanged": true,
+    "magazine": {
+      "ammoData": null,
+      "max": 12,
+      "value": 0
+    },
+    "price": {
+      "market": 500
+    },
+    "quality": "standard",
+    "revealed": true,
+    "rof": 2,
+    "source": {
+      "book": "CEMK",
+      "page": 32
+    },
+    "unarmedAutomaticCalculation": true,
+    "usage": "equipped",
+    "usesType": "magazine",
+    "weaponSkill": "Handgun",
+    "weaponType": "heavyPistol"
+  },
+  "type": "weapon",
+  "folder": null
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Budget Arms Carnage",
+  "img": "systems/cyberpunk-red-core/icons/compendium/weapons/Shotgun_poor.svg",
+  "effects": [],
+  "system": {
+    "ammoVariety": [
+      "shotgunShell",
+      "shotgunSlug"
+    ],
+    "attackmod": 0,
+    "brand": "Budget Arms",
+    "canIgnoreArmor": false,
+    "concealable": {
+      "concealable": false,
+      "isConcealed": false
+    },
+    "critFailEffect": "jammed",
+    "damage": "5d6",
+    "description": {
+      "value": "<p><em>There are weapons that are subtle, weapons that are elegant, and weapons capable of hitting their targets with surgical precision. Budget Arms' Carnage possesses none of those qualities. Its designers followed one simple rule: Bigger is better. The result? The Carnage is massive, deals ridiculous amounts of damage and has a recoil that could pop your shoulder right out of its socket.</em></p><p>A Poor Quality Shotgun with a Power Rebuild. It holds 5 rounds. When fired by a user without BODY 10 or higher, they suffer the Torn Muscle Critical Injury if they didn't have it already.</p>"
+    },
+    "dvTable": "DV Shotgun (Slug)",
+    "equipped": "owned",
+    "favorite": false,
+    "fireModes": {
+      "autoFire": 0,
+      "suppressiveFire": false
+    },
+    "handsReq": 2,
+    "ignoreArmorPercent": 0,
+    "ignoreBelowSP": 0,
+    "installedItems": {
+      "allowed": true,
+      "allowedTypes": [
+        "itemUpgrade",
+        "ammo"
+      ],
+      "list": [],
+      "slots": 0,
+      "usedSlots": 0
+    },
+    "isRanged": true,
+    "magazine": {
+      "ammoData": null,
+      "max": 5,
+      "value": 0
+    },
+    "price": {
+      "market": 100
+    },
+    "quality": "poor",
+    "revealed": true,
+    "rof": 1,
+    "source": {
+      "book": "CEMK",
+      "page": 31
+    },
+    "unarmedAutomaticCalculation": true,
+    "usage": "equipped",
+    "usesType": "magazine",
+    "weaponSkill": "Shoulder Arms",
+    "weaponType": "shotgun"
+  },
+  "type": "weapon",
+  "folder": null
+}

@@ -1,0 +1,166 @@
+{
+  "effects": [],
+  "flags": {
+    "cyberpunk-red-core": {
+      "_migration": {
+        "current": 33,
+        "previous": "24"
+      }
+    },
+    "exportSource": {
+      "world": "cpr-dev-test",
+      "system": "cyberpunk-red-core",
+      "coreVersion": "12.343",
+      "systemVersion": "v0.92.4"
+    }
+  },
+  "img": "systems/cyberpunk-red-core/icons/compendium/upgrades/smartgun_link.svg",
+  "name": "Smart Rebuild",
+  "system": {
+    "ammoVariety": [],
+    "attackmod": 0,
+    "brand": "",
+    "canIgnoreArmor": true,
+    "concealable": {
+      "concealable": false,
+      "isConcealed": false
+    },
+    "damage": "1d6",
+    "description": {
+      "value": "<p><strong>Eligible:</strong> All Non-Exotic Ranged Weapons</p><p><em>The weapon's internals are stripped down and rebuilt, incorporating advances in smart targeting technology needed to make use of improved gyrojet bullets.</em></p><p><strong>Rebuild. Requires 2 attachment slots.</strong> Transforms the weapon into a <strong>Smart Weapon</strong>. Cannot be attached to a weapon with a Smartgun Link.</p><p>The weapon is a smart gun and requires a user to be connected to it using a Personal (Interface Plug) or a Subdermal Grip to operate. When making a Ranged Attack with the weapon, the user adds +1 to their Check. Additionally, the weapon can be loaded with Improved Smart Ammunition of all the varieties it is capable of shooting. If loaded with any other type of ammunition the user receives the +1 bonus but not the advantages of the Improved Smart Ammunition.</p>"
+    },
+    "dvTable": "",
+    "favorite": false,
+    "fireModes": {
+      "autoFire": 0,
+      "suppressiveFire": false
+    },
+    "handsReq": 0,
+    "ignoreArmorPercent": 50,
+    "installLocation": "mall",
+    "installedItems": {
+      "allowed": false,
+      "list": [],
+      "slots": 0,
+      "usedSlots": 0
+    },
+    "isElectronic": false,
+    "isRanged": false,
+    "magazine": {
+      "ammoData": null,
+      "max": 0,
+      "value": 0
+    },
+    "modifiers": {
+      "Wardrobe & Style": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "attackmod": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": 1
+      },
+      "bodySp": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "cool": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "damage": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": 0
+      },
+      "headSp": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "magazine": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "rof": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "sdp": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "seats": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "secondaryWeapon": {
+        "configured": false
+      },
+      "shieldHp": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "slots": {
+        "isSituational": false,
+        "onByDefault": false,
+        "type": "modifier",
+        "value": null
+      },
+      "speedCombat": {
+        "value": null,
+        "isSituational": false,
+        "onByDefault": false
+      }
+    },
+    "price": {
+      "market": 1000
+    },
+    "providesHardening": false,
+    "rof": 1,
+    "size": 2,
+    "source": {
+      "book": "CEMK",
+      "page": 31
+    },
+    "type": "weapon",
+    "unarmedAutomaticCalculation": true,
+    "usesType": "magazine",
+    "weaponSkill": "",
+    "weaponType": "",
+    "critFailEffect": "jammed",
+    "ignoreBelowSP": 0,
+    "revealed": true,
+    "usage": "toggled"
+  },
+  "type": "itemUpgrade",
+  "_stats": {
+    "coreVersion": "12.343",
+    "systemId": "cyberpunk-red-core",
+    "systemVersion": "v0.92.4",
+    "createdTime": 1792262095235,
+    "modifiedTime": 1792262243696,
+    "lastModifiedBy": "LMiFxf5pshG9G5e3"
+  },
+  "folder": null
+}

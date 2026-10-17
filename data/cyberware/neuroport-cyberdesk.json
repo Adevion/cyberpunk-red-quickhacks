@@ -1,0 +1,50 @@
+{
+  "name": "Neuroport Cyberdeck Port",
+  "img": "modules/cyberpunk-red-quickhacks/icons/cyberware/cyberdeck-port.svg",
+  "effects": [],
+  "system": {
+    "ammoVariety": [],
+    "attackmod": 0,
+    "brand": "",
+    "canIgnoreArmor": true,
+    "concealable": {
+      "concealable": false,
+      "isConcealed": false
+    },
+    "core": false,
+    "damage": "3d6",
+    "description": {
+      "value": "<p>This neck-mounted port connects a Cyberdeck directly into the body, dramatically increasing its range.</p><p><strong>Neuralware.</strong> Requires Neuroport.</p><p>An additional specialized port is installed into the back of the user's neck for the insertion of a Cyberdeck.</p><p>A user can only have one Neuroport Cyberdeck Port installed at a time.</p>"
+    },
+    "humanityLoss": {
+      "roll": "1d6",
+      "static": 3
+    },
+    "installLocation": "hospital",
+    "installedItems": {
+      "allowed": true,
+      "allowedTypes": [
+        "itemUpgrade",
+        "cyberdeck"
+      ],
+      "list": [],
+      "slots": 1,
+      "usedSlots": 0
+    },
+    "price": {
+      "market": 100
+    },
+    "isElectronic": true,
+    "isFoundational": false,
+    "revealed": true,
+    "size": 1,
+    "source": {
+      "book": "CEMK",
+      "page": 36
+    },
+    "type": "neuralWare",
+    "usage": "installed"
+  },
+  "type": "cyberware",
+  "folder": null
+}

@@ -1,0 +1,65 @@
+{
+  "name": "Arasaka HJSH-18 Masamune",
+  "img": "systems/cyberpunk-red-core/icons/compendium/weapons/AssaultRifle.svg",
+  "effects": [],
+  "system": {
+    "ammoVariety": [
+      "rifle"
+    ],
+    "attackmod": 0,
+    "brand": "Arasaka",
+    "canIgnoreArmor": false,
+    "concealable": {
+      "concealable": false,
+      "isConcealed": false
+    },
+    "critFailEffect": "jammed",
+    "damage": "5d6",
+    "description": {
+      "value": "<p><em>Designed in the 2050s by Arasaka. Every single one of the Masamune's elements, down to the tiniest screws and bolts, were quality-ensured by a legion of Arasaka engineers - and you can feel it.</em></p><p>An Exotic Assault Rifle with a Power Rebuild. Its proprietary magazine holds 24 rounds. When fired in Single Shot, it deals 5d6 damage, expending 3 rounds with each Attack Check. If not enough rounds are available to fire 3 it empties the magazine and deals 4d6 damage instead.</p>"
+    },
+    "dvTable": "DV Assault Rifle",
+    "equipped": "owned",
+    "favorite": false,
+    "fireModes": {
+      "autoFire": 3,
+      "suppressiveFire": true
+    },
+    "handsReq": 2,
+    "ignoreArmorPercent": 0,
+    "ignoreBelowSP": 0,
+    "installedItems": {
+      "allowed": true,
+      "allowedTypes": [
+        "itemUpgrade",
+        "ammo"
+      ],
+      "list": [],
+      "slots": 3,
+      "usedSlots": 0
+    },
+    "isRanged": true,
+    "magazine": {
+      "ammoData": null,
+      "max": 24,
+      "value": 0
+    },
+    "price": {
+      "market": 500
+    },
+    "quality": "standard",
+    "revealed": true,
+    "rof": 1,
+    "source": {
+      "book": "CEMK",
+      "page": 32
+    },
+    "unarmedAutomaticCalculation": true,
+    "usage": "equipped",
+    "usesType": "magazine",
+    "weaponSkill": "Shoulder Arms",
+    "weaponType": "assaultRifle"
+  },
+  "type": "weapon",
+  "folder": null
+}

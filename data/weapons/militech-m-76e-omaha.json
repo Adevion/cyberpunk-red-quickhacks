@@ -1,0 +1,65 @@
+{
+  "name": "Militech M-76e Omaha",
+  "img": "systems/cyberpunk-red-core/icons/compendium/weapons/heavyPistol.svg",
+  "effects": [],
+  "system": {
+    "ammoVariety": [
+      "heavyPistol"
+    ],
+    "attackmod": 0,
+    "brand": "Militech",
+    "canIgnoreArmor": false,
+    "concealable": {
+      "concealable": true,
+      "isConcealed": false
+    },
+    "critFailEffect": "jammed",
+    "damage": "3d6",
+    "description": {
+      "value": "<p><em>The Omaha looks like your classic lead-spitter, but don't let appearances fool you. This gem from Militech conceals a powerful electromag rail system. It's no wonder this firearm is commonly found in the holsters of corpos at the high end of the food chain. Its small size makes it a convenient fit in a briefcase or inside the company limo's glove compartment.</em></p><p>An Exotic Heavy Pistol with a Tech Rebuild. It has a 9-shot capacity. When Charged using its Tech Rebuild, it remains so until the end of a Turn in which it was fired.</p><p>Additionally, while Charged, the Omaha remains ROF2 and expends up to 3 rounds instead of 1 for each Attack Check. If less than 3 rounds are in the magazine when Charged it empties the magazine with the shot.</p>"
+    },
+    "dvTable": "DV Pistol",
+    "equipped": "owned",
+    "favorite": false,
+    "fireModes": {
+      "autoFire": 0,
+      "suppressiveFire": false
+    },
+    "handsReq": 1,
+    "ignoreArmorPercent": 0,
+    "ignoreBelowSP": 0,
+    "installedItems": {
+      "allowed": true,
+      "allowedTypes": [
+        "itemUpgrade",
+        "ammo"
+      ],
+      "list": [],
+      "slots": 3,
+      "usedSlots": 0
+    },
+    "isRanged": true,
+    "magazine": {
+      "ammoData": null,
+      "max": 9,
+      "value": 0
+    },
+    "price": {
+      "market": 500
+    },
+    "quality": "standard",
+    "revealed": true,
+    "rof": 2,
+    "source": {
+      "book": "CEMK",
+      "page": 33
+    },
+    "unarmedAutomaticCalculation": true,
+    "usage": "equipped",
+    "usesType": "magazine",
+    "weaponSkill": "Handgun",
+    "weaponType": "heavyPistol"
+  },
+  "type": "weapon",
+  "folder": null
+}
