@@ -57,22 +57,26 @@ async function buildPack(def) {
     return;
   }
 
-  const source = foundry.utils.getRoute(`${def.source}/index.json`);
-  const response = await fetch(source);
+  const wasLocked = pack.locked;
 
-  if (!response.ok) {
-    console.warn(`No index found for ${def.pack}`);
-    return;
+  try {
+
+    if (wasLocked) { await pack.configure({ locked: false }); }
+
+    const source = foundry.utils.getRoute(`${def.source}/index.json`);
+    const response = await fetch(source);
+
+    if (!response.ok) {
+      console.warn(`No index found for ${def.pack}`);
+      return;
+    }
+
+    const files = await response.json();
+    for (const file of files) { await importEntry(pack, def, file); }
+
+  } finally {
+    if (wasLocked) { await pack.configure({ locked: true }); }
   }
-
-  const files = await response.json();
-
-  for (const file of files) {
-    await importEntry(pack, def, file);
-  }
-
-  console.log(`CPRED Edgerunners QuickHacks | Compendium ${pack.name} Build Completed`);
-
 }
 
 async function importEntry(pack, definition, file) {
