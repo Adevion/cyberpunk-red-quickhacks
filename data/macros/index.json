@@ -2,5 +2,6 @@
   "modules/cyberpunk-red-quickhacks/data/macros/add-neuroport-npc.json",
   "modules/cyberpunk-red-quickhacks/data/macros/add-self-ice-npc.json",
   "modules/cyberpunk-red-quickhacks/data/macros/remove-all-effects.json",
-  "modules/cyberpunk-red-quickhacks/data/macros/remove-effect.json"
+  "modules/cyberpunk-red-quickhacks/data/macros/remove-effect.json",
+  "modules/cyberpunk-red-quickhacks/data/macros/hotbar-breach.json"
 ]

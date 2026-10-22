@@ -3,9 +3,14 @@
   "type": "gear",
   "img": "modules/cyberpunk-red-quickhacks/icons/netactions/breach.svg",
   "effects": [],
+  "flags": {
+    "cyberpunk-red-quickhacks": {
+      "hotbarAction": "breach"
+    }
+  },
   "system": {
     "description": {
-      "value": "<h2>NET Action.</h2><p>Some targets have added additional security to their Neuroport via a piece of cyberware known as a Self-ICE. For each Self-ICE they've installed, the Netrunner must spend a Net Action to bypass a Passwall, a process known as Breaching, before they can begin Quickhacking. For each Self-ICE the target has installed, the DV to Breach all of their Passwalls increases by 2 (DV6 for one Self-ICE, DV8 for two Self- ICE, and so forth). Breaching a Passwall requires an Interface Check against its DV.<br /><br />Each installed Self‑ICE requires one successful Breach.</p><ul><li><p>DV6 with one Self‑ICE.</p></li><li><p>DV8 with two.</p></li><li><p>DV10 with three.</p></li></ul><p>Make an Interface Check to bypass Passwalls.</p>"
+      "value": "<h2>NET Action.</h2><p>Some targets have added additional security to their Neuroport via a piece of cyberware known as a Self-ICE. For each Self-ICE they've installed, the Netrunner must spend a Net Action to bypass a Passwall, a process known as Breaching, before they can begin Quickhacking. For each Self-ICE the target has installed, the DV to Breach all of their Passwalls increases by 2 (DV6 for one Self-ICE, DV8 for two Self- ICE, and so forth). Breaching a Passwall requires an Interface Check against its DV.<br /><br />Each installed Self‑ICE requires one successful Breach.</p><ul><li><p>DV6 with one Self‑ICE.</p></li><li><p>DV8 with two.</p></li><li><p>DV10 with three.</p></li></ul><p>Make an Interface Check to bypass Passwalls.</p><p>@UUID[Compendium.cyberpunk-red-quickhacks.macros.Macro.pr9rdNgod82TMph9]{Run Breach}</p>"
     },
     "usage": "carried",
     "revealed": true,

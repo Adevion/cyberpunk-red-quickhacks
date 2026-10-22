@@ -113,7 +113,8 @@ async function importEntry(pack, definition, file) {
   await Macro.create(
     data,
     {
-      pack: pack.collection
+      pack: pack.collection,
+      keepId: true
     }
   );
 }
