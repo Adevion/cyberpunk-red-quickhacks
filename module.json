@@ -61,7 +61,8 @@
         "drugs",
         "journals",
         "weapons",
-        "upgrades"
+        "upgrades",
+        "macros"
       ]
     }
   ],
@@ -119,6 +120,14 @@
       "type": "Item",
       "name": "upgrades",
       "path": "packs/upgrades",
+      "system": "cyberpunk-red-core",
+      "banner": "modules/cyberpunk-red-quickhacks/images/compendium-banner.webp"
+    },
+    {
+      "label": "Macros",
+      "type": "Macro",
+      "name": "macros",
+      "path": "packs/macros",
       "system": "cyberpunk-red-core",
       "banner": "modules/cyberpunk-red-quickhacks/images/compendium-banner.webp"
     }

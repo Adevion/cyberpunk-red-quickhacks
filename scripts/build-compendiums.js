@@ -6,44 +6,42 @@ export async function buildCompendiums() {
    {
       pack: "quickhacks",
       type: "Item",
-      source:
-        "modules/cyberpunk-red-quickhacks/data/quickhacks"
+      source: "modules/cyberpunk-red-quickhacks/data/quickhacks"
     },
     {
       pack: "cyberware",
       type: "Item",
-      source:
-        "modules/cyberpunk-red-quickhacks/data/cyberware"
+      source: "modules/cyberpunk-red-quickhacks/data/cyberware"
     },
     {
       pack: "drugs",
       type: "Item",
-      source:
-        "modules/cyberpunk-red-quickhacks/data/drugs"
+      source: "modules/cyberpunk-red-quickhacks/data/drugs"
     },
     {
       pack: "net-actions",
       type: "Item",
-      source:
-        "modules/cyberpunk-red-quickhacks/data/netactions"
+      source: "modules/cyberpunk-red-quickhacks/data/netactions"
     },
     {
       pack: "journals",
       type: "JournalEntry",
-      source:
-        "modules/cyberpunk-red-quickhacks/data/journals"
+      source: "modules/cyberpunk-red-quickhacks/data/journals"
     },
     {
       pack: "weapons",
       type: "Item",
-      source:
-        "modules/cyberpunk-red-quickhacks/data/weapons"
+      source: "modules/cyberpunk-red-quickhacks/data/weapons"
     },
     {
       pack: "upgrades",
       type: "Item",
-      source:
-        "modules/cyberpunk-red-quickhacks/data/upgrades"
+      source: "modules/cyberpunk-red-quickhacks/data/upgrades"
+    },
+    {
+      pack: "macros",
+      type: "Macro",
+      source: "modules/cyberpunk-red-quickhacks/data/macros"
     }
   ];
   for (const def of definitions) {await buildPack(def);}
@@ -89,9 +87,7 @@ async function importEntry(pack, definition, file) {
   
   if (existing) {
     const doc =
-    await pack.getDocument(
-      existing._id
-    );
+    await pack.getDocument( existing._id );
     await doc.delete();
   }
 
@@ -112,4 +108,13 @@ async function importEntry(pack, definition, file) {
       }
     );
   }
+
+  if (definition.type === "Macro") {
+  await Macro.create(
+    data,
+    {
+      pack: pack.collection
+    }
+  );
+}
 }
