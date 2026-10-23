@@ -4,6 +4,7 @@
   "modules/cyberpunk-red-quickhacks/data/macros/remove-all-effects.json",
   "modules/cyberpunk-red-quickhacks/data/macros/remove-effect.json",
   "modules/cyberpunk-red-quickhacks/data/macros/hotbar-breach.json",
+  "modules/cyberpunk-red-quickhacks/data/macros/hotbar-perform-quickhack.json",
   "modules/cyberpunk-red-quickhacks/data/macros/hotbar-impair-movement.json",
   "modules/cyberpunk-red-quickhacks/data/macros/hotbar-sonic-shock.json",
   "modules/cyberpunk-red-quickhacks/data/macros/hotbar-overheat.json",
