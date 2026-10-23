@@ -57,3 +57,33 @@
   height: auto;
   image-rendering: pixelated;
 }
+
+.cpred-self-ice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 4px 0;
+  padding: 4px 8px;
+
+  border: 1px solid var(--red-border-color, #7a1d1d);
+  background: rgba(122, 29, 29, 0.12);
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.cpred-self-ice-label {
+  color: #fff;
+}
+
+.cpred-self-ice-value {
+  flex-grow: 1;
+  text-align: center;
+  color: #fff;
+}
+
+.cpred-self-ice-dv {
+  white-space: nowrap;
+  color: #fff;
+}
