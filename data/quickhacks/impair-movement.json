@@ -20,7 +20,7 @@
     },
     "def": 0,
     "description": {
-      "value": "<p><strong>DV 6</strong></p><p>Target's MOVE is lowered by 1 for 20 Rounds (60 seconds).</p><p>If MOVE is reduced to 0, the target cannot take Move Actions.</p>"
+      "value": "<p><strong>DV 6</strong></p><p>Target's MOVE is lowered by 1 for 20 Rounds (60 seconds).</p><p>If MOVE is reduced to 0, the target cannot take Move Actions.</p><p>@UUID[Compendium.cyberpunk-red-quickhacks.macros.Macro.qhImpairMove0001]{Run Impair Movement}</p>"
     },
     "favorite": false,
     "installLocation": "mall",

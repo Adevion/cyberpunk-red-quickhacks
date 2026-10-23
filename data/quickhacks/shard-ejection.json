@@ -20,7 +20,7 @@
     },
     "def": 0,
     "description": {
-      "value": "<p><strong>DV 12</strong></p><p>Forcefully uninstall and eject one installed piece of chipware into an adjacent square.</p><p>If multiple chipware options are installed, the Netrunner chooses which one is ejected.</p><p>Fails if the target has a shard slot cover or equivalent protection.</p>"
+      "value": "<p><strong>DV 12</strong></p><p>Forcefully uninstall and eject one installed piece of chipware into an adjacent square.</p><p>If multiple chipware options are installed, the Netrunner chooses which one is ejected.</p><p>Fails if the target has a shard slot cover or equivalent protection.</p><p>@UUID[Compendium.cyberpunk-red-quickhacks.macros.Macro.qhShardEject0001]{Run Shard Ejection}</p>"
     },
     "favorite": false,
     "installLocation": "mall",

@@ -184,3 +184,26 @@ export function getInterfaceRank( actor ) {
     );
   return role?.system?.rank || 0;
 }
+
+export async function runQuickHackFromHotbar( actor, target, hackName ) {
+  if (!actor) {
+    ui.notifications.warn( "Select your Netrunner token or assign a character to your user." );
+    return;
+  }
+
+  if (!target) {
+    ui.notifications.warn( "Target a token first." );
+    return;
+  }
+
+  const hack = actor.items.find(
+    item => item.type === "program" && item.name === hackName
+  );
+
+  if (!hack) {
+    ui.notifications.warn( `${actor.name} does not have ${hackName} installed.` );
+    return;
+  }
+
+  return performQuickHack( actor, target, hack );
+}

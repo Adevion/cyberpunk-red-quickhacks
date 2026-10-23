@@ -20,7 +20,7 @@
     },
     "def": 0,
     "description": {
-      "value": "<p><strong>DV 6</strong></p><p>Target suffers the Damaged Ear Critical Injury without taking Bonus Damage.</p><p>Duration: 20 Rounds.</p>"
+      "value": "<p><strong>DV 6</strong></p><p>Target suffers the Damaged Ear Critical Injury without taking Bonus Damage.</p><p>Duration: 20 Rounds.</p><p>@UUID[Compendium.cyberpunk-red-quickhacks.macros.Macro.qhSonicShock0001]{Run Sonic Shock}</p>"
     },
     "favorite": false,
     "installLocation": "mall",

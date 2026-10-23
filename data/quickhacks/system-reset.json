@@ -20,7 +20,7 @@
     },
     "def": 0,
     "description": {
-      "value": "<p><strong>DV 12</strong></p><p>Target falls Unconscious for 20 Rounds or until damaged.</p><p>Target also becomes Prone.</p>"
+      "value": "<p><strong>DV 12</strong></p><p>Target falls Unconscious for 20 Rounds or until damaged.</p><p>Target also becomes Prone.</p><p>@UUID[Compendium.cyberpunk-red-quickhacks.macros.Macro.qhSystemReset001]{Run System Reset}</p>"
     },
     "favorite": false,
     "installLocation": "mall",

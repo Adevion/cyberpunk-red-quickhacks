@@ -20,7 +20,7 @@
     },
     "def": 0,
     "description": {
-      "value": "<p><strong>DV 8</strong></p><p>The GM chooses three pieces of cyberware other than a Cyberarm, Cyberleg, Cybereye, Cyberaudio Suite, Neuroport, or Neuroport Cyberdeck Expansion.</p><p>Selected cyberware and attached options cease functioning for 20 Rounds.</p>"
+      "value": "<p><strong>DV 8</strong></p><p>The GM chooses three pieces of cyberware other than a Cyberarm, Cyberleg, Cybereye, Cyberaudio Suite, Neuroport, or Neuroport Cyberdeck Expansion.</p><p>Selected cyberware and attached options cease functioning for 20 Rounds.</p><p>@UUID[Compendium.cyberpunk-red-quickhacks.macros.Macro.qhShortCirc00001]{Run Short Circuit}</p>"
     },
     "favorite": false,
     "installLocation": "mall",

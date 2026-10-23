@@ -20,7 +20,7 @@
     },
     "def": 0,
     "description": {
-      "value": "<p><strong>DV 10</strong></p><p>Target's MOVE is reduced by 1d6 for 20 Rounds.</p><p>If MOVE reaches 0, the target cannot take Move Actions.</p>"
+      "value": "<p><strong>DV 10</strong></p><p>Target's MOVE is reduced by 1d6 for 20 Rounds.</p><p>If MOVE reaches 0, the target cannot take Move Actions.</p><p>@UUID[Compendium.cyberpunk-red-quickhacks.macros.Macro.qhSlow0000000001]{Run Slow}</p>"
     },
     "favorite": false,
     "installLocation": "mall",

@@ -6,6 +6,7 @@ import { buildCompendiums } from "./build-compendiums.js";
 import { registerSheetHooks } from "./sheet-hooks.js";
 import { getSelfIceCount } from "./neuroport.js";
 import { removeAllQuickHackEffects, removeQuickHackEffect } from "./gm-utilities.js";
+import { runQuickHackFromHotbar } from "./quickhacks.js";
 import { registerSocketLib } from "./socketlib.js";
 
 Hooks.once( "socketlib.ready", registerSocketLib );
@@ -23,7 +24,7 @@ Hooks.once("ready", async () => {
     await buildCompendiums();
   }
   console.log("CPRED Edgerunners QuickHacks | Ready");
-  window.cpredqh = { getSelfIceCount, removeAllQuickHackEffects, removeQuickHackEffect, performBreach };
+  window.cpredqh = { getSelfIceCount, removeAllQuickHackEffects, removeQuickHackEffect, performBreach, runQuickHackFromHotbar };
 });
 
 Hooks.on("updateCombat", async (combat, changed) => {

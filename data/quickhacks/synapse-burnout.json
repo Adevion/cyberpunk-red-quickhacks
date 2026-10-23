@@ -20,7 +20,7 @@
     },
     "def": 0,
     "description": {
-      "value": "<p><strong>DV 10</strong></p><p>Deal 3d6 damage directly to HP.</p><p>This damage bypasses armor and does not ablate armor.</p>"
+      "value": "<p><strong>DV 10</strong></p><p>Deal 3d6 damage directly to HP.</p><p>This damage bypasses armor and does not ablate armor.</p><p>@UUID[Compendium.cyberpunk-red-quickhacks.macros.Macro.qhSynapseBurn001]{Run Synapse Burnout}</p>"
     },
     "favorite": false,
     "installLocation": "mall",

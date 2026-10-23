@@ -20,7 +20,7 @@
     },
     "def": 0,
     "description": {
-      "value": "<p><strong>DV 10</strong></p><p>Select one piece of cyberware other than a Neuroport or Neuroport Cyberdeck Port.</p><p>The selected cyberware becomes inoperable for 20 Rounds.</p><p>Cyberlimbs act as Broken Arm or Broken Leg Critical Injuries while disabled.</p><p>All attached cyberware options cease functioning.</p>"
+      "value": "<p><strong>DV 10</strong></p><p>Select one piece of cyberware other than a Neuroport or Neuroport Cyberdeck Port.</p><p>The selected cyberware becomes inoperable for 20 Rounds.</p><p>Cyberlimbs act as Broken Arm or Broken Leg Critical Injuries while disabled.</p><p>All attached cyberware options cease functioning.</p><p>@UUID[Compendium.cyberpunk-red-quickhacks.macros.Macro.qhCyberMalfunc01]{Run Cyberware Malfunction}</p>"
     },
     "favorite": false,
     "installLocation": "mall",

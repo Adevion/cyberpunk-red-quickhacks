@@ -20,7 +20,7 @@
     },
     "def": 0,
     "description": {
-      "value": "<p><strong>DV 8</strong></p><p>Target catches fire.</p><p>At the end of each Turn the target suffers 4 damage directly to HP.</p><p>This damage bypasses armor and does not ablate armor.</p><p>Extinguishing requires an Action on the target's Turn.</p>"
+      "value": "<p><strong>DV 8</strong></p><p>Target catches fire.</p><p>At the end of each Turn the target suffers 4 damage directly to HP.</p><p>This damage bypasses armor and does not ablate armor.</p><p>Extinguishing requires an Action on the target's Turn.</p><p>@UUID[Compendium.cyberpunk-red-quickhacks.macros.Macro.qhOverheat000001]{Run Overheat}</p>"
     },
     "favorite": false,
     "installLocation": "mall",

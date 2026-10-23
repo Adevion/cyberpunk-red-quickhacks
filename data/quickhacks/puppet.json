@@ -20,7 +20,7 @@
     },
     "def": 0,
     "description": {
-      "value": "<p><strong>DV 12</strong></p><p>You control the target's Move Action and Action during their next Turn.</p><p>All rolls use the target's own Stats and Skills.</p><p>The target may attack allies, themselves, use equipment, or perform other legal actions as determined by the Netrunner.</p>"
+      "value": "<p><strong>DV 12</strong></p><p>You control the target's Move Action and Action during their next Turn.</p><p>All rolls use the target's own Stats and Skills.</p><p>The target may attack allies, themselves, use equipment, or perform other legal actions as determined by the Netrunner.</p><p>@UUID[Compendium.cyberpunk-red-quickhacks.macros.Macro.qhPuppet00000001]{Run Puppet}</p>"
     },
     "favorite": false,
     "installLocation": "mall",
