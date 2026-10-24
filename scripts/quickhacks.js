@@ -21,55 +21,42 @@ const QUICKHACKS = [
 ];
 
 export function getQuickhacks(actor) {
-  return actor.items.filter(
+  const programs = actor.items.filter(
     i =>
       i.type === "program" &&
-      QUICKHACKS.includes(i.name)
+      QUICKHACKS.includes(i.name) &&
+      i.system.isInstalled
   );
+
+  return programs;
 }
 
 export async function openQuickhackDialog( actor ) {
   const target = [...game.user.targets][0]?.actor;
 
-  if (!target) {
-    ui.notifications.warn(
-      "Select a target."
-    );
+  if (!target) { ui.notifications.warn( "Select a target." );
     return;
   }
 
-const allPrograms = actor.items.filter( i => i.type === "program" );
-const hacks = getQuickhacks(actor);
+  const hacks = getQuickhacks(actor);
 
-let options = "";
+  if (hacks.length === 0) { ui.notifications.warn( "No QuickHacks installed in Cyberdeck." );
+    return;
+  }
 
-for (const h of hacks) {
-  options += `
-    <option value="${h.id}">
-      ${h.name}
-    </option>
-  `;
-}
+  let options = "";
+  for (const h of hacks) { options += ` <option value="${h.id}"> ${h.name} </option> `; }
 
-const content = `
-  <form>
-    <div>
-      Target: ${target.name}
-    </div>
-
-    <div class="form-group">
-      <label>Quickhack</label>
-      <select id="hack">
-        ${options}
-      </select>
-    </div>
-
-    <hr/>
-
-    <div class="text-small">
-      Select a Quickhack and press Execute.
-    </div>
-  </form>
+  const content = `
+    <form>
+      <div> Target: ${target.name} </div>
+      <div class="form-group">
+        <label>Quickhack</label>
+        <select id="hack"> ${options} </select>
+      </div>
+      <hr/>
+      <div class="text-small"> Select a Quickhack and press Execute. </div>
+    </form>
   `;
 
   new Dialog({
@@ -79,15 +66,9 @@ const content = `
       apply: {
         label: "Execute",
         callback: async html => {
-          const id =
-            html.find("#hack").val();
-          const hack =
-            actor.items.get(id);
-          await performQuickhack(
-            actor,
-            target,
-            hack
-          );
+          const id = html.find("#hack").val();
+          const hack = actor.items.get(id);
+          await performQuickhack( actor, target, hack );
         }
       }
     }
@@ -170,7 +151,6 @@ export async function performQuickhack( actor, target, hack) {
   if (!success) {
     return;
   }
-);
 
   await applyQuickhack( actor, target, hack );
 }
@@ -198,7 +178,7 @@ export async function runQuickhackFromHotbar( actor, target, hackName ) {
   }
 
   const hack = actor.items.find(
-    item => item.type === "program" && item.name === hackName
+    item => item.type === "program" && item.name === hackName && item.system.isInstalled
   );
 
   if (!hack) {
