@@ -1,0 +1,177 @@
+<div class="rollcard">
+
+  <div class="rollcard-top">
+    <div class="cpr-block chat-rollTitle-stat">
+
+      <div class="text-center text-padding-top text-normal text-semi">
+        {{rollTitle}}
+      </div>
+
+      <div class="rollcard-subtitle">
+        <div class="rollcard-subtitle-center text-small">
+          {{subTitle}}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="rollcard-bottom">
+    <div class="cpr-block">
+      <br/>
+      <div class="d10-rollcard-data">
+
+        <div class="breach-stage">
+          {{#if neuroport}}
+            <div class="breach-stage-title">
+              <h4>Neuroport Firewall</h4>
+            </div>
+            {{#unless neuroport.noAutoSuccess}}
+              <div class="d10-dice-div">
+                  {{#each neuroport.faces as |dieFace| }}
+                    <img class="d10" src="systems/cyberpunk-red-core/icons/dice/black/d10_{{dieFace}}.svg"/> 
+                  {{/each}}
+
+                  {{#if neuroport.wasCritSuccess}}
+                    <i class="fas fa-plus"></i> <img class="d10" src="systems/cyberpunk-red-core/icons/dice/red/d10_{{neuroport.criticalRoll}}.svg"/>
+                  {{/if}}
+
+                  {{#if neuroport.wasCritFail}}
+                    <i class="fas fa-minus"></i> <img class="d10" src="systems/cyberpunk-red-core/icons/dice/black/d10_{{neuroport.criticalRoll}}.svg"/>
+                  {{/if}}
+              </div>
+
+              <div class="d10-number-div">
+                <a> 
+                  <span class="clickable" data-action="toggleVisibility" data-visible-element="d10-data-details">
+                    {{neuroport.resultTotal}}
+                  </span>
+                </a>
+              </div>
+
+              <div class="d10-data-div">
+                <div class="d10-data-details hide">
+                  {{#if interfaceRank}}
+                    <div class="text-normal text-semi">
+                      Interface +{{interfaceRank}}
+                    </div>
+                  {{/if}}
+
+                  {{#if neuroport.wasCritSuccess}}
+                    <div class="text-normal text-semi">
+                      Critical Success +{{neuroport.criticalRoll}}
+                    </div>
+                  {{/if}}
+
+                  {{#if neuroport.wasCritFail}}
+                    <div class="text-normal text-semi">
+                      Critical Failure -{{neuroport.criticalRoll}}
+                    </div>
+                  {{/if}}
+
+                  {{#if neuroport.hasModifiers}}
+                    <div class="text-normal text-semi text-nowrap" data-tooltip="
+                    {{#each neuroport.modifiers}} 
+                      {{this.source}}: {{this.value}} <br/>
+                    {{/each}}
+                    "> Total Mods {{{neuroport.totalModsDisplay}}}
+                    </div>
+                  {{/if}}
+
+                  {{#if neuroport.luck}}
+                    <div class="text-normal text-semi">
+                      LUCK +{{neuroport.luck}}
+                    </div>
+                  {{/if}}
+                </div>
+              </div>
+            {{/unless}}
+
+            {{#if neuroport.noAutoSuccess}}
+              <div class="breach-stage-auto"> AUTO SUCCESS </div>
+            {{/if}}    
+
+          {{/if}}      
+        </div>
+
+        {{#if selfIce}}
+        <div class="breach-stage">
+            <div class="breach-stage-title">
+              <h4>Self-ICE Passwall</h4>
+            </div>  
+            <div class="d10-dice-div">
+              {{#each selfIce.faces as |dieFace| }}
+                <img class="d10" src="systems/cyberpunk-red-core/icons/dice/black/d10_{{dieFace}}.svg"/> 
+              {{/each}}
+
+              {{#if selfIce.wasCritSuccess}}
+                <i class="fas fa-plus"></i> <img class="d10" src="systems/cyberpunk-red-core/icons/dice/red/d10_{{selfIce.criticalRoll}}.svg"/>
+              {{/if}}
+
+              {{#if selfIce.wasCritFail}}
+                <i class="fas fa-minus"></i> <img class="d10" src="systems/cyberpunk-red-core/icons/dice/black/d10_{{selfIce.criticalRoll}}.svg"/>
+              {{/if}}
+            </div>
+
+            <div class="d10-number-div">
+              <a> 
+                <span class="clickable" data-action="toggleVisibility" data-visible-element="d10-data-details">
+                  {{selfIce.resultTotal}}
+                </span>
+              </a>
+            </div>
+
+            <div class="d10-data-div">
+              <div class="d10-data-details hide">
+                {{#if interfaceRank}}
+                  <div class="text-normal text-semi">
+                    Interface +{{interfaceRank}}
+                  </div>
+                {{/if}}
+
+                {{#if selfIce.wasCritSuccess}}
+                  <div class="text-normal text-semi">
+                    Critical Success +{{selfIce.criticalRoll}}
+                  </div>
+                {{/if}}
+
+                {{#if selfIce.wasCritFail}}
+                  <div class="text-normal text-semi">
+                    Critical Failure -{{selfIce.criticalRoll}}
+                  </div>
+                {{/if}}
+
+                {{#if selfIce.hasModifiers}}
+                  <div class="text-normal text-semi text-nowrap" data-tooltip="
+                  {{#each selfIce.modifiers}} 
+                    {{this.source}}: {{this.value}} <br/>
+                  {{/each}}
+                  "> Total Mods {{{selfIce.totalModsDisplay}}}
+                  </div>
+                {{/if}}
+
+                {{#if selfIce.luck}}
+                  <div class="text-normal text-semi">
+                    LUCK +{{selfIce.luck}}
+                  </div>
+                {{/if}}
+              </div>
+            </div>
+        </div>
+        {{/if}}
+
+        <div class="breach-result-summary">
+          {{#if description}}
+            {{{description}}}
+          {{/if}}
+
+          {{#if resultImage}}
+            <img class="quickhack-result-image" src="{{resultImage}}"/><br/>
+          {{/if}}
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
