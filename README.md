@@ -1,12 +1,12 @@
-# Cyberpunk RED: Edgerunners QuickHacks
+# Cyberpunk RED: Edgerunners Quickhacks
 
 A Foundry VTT module for Cyberpunk RED that adds the Quickhack system from the Cyberpunk: Edgerunners Mission Kit.
 
 ## Features
 
-### QuickHacks
+### Quickhacks
 
-Adds 11 QuickHack Programs:
+Adds 11 Quickhack Programs:
 
 - Impair Movement
 - Sonic Shock
@@ -23,7 +23,7 @@ Adds 11 QuickHack Programs:
 ### New NET Actions
 
 - Breach
-- Perform QuickHack
+- Perform Quickhack
 
 ### Cyberware
 
@@ -95,7 +95,7 @@ The following systems are partially automated and may still require GM interacti
 ## Planned Features
 
 - Neuroport tracker panel
-- QuickHack range validation
+- Quickhack range validation
 - Scene-based shard drops
 - Advanced CPR sheet integration
 - Full Direct Connection automation

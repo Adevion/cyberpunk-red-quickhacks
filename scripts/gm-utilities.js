@@ -1,6 +1,6 @@
 import { getSocket } from "./socketlib.js";
 
-export async function removeAllQuickHackEffects( actor ) {
+export async function removeAllQuickhackEffects( actor ) {
   //const actor = await fromUuid( actorUuid );
   if (!actor) return;
 
@@ -27,11 +27,11 @@ export async function removeAllQuickHackEffects( actor ) {
   await actor.toggleStatusEffect( "unconscious", { active: false } );
   await actor.toggleStatusEffect( "prone", { active: false } );
 
-  ui.notifications.info( `${actor.name}: all QuickHack effects removed.` );
-  await ChatMessage.create({ content: `<div class="cpr-evasion-result hit"> <b>${actor.name}</b> has been cleared of all QuickHack effects. </div>` });
+  ui.notifications.info( `${actor.name}: all Quickhack effects removed.` );
+  await ChatMessage.create({ content: `<div class="cpr-evasion-result hit"> <b>${actor.name}</b> has been cleared of all Quickhack effects. </div>` });
 }
 
-export async function removeQuickHackEffect( actorUuid, quickhackName ) {
+export async function removeQuickhackEffect( actorUuid, quickhackName ) {
   const actor = await fromUuid(actorUuid);
   if (!actor) return;
 

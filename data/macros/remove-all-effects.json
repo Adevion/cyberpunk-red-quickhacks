@@ -3,5 +3,5 @@
   "type": "script",
   "img": "modules/cyberpunk-red-quickhacks/icons/quickhacks/purge.png",
   "scope": "global",
-  "command": "const actor = token?.actor; if (!actor) { ui.notifications.warn(\"Select a token.\"); return; } await cpredqh.removeAllQuickHackEffects(actor);"
+  "command": "const actor = token?.actor; if (!actor) { ui.notifications.warn(\"Select a token.\"); return; } await cpredqh.removeAllQuickhackEffects(actor);"
 }

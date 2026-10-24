@@ -1,7 +1,7 @@
 export const QUICKHACK_EFFECTS = [
   {
     id: "quickhacked",
-    label: "QuickHacked",
+    label: "Quickhacked",
     icon: "modules/cyberpunk-red-quickhacks/icons/svg/lightning.svg"
   },
   {

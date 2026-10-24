@@ -1,10 +1,10 @@
 export async function createFolders() {
 
     const names = [
-        "Simple QuickHacks",
-        "Standard QuickHacks",
-        "Difficult QuickHacks",
-        "Advanced QuickHacks"
+        "Simple Quickhacks",
+        "Standard Quickhacks",
+        "Difficult Quickhacks",
+        "Advanced Quickhacks"
     ];
 
     for (const name of names) {

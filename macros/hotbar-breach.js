@@ -13,7 +13,7 @@ if (!target) {
 } 
 
 if (!window.cpredqh?.performBreach) { 
-    ui.notifications.error("QuickHacks module API is not ready. Reload Foundry and try again.");
+    ui.notifications.error("Quickhacks module API is not ready. Reload Foundry and try again.");
     return;
 } 
 

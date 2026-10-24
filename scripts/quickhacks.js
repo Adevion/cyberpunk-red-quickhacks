@@ -2,7 +2,7 @@
 import * as CPRRolls from  "../../../systems/cyberpunk-red-core/modules/rolls/cpr-rolls.js";
 
 // Quickhack Imports
-import { applyQuickHack } from "./quickhack-effects.js";
+import { applyQuickhack } from "./quickhack-effects.js";
 import { debugLog } from "./gm-utilities.js";
 import "./quickhack-expiration.js";
 
@@ -20,7 +20,7 @@ const QUICKHACKS = [
   "System Reset"
 ];
 
-export function getQuickHacks(actor) {
+export function getQuickhacks(actor) {
   return actor.items.filter(
     i =>
       i.type === "program" &&
@@ -28,7 +28,7 @@ export function getQuickHacks(actor) {
   );
 }
 
-export async function openQuickHackDialog( actor ) {
+export async function openQuickhackDialog( actor ) {
   const target = [...game.user.targets][0]?.actor;
 
   if (!target) {
@@ -39,7 +39,7 @@ export async function openQuickHackDialog( actor ) {
   }
 
 const allPrograms = actor.items.filter( i => i.type === "program" );
-const hacks = getQuickHacks(actor);
+const hacks = getQuickhacks(actor);
 
 let options = "";
 
@@ -83,7 +83,7 @@ const content = `
             html.find("#hack").val();
           const hack =
             actor.items.get(id);
-          await performQuickHack(
+          await performQuickhack(
             actor,
             target,
             hack
@@ -94,7 +94,7 @@ const content = `
   }).render(true);
 }
 
-export async function performQuickHack( actor, target, hack) {
+export async function performQuickhack( actor, target, hack) {
   const dv = hack.flags[ "cyberpunk-red-quickhacks" ].dv;
   const interfaceRank = getInterfaceRank(actor);
   const roll = new CPRRolls.CPRInterfaceRoll("action", "Quickhack", interfaceRank);
@@ -170,8 +170,9 @@ export async function performQuickHack( actor, target, hack) {
   if (!success) {
     return;
   }
+);
 
-  await applyQuickHack( actor, target, hack );
+  await applyQuickhack( actor, target, hack );
 }
 
 export function getInterfaceRank( actor ) {
@@ -185,7 +186,7 @@ export function getInterfaceRank( actor ) {
   return role?.system?.rank || 0;
 }
 
-export async function runQuickHackFromHotbar( actor, target, hackName ) {
+export async function runQuickhackFromHotbar( actor, target, hackName ) {
   if (!actor) {
     ui.notifications.warn( "Select your Netrunner token or assign a character to your user." );
     return;
@@ -205,5 +206,5 @@ export async function runQuickHackFromHotbar( actor, target, hackName ) {
     return;
   }
 
-  return performQuickHack( actor, target, hack );
+  return performQuickhack( actor, target, hack );
 }

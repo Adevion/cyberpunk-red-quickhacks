@@ -1,8 +1,8 @@
 {
   "_id": "performQHack0001",
-  "name": "Perform QuickHack",
+  "name": "Perform Quickhack",
   "type": "script",
   "scope": "global",
   "img": "modules/cyberpunk-red-quickhacks/icons/netactions/perform_quickhack.svg",
-  "command": "const actor = canvas.tokens.controlled[0]?.actor ?? game.user.character; if (!actor) { ui.notifications.warn(\"Select your Netrunner token or assign a character to your user.\"); return; } if (!window.cpredqh?.openQuickHackDialog) { ui.notifications.error(\"QuickHacks module API is not ready. Reload Foundry and try again.\"); return; } await window.cpredqh.openQuickHackDialog(actor);"
+  "command": "const actor = canvas.tokens.controlled[0]?.actor ?? game.user.character; if (!actor) { ui.notifications.warn(\"Select your Netrunner token or assign a character to your user.\"); return; } if (!window.cpredqh?.openQuickhackDialog) { ui.notifications.error(\"Quickhacks module API is not ready. Reload Foundry and try again.\"); return; } await window.cpredqh.openQuickhackDialog(actor);"
 }

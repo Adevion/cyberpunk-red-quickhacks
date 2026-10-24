@@ -3,7 +3,7 @@ import * as CPRRolls from  "../../../systems/cyberpunk-red-core/modules/rolls/cp
 
 import { getSocket } from "./socketlib.js";
 
-// Apply QuickHack Effects
+// Apply Quickhack Effects
 //--------------------------------------------------------------------
 // Impair Movement
 async function applyImpairMovement( attacker, target ) {
@@ -730,7 +730,7 @@ export async function applyShardEjectionEffect( attackerUuid, targetUuid, itemId
   });
 }
 
-// Remove QuickHack Effects
+// Remove Quickhack Effects
 async function removeSlow( target ) {
   const slowEffects = target.effects.filter(
     e =>
@@ -854,30 +854,30 @@ export async function postRollCard( attacker, rollTitle, subTitle, description, 
   });
 }
 
-export async function applyQuickHack( attacker, target, hack ) {
+export async function applyQuickhack( attacker, target, hack ) {
   const dialogDrivenHacks = [ "Lure", "Puppet", "Cyberware Malfunction", "Short Circuit", "Shard Ejection" ];
 
   if (dialogDrivenHacks.includes(hack.name)) {
-    return executeQuickHack( attacker, target,  hack.name );
+    return executeQuickhack( attacker, target,  hack.name );
   }
 
   // If user can modify the target, execute normally
   if (target.isOwner) { 
-    return executeQuickHack( attacker, target, hack.name );
+    return executeQuickhack( attacker, target, hack.name );
   } else {
     const socket = getSocket();
-    await socket.executeAsGM( "executeQuickHack", attacker.uuid, target.uuid, hack.name );
+    await socket.executeAsGM( "executeQuickhack", attacker.uuid, target.uuid, hack.name );
   }
 }
 
-export async function executeQuickHackSocket( attackerUuid, targetUuid, hackName ) {
+export async function executeQuickhackSocket( attackerUuid, targetUuid, hackName ) {
   const attacker = await fromUuid(attackerUuid);
   const target = await fromUuid(targetUuid);
 
-  return executeQuickHack( attacker, target, hackName );
+  return executeQuickhack( attacker, target, hackName );
 }
 
-export async function executeQuickHack( attacker, target, hackName ) {
+export async function executeQuickhack( attacker, target, hackName ) {
   switch (hackName) {
     case "Impair Movement": return applyImpairMovement(attacker, target);
     case "Sonic Shock": return applySonicShock(attacker, target);

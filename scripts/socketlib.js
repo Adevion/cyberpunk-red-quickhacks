@@ -1,6 +1,6 @@
-//  Cyberpunk RED QuickHack Imports
-import { removeQuickHackEffect, removeAllQuickHackEffects, gmDebugLog } from "./gm-utilities.js";
-import { executeQuickHackSocket } from "./quickhack-effects.js";
+//  Cyberpunk RED Quickhack Imports
+import { removeQuickhackEffect, removeAllQuickhackEffects, gmDebugLog } from "./gm-utilities.js";
+import { executeQuickhackSocket } from "./quickhack-effects.js";
 
 //  Quickhacks
 import { applyBreach } from "./breach.js";
@@ -16,11 +16,11 @@ export function registerSocketLib() {
   // Socket Registration
   socket = socketlib.registerModule("cyberpunk-red-quickhacks");
   // Macrco's & GM Tools
-  socket.register( "removeQuickHackEffect", removeQuickHackEffect );
-  socket.register( "removeAllQuickHackEffects", removeAllQuickHackEffects );
+  socket.register( "removeQuickhackEffect", removeQuickhackEffect );
+  socket.register( "removeAllQuickhackEffects", removeAllQuickhackEffects );
   socket.register( "gmDebugLog", gmDebugLog );
   // Quickhacks
-  socket.register( "executeQuickHack", executeQuickHackSocket );
+  socket.register( "executeQuickhack", executeQuickhackSocket );
   socket.register( "applyLureEffect", applyLureEffect );
   socket.register( "applyPuppetEffect", applyPuppetEffect );
   socket.register( "applyCyberwareMalfunctionEffect", applyCyberwareMalfunctionEffect );

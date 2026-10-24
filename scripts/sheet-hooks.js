@@ -1,4 +1,4 @@
-import { openQuickHackDialog } from "./quickhacks.js";
+import { openQuickhackDialog } from "./quickhacks.js";
 import { performBreach } from "./breach.js";
 import { getSelfIceCount, getPasswallDV } from "./neuroport.js";
 
@@ -72,7 +72,7 @@ export function registerSheetHooks() {
         </button>
 
         <button class="cpred-quickhack">
-          <b>Perform QuickHack</b>
+          <b>Perform Quickhack</b>
         </button>
       </div>
     `);
@@ -95,7 +95,7 @@ export function registerSheetHooks() {
       });
 
     controls.find(".cpred-quickhack")
-      .click(() => openQuickHackDialog(actor));
+      .click(() => openQuickhackDialog(actor));
   });
 
   //

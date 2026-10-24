@@ -20,7 +20,7 @@
     },
     "def": 0,
     "description": {
-      "value": "<p><strong>DV 10</strong></p><p>At the start of the target's next Turn, they are compelled to take a Move Action chosen by the Netrunner to investigate a phantom noise.</p><p>Lure only works if the target is unaware a Netrunner has Jacked In.</p><p>The target is not alerted to the QuickHack.</p><p>Cannot force movement into obvious physical danger.</p><p>@UUID[Compendium.cyberpunk-red-quickhacks.macros.Macro.qhLure0000000001]{Run Lure}</p>"
+      "value": "<p><strong>DV 10</strong></p><p>At the start of the target's next Turn, they are compelled to take a Move Action chosen by the Netrunner to investigate a phantom noise.</p><p>Lure only works if the target is unaware a Netrunner has Jacked In.</p><p>The target is not alerted to the Quickhack.</p><p>Cannot force movement into obvious physical danger.</p><p>@UUID[Compendium.cyberpunk-red-quickhacks.macros.Macro.qhLure0000000001]{Run Lure}</p>"
     },
     "favorite": false,
     "installLocation": "mall",

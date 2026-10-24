@@ -9,7 +9,7 @@
       "type": "text",
       "text": {
         "format": 1,
-        "content": "<p>A target's Neuroport acts like a NET Architecture. If it has no Self-ICE or Black ICE installed, the NET Architecture has one floor - a Control Node (DV10) for the Neuroport's attached holophone. Otherwise, the Neuroport has one floor per Passwall installed and/or Black ICE connected. A Neuroport's initial firewall defenses are not considered a Passwall and do not occupy a floor.</p><p>Neuroports cannot install Black ICE directly. Instead, a Neuroport borrows any Black ICE installed on a Cyberdeck the user is currently connected to. The Neuroport's NET Architecture expands to accommodate the Black ICE. The user can order the floors to position any Passwalls, Black ICE, and the holophone Control Node however they like.</p><p>Netrunners are always Jacked In to their own Neuroport and can always choose to interact with (and battle) another Netrunner who is invading their system. A Netrunner cannot be Jacked Out of their own Neuroport. <br/> Netrunners can leave a Virus in a Neuroport's NET Architecture if they reach the bottom. This follows the normal rules as presented in the Cyberpunk RED core rulebook (see CP:R page 200).</p><p>The Backdoor NET Action has been renamed <b>Breach</b>.</p><br><p>A Netrunner may only attempt one QuickHack per target per Turn.</p><table><tr><th>QuickHack</th><th>DV</th></tr><tr><td>Impair Movement</td><td>6</td></tr><tr><td>Sonic Shock</td><td>6</td></tr><tr><td>Overheat</td><td>8</td></tr><tr><td>Short Circuit</td><td>8</td></tr><tr><td>Cyberware Malfunction</td><td>10</td></tr><tr><td>Lure</td><td>10</td></tr><tr><td>Slow</td><td>10</td></tr><tr><td>Synapse Burnout</td><td>10</td></tr><tr><td>Puppet</td><td>12</td></tr><tr><td>Shard Ejection</td><td>12</td></tr><tr><td>System Reset</td><td>12</td></tr></table>"
+        "content": "<p>A target's Neuroport acts like a NET Architecture. If it has no Self-ICE or Black ICE installed, the NET Architecture has one floor - a Control Node (DV10) for the Neuroport's attached holophone. Otherwise, the Neuroport has one floor per Passwall installed and/or Black ICE connected. A Neuroport's initial firewall defenses are not considered a Passwall and do not occupy a floor.</p><p>Neuroports cannot install Black ICE directly. Instead, a Neuroport borrows any Black ICE installed on a Cyberdeck the user is currently connected to. The Neuroport's NET Architecture expands to accommodate the Black ICE. The user can order the floors to position any Passwalls, Black ICE, and the holophone Control Node however they like.</p><p>Netrunners are always Jacked In to their own Neuroport and can always choose to interact with (and battle) another Netrunner who is invading their system. A Netrunner cannot be Jacked Out of their own Neuroport. <br/> Netrunners can leave a Virus in a Neuroport's NET Architecture if they reach the bottom. This follows the normal rules as presented in the Cyberpunk RED core rulebook (see CP:R page 200).</p><p>The Backdoor NET Action has been renamed <b>Breach</b>.</p><br><p>A Netrunner may only attempt one Quickhack per target per Turn.</p><table><tr><th>Quickhack</th><th>DV</th></tr><tr><td>Impair Movement</td><td>6</td></tr><tr><td>Sonic Shock</td><td>6</td></tr><tr><td>Overheat</td><td>8</td></tr><tr><td>Short Circuit</td><td>8</td></tr><tr><td>Cyberware Malfunction</td><td>10</td></tr><tr><td>Lure</td><td>10</td></tr><tr><td>Slow</td><td>10</td></tr><tr><td>Synapse Burnout</td><td>10</td></tr><tr><td>Puppet</td><td>12</td></tr><tr><td>Shard Ejection</td><td>12</td></tr><tr><td>System Reset</td><td>12</td></tr></table>"
       }
     },
     {
@@ -17,7 +17,7 @@
       "type": "text",
       "text": {
         "format": 1,
-        "content": "<table><tr><th>QuickHack</th><th>DV</th><th>Cost</th></tr><tr><td>Impair Movement</td><td>6</td><td>20eb</td></tr><tr><td>Sonic Shock</td><td>6</td><td>20eb</td></tr><tr><td>Overheat</td><td>8</td><td>50eb</td></tr><tr><td>Short Circuit</td><td>8</td><td>50eb</td></tr><tr><td>Cyberware Malfunction</td><td>10</td><td>100eb</td></tr><tr><td>Lure</td><td>10</td><td>100eb</td></tr><tr><td>Slow</td><td>10</td><td>100eb</td></tr><tr><td>Synapse Burnout</td><td>10</td><td>100eb</td></tr><tr><td>Puppet</td><td>12</td><td>500eb</td></tr><tr><td>Shard Ejection</td><td>12</td><td>500eb</td></tr><tr><td>System Reset</td><td>12</td><td>500eb</td></tr></table>"
+        "content": "<table><tr><th>Quickhack</th><th>DV</th><th>Cost</th></tr><tr><td>Impair Movement</td><td>6</td><td>20eb</td></tr><tr><td>Sonic Shock</td><td>6</td><td>20eb</td></tr><tr><td>Overheat</td><td>8</td><td>50eb</td></tr><tr><td>Short Circuit</td><td>8</td><td>50eb</td></tr><tr><td>Cyberware Malfunction</td><td>10</td><td>100eb</td></tr><tr><td>Lure</td><td>10</td><td>100eb</td></tr><tr><td>Slow</td><td>10</td><td>100eb</td></tr><tr><td>Synapse Burnout</td><td>10</td><td>100eb</td></tr><tr><td>Puppet</td><td>12</td><td>500eb</td></tr><tr><td>Shard Ejection</td><td>12</td><td>500eb</td></tr><tr><td>System Reset</td><td>12</td><td>500eb</td></tr></table>"
       }
     },
     {
@@ -33,7 +33,7 @@
       "type": "text",
       "text": {
         "format": 1,
-        "content": "<p>All Neuroports possess built-in firewall security.</p><p>Netrunners with Interface Rank 1-2 must succeed at a DV6 Interface Check before attempting to establish a QuickHack connection.</p><p>Netrunners with Interface Rank 3+ bypass this security automatically.</p><p>Failure does not alert the target.</p><p>If the Netrunner is forcefully removed from the Neuroport they are considered to have Unsafely Jacked Out.</p><p>After being Unsafely Jacked Out, the Netrunner may not attempt to reconnect to that target for 60 minutes.</p>"
+        "content": "<p>All Neuroports possess built-in firewall security.</p><p>Netrunners with Interface Rank 1-2 must succeed at a DV6 Interface Check before attempting to establish a Quickhack connection.</p><p>Netrunners with Interface Rank 3+ bypass this security automatically.</p><p>Failure does not alert the target.</p><p>If the Netrunner is forcefully removed from the Neuroport they are considered to have Unsafely Jacked Out.</p><p>After being Unsafely Jacked Out, the Netrunner may not attempt to reconnect to that target for 60 minutes.</p>"
       }
     },
     {
@@ -41,7 +41,7 @@
       "type": "text",
       "text": {
         "format": 1,
-        "content": "<p>QuickHacks target a user's Neuroport architecture.</p><p>A Neuroport acts as a NET Architecture containing Passwalls, Control Nodes and borrowed Black ICE.</p><p>Black ICE installed on an active Cyberdeck may be used by the Neuroport.</p><p>Netrunners are always considered Jacked Into their own Neuroport and may immediately respond to hostile intrusions.</p><p>A successful QuickHack causes the target to become aware that their Neuroport has been compromised unless the QuickHack specifically states otherwise.</p>"
+        "content": "<p>Quickhacks target a user's Neuroport architecture.</p><p>A Neuroport acts as a NET Architecture containing Passwalls, Control Nodes and borrowed Black ICE.</p><p>Black ICE installed on an active Cyberdeck may be used by the Neuroport.</p><p>Netrunners are always considered Jacked Into their own Neuroport and may immediately respond to hostile intrusions.</p><p>A successful Quickhack causes the target to become aware that their Neuroport has been compromised unless the Quickhack specifically states otherwise.</p>"
       }
     },
     {
@@ -57,7 +57,7 @@
       "type": "text",
       "text": {
         "format": 1,
-        "content": "<table><tr><th>Configuration</th><th>Range</th></tr><tr><td>External Cyberdeck</td><td>3 Squares</td></tr><tr><td>External Cyberdeck + Range Upgrade</td><td>4 Squares</td></tr><tr><td>Neuroport Cyberdeck Port</td><td>25 Squares</td></tr></table><p>Line of sight is required for all QuickHacks.</p><br><p>The range at which a Netrunner can Quickhack depends on what hardware they're packing. An old-fashioned external Cyberdeck still needs to be within 6 m/yds (3 squares) - or 8 m/yds (4 squares) if they've got the right hardware option installed - but if the Netrunner is rocking a Cyberdeck in a Neuroport Cyberdeck Port the range increases to 50 m/yds (25 squares)!</p><p>Line of sight is still required.</p>"
+        "content": "<table><tr><th>Configuration</th><th>Range</th></tr><tr><td>External Cyberdeck</td><td>3 Squares</td></tr><tr><td>External Cyberdeck + Range Upgrade</td><td>4 Squares</td></tr><tr><td>Neuroport Cyberdeck Port</td><td>25 Squares</td></tr></table><p>Line of sight is required for all Quickhacks.</p><br><p>The range at which a Netrunner can Quickhack depends on what hardware they're packing. An old-fashioned external Cyberdeck still needs to be within 6 m/yds (3 squares) - or 8 m/yds (4 squares) if they've got the right hardware option installed - but if the Netrunner is rocking a Cyberdeck in a Neuroport Cyberdeck Port the range increases to 50 m/yds (25 squares)!</p><p>Line of sight is still required.</p>"
       }
     },
     {
@@ -65,7 +65,7 @@
       "type": "text",
       "text": {
         "format": 1,
-        "content": "<p>Self-ICE is specialized Neuralware designed to resist QuickHacks.</p><p>Each Self-ICE installation adds one Passwall to the user's Neuroport architecture.</p><p>Maximum installations: 3.</p><table><tr><th>Installed</th><th>Passwall DV</th></tr><tr><td>1</td><td>6</td></tr><tr><td>2</td><td>8</td></tr><tr><td>3</td><td>10</td></tr></table><p>Each Passwall must be successfully Breached before QuickHacks can be attempted.</p>"
+        "content": "<p>Self-ICE is specialized Neuralware designed to resist Quickhacks.</p><p>Each Self-ICE installation adds one Passwall to the user's Neuroport architecture.</p><p>Maximum installations: 3.</p><table><tr><th>Installed</th><th>Passwall DV</th></tr><tr><td>1</td><td>6</td></tr><tr><td>2</td><td>8</td></tr><tr><td>3</td><td>10</td></tr></table><p>Each Passwall must be successfully Breached before Quickhacks can be attempted.</p>"
       }
     }
   ]

@@ -5,4 +5,4 @@ if (!actor) {
   return;
 }
 
-await cpredqh.removeAllQuickHackEffects( actor );
+await cpredqh.removeAllQuickhackEffects( actor );

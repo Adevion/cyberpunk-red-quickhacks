@@ -29,13 +29,13 @@ const effects = actor.effects
 
 if (!effects.length) {
   ui.notifications.warn(
-    `${actor.name} has no QuickHack effects.`
+    `${actor.name} has no Quickhack effects.`
   );
   return;
 }
 
 new Dialog({
-  title: "Remove QuickHack Effect",
+  title: "Remove Quickhack Effect",
   content: `
     <form>
       <div class="form-group">
@@ -54,7 +54,7 @@ new Dialog({
       label: "Remove",
       callback: async html => {
         const effect = html.find("#effect").val();
-        await cpredqh.removeQuickHackEffect( actor.uuid, effect );
+        await cpredqh.removeQuickhackEffect( actor.uuid, effect );
       }
     }
   },
